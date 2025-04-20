@@ -29,3 +29,4 @@ mono_crash.*
 ipch/
 *.sdf
 *.VC.db
+*.csproj
