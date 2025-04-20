@@ -96,7 +96,29 @@ public class Zabbix_Serializables
         public string hostName { get; set; } 
         public List<Zabbix_Send_Item> data { get; set; }
     }
-    
+
+
+    #region proxy
+
+    public class Zabbix_Proxy_Config_Response
+    {
+        public int full_sync { get; set; }
+        public Zabbix_Proxy_Data data { get; set; }
+        public int config_revision { get; set; }
+    }
+
+    public class Zabbix_Proxy_Data
+    {
+        public List<Proxy_Data_Item> proxy_Data_Items { get; set; }
+    }
+
+    public class Proxy_Data_Item
+    {
+        public string Item_Name { get; set; }
+        public List<string> fields { get; set; }
+        public List<object> data { get; set; }
+    }
+    #endregion
 
 
 
