@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ZabbixService/1.0.0": {
+        "dependencies": {
+          "ZabbixAgent": "1.0.0"
+        },
+        "runtime": {
+          "ZabbixService.dll": {}
+        }
+      },
+      "ZabbixAgent/1.0.0": {
+        "runtime": {
+          "ZabbixAgent.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZabbixService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZabbixAgent/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

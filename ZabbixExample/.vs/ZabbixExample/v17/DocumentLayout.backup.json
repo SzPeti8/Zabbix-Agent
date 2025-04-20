@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA86819C-58E6-4110-9326-565A7EAB6AA2}|ZabbixExample\\ZabbixExample.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA86819C-58E6-4110-9326-565A7EAB6AA2}|ZabbixExample\\ZabbixExample.csproj|solutionrelative:zabbixexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixagent\\zabbixagent.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|solutionrelative:zabbixagent\\zabbixagent.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA86819C-58E6-4110-9326-565A7EAB6AA2}|ZabbixExample\\ZabbixExample.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixexample\\zabbixexample.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CA86819C-58E6-4110-9326-565A7EAB6AA2}|ZabbixExample\\ZabbixExample.csproj|solutionrelative:zabbixexample\\zabbixexample.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D83229C7-1B72-4C20-B456-49BFAF41EB79}|ZabbixService\\ZabbixService.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D83229C7-1B72-4C20-B456-49BFAF41EB79}|ZabbixService\\ZabbixService.csproj|solutionrelative:zabbixservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixagent\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|solutionrelative:zabbixagent\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixagent\\zabbixresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|solutionrelative:zabbixagent\\zabbixresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixagent\\zabbixrr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|solutionrelative:zabbixagent\\zabbixrr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixagent\\zabbixrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|solutionrelative:zabbixagent\\zabbixrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|d:\\nextcloud2\\munka\\gyakornok\\szehlj\u00E1nik p\u00E9ter\\zabbixexample\\zabbixagent\\zabbixagent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9767E164-CD4D-493E-876F-713CA9452EBA}|ZabbixAgent\\ZabbixAgent.csproj|solutionrelative:zabbixagent\\zabbixagent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1385,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{79664857-03bf-4bca-aa54-ec998b3328f8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ZabbixResponse.cs",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixResponse.cs",
+              "RelativeDocumentMoniker": "ZabbixAgent\\ZabbixResponse.cs",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixResponse.cs",
+              "RelativeToolTip": "ZabbixAgent\\ZabbixResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:10:30.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixExample\\Program.cs",
+              "RelativeDocumentMoniker": "ZabbixExample\\Program.cs",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixExample\\Program.cs",
+              "RelativeToolTip": "ZabbixExample\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T07:57:18.843Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1385,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{92755723-0816-4623-955b-8aa705bf0237}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ZabbixExample",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixExample\\ZabbixExample.csproj",
+              "RelativeDocumentMoniker": "ZabbixExample\\ZabbixExample.csproj",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixExample\\ZabbixExample.csproj",
+              "RelativeToolTip": "ZabbixExample\\ZabbixExample.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T08:20:56.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZabbixAgent",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixAgent.csproj",
+              "RelativeDocumentMoniker": "ZabbixAgent\\ZabbixAgent.csproj",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixAgent.csproj",
+              "RelativeToolTip": "ZabbixAgent\\ZabbixAgent.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T08:20:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixService\\Program.cs",
+              "RelativeDocumentMoniker": "ZabbixService\\Program.cs",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixService\\Program.cs",
+              "RelativeToolTip": "ZabbixService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:59.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ZAbbixRR.cs",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZAbbixRR.cs",
+              "RelativeDocumentMoniker": "ZabbixAgent\\ZAbbixRR.cs",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZAbbixRR.cs",
+              "RelativeToolTip": "ZabbixAgent\\ZAbbixRR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:13:00.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ZabbixRequest.cs",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixRequest.cs",
+              "RelativeDocumentMoniker": "ZabbixAgent\\ZabbixRequest.cs",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixRequest.cs",
+              "RelativeToolTip": "ZabbixAgent\\ZabbixRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:10:21.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ZabbixAgent",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixAgent.csproj",
+              "RelativeDocumentMoniker": "ZabbixAgent\\ZabbixAgent.csproj",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\ZabbixAgent.csproj",
+              "RelativeToolTip": "ZabbixAgent\\ZabbixAgent.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T08:09:58.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Agent.cs",
+              "DocumentMoniker": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\Agent.cs",
+              "RelativeDocumentMoniker": "ZabbixAgent\\Agent.cs",
+              "ToolTip": "D:\\Nextcloud2\\Munka\\Gyakornok\\Szehlj\u00E1nik P\u00E9ter\\ZabbixExample\\ZabbixAgent\\Agent.cs",
+              "RelativeToolTip": "ZabbixAgent\\Agent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:07:11.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1948,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 2202,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

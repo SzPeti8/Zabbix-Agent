@@ -1,0 +1,22 @@
+{
+  "request": "agent data",
+  "data": [
+    {
+      "id": 1,
+      "itemid": 121052,
+      "value": "Unknown metric system.sw.os",
+      "clock": 1741602187,
+      "ns": 892492600
+    },
+    {
+      "id": 2,
+      "itemid": 121032,
+      "value": "1",
+      "clock": 1741602192,
+      "ns": 1782900
+    }
+  ],
+  "session": "dc2e3 6383b 9e8f2 400f5 850a6 70428 3c",
+  "host": "gyszp_pc2",
+  "version": "6.2"
+}
