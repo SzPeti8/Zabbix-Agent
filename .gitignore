@@ -30,3 +30,4 @@ ipch/
 *.sdf
 *.VC.db
 *.csproj
+*.sln
