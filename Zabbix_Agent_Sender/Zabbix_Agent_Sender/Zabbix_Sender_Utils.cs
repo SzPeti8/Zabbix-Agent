@@ -58,21 +58,7 @@ public class Zabbix_Active_Sender_Utils
         return JsonSerializer.Serialize(request);
     }
 
-    public static string CreateProxyConfigPayload(string host, string version,string session)
-    {
-
-        Zabbix_Send_Request request = new Zabbix_Send_Request()
-        {
-            
-            request = "proxy config",
-            host = host,
-            version = version,
-            session = session,
-            config_revision = 0
-        };
-        log.Debug($"Created Zabbix_Send_Request: {SerializeSendRequest(request)}");
-        return SerializeSendRequest(request);
-    }
+    
 
     public static string CreateConfigPayload(string host, string version)
     {
@@ -137,5 +123,22 @@ public class Zabbix_Active_Sender_Utils
 
         return zabbixRR;
     }
+    #region Proxy
+    public static string CreateProxyConfigPayload(string host, string version, string session)
+    {
+
+        Zabbix_Send_Request request = new Zabbix_Send_Request()
+        {
+
+            request = "proxy config",
+            host = host,
+            version = version,
+            session = session,
+            config_revision = 0
+        };
+        log.Debug($"Created Zabbix_Send_Request: {SerializeSendRequest(request)}");
+        return SerializeSendRequest(request);
+    }
+    #endregion
 
 }

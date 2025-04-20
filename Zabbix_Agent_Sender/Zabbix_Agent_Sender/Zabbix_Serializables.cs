@@ -14,14 +14,6 @@ public class Zabbix_Serializables
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? info { get; set; }
 
-        //public class Zabbix_Config_Item
-        //{
-        //    public string key { get; set; }
-        //    public int itemId { get; set; }
-        //    public string delay { get; set; }
-        //    public int lastlogsize { get; set; }
-        //    public int mtime { get; set; }
-        //}
 
     }
 
@@ -97,14 +89,14 @@ public class Zabbix_Serializables
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public int? config_revision { get; set; }
     }
-    #region test
+    
     //TODO: örökoltessem a request responsoet legyen kulon response, és requests
     public class Zabbix_Dev_Request_Response
     {
         public string hostName { get; set; } 
         public List<Zabbix_Send_Item> data { get; set; }
     }
-    #endregion
+    
 
 
 
