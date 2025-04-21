@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-public class Zabbix_Serializables
+public partial class Zabbix_Serializables
 {
     public class ZabbixResponse
     {
@@ -109,15 +109,34 @@ public class Zabbix_Serializables
 
     public class Zabbix_Proxy_Data
     {
-        public List<Proxy_Data_Item> proxy_Data_Items { get; set; }
+        public Proxy_Data_Hosts hosts { get; set;}
+        public Proxy_Data_interface _interface    { get; set;}
+        public Proxy_Data_interface_snmp interface_snmp { get; set;}
+        public Proxy_Data_host_inventory host_inventory { get; set;}
+        public Proxy_Data_items items { get; set;}
+        public Proxy_Data_item_rtdata item_rtdata { get; set;}
+        public Proxy_Data_item_preproc item_preproc { get; set;}
+        public Proxy_Data_item_parameter item_parameter { get; set;}
+        public Proxy_Data_globalmacro globalmacro { get; set;}
+        public Proxy_Data_hosts_templates hosts_templates { get; set;}
+        public Proxy_Data_hostmacro hostmacro { get; set;}
+        public Proxy_Data_drules drules { get; set;}
+        public Proxy_Data_dchecks dchecks { get; set;}
+        public Proxy_Data_regexps regexps { get; set;}
+        public Proxy_Data_expressions expressions { get; set;}
+        public Proxy_Data_config config { get; set;}
+        public Proxy_Data_httptest httptest { get; set;}
+        public Proxy_Data_httptestitem httptestitem { get; set;}
+        public Proxy_Data_httptest_field httptest_field { get; set;}
+        public Proxy_Data_httpstep httpstep { get; set;}
+        public Proxy_Data_httpstepitem httpstepitem { get; set;}
+        public Proxy_Data_httpstep_field httpstep_field { get; set;}
+        public Proxy_Data_config_autoreg_tls config_autoreg_tls { get; set;}
+
+
     }
 
-    public class Proxy_Data_Item
-    {
-        public string Item_Name { get; set; }
-        public List<string> fields { get; set; }
-        public List<object> data { get; set; }
-    }
+
     #endregion
 
 
