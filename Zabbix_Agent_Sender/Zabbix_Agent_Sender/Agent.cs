@@ -152,7 +152,7 @@ namespace Zabbix_Agent_Sender
             //Sending Data
 
             SendingData(send_tems, host, session, version, zabbixServer, zabbixPort, id);
-            id = send_tems.Count + 1;
+            id += send_tems.Count + 1;
             
         }
 

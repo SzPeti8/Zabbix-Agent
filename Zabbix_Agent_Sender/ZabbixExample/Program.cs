@@ -4,10 +4,14 @@ using Zabbix_Agent_Sender;
 using static Zabbix_Agent_Sender.ZabbixRR;
 using static Zabbix_Serializables;
 using static Zabbix_Agent_Sender.DevNameDoesntMatchException;
+using System.Globalization;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
  log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
+// A tizedes értékek javítása
+CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
+CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
 
 IAgent agent1 = new Agent();
 string devname = "gyszp_pc2";
@@ -98,31 +102,31 @@ Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
             //TODO: Culture info csere
             //TODO: egyszerűsítés
             item.SetValue(1);
-            item.value = (rnd.NextDouble() * 1000).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() * 1000).ToString(); break;
 
         case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
-            item.value = (rnd.NextDouble() + 8).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() + 8).ToString(); break;
 
         case "perf_counter_en[\"\\Memory\\Pool Nonpaged Bytes\"]":
             item.value = rnd.Next(300645000, 491655168).ToString(); break;
 
         case "perf_counter_en[\"\\Paging file(_Total)\\% Usage\"]":
-            item.value = (rnd.NextDouble() * 100).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() * 100).ToString(); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% DPC Time\"]":
-            item.value = (rnd.NextDouble()).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble()).ToString(); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% Interrupt Time\"]":
-            item.value = (rnd.NextDouble()).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble()).ToString(); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% Privileged Time\"]":
-            item.value = (rnd.NextDouble() + 5).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() + 5).ToString(); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% User Time\"]":
-            item.value = (rnd.NextDouble() + 5).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() + 5).ToString(); break;
 
         case "perf_counter_en[\"\\System\\Context Switches/sec\"]":
-            item.value = (rnd.NextDouble() + 18000).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() + 18000).ToString(); break;
 
 
         case "perf_counter_en[\"\\System\\Threads\"]":
@@ -132,7 +136,7 @@ Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
             item.value = rnd.Next(10, 500).ToString(); break;
 
         case "system.cpu.util":
-            item.value = (rnd.NextDouble() * 100).ToString().Replace(',', '.'); break;
+            item.value = (rnd.NextDouble() * 100).ToString(); break;
 
         case "system.swap.size[,total]":
             item.value = rnd.Next(19514624, 2095514624).ToString(); break;
