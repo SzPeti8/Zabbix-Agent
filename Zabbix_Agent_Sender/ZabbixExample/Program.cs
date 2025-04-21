@@ -92,66 +92,96 @@ Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
     switch (item.key)
     {
         case "perf_counter_en[\"\\Memory\\Cache Bytes\"]":
-            item.value = rnd.Next(300645000, 491655168).ToString(); break;
+            item.SetValue(rnd.Next(300645000, 491655168)); break;
 
         case "perf_counter_en[\"\\Memory\\Free System Page Table Entries\"]":
-            item.value = rnd.Next(1000, 12471498).ToString(); break;
+            item.SetValue(rnd.Next(1000, 12471498)); break;
 
 
         case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-            //TODO: Culture info csere
-            //TODO: egyszerűsítés
-            item.SetValue(1);
-            item.value = (rnd.NextDouble() * 1000).ToString(); break;
+            //TODO: Culture info csere-
+            //TODO: egyszerűsítés-
+            item.SetValue(rnd.NextDouble() * 1000);break;
 
         case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
-            item.value = (rnd.NextDouble() + 8).ToString(); break;
+            item.SetValue(rnd.NextDouble() + 8); break;
 
         case "perf_counter_en[\"\\Memory\\Pool Nonpaged Bytes\"]":
-            item.value = rnd.Next(300645000, 491655168).ToString(); break;
+            item.SetValue(rnd.Next(300645000, 491655168)); break;
 
         case "perf_counter_en[\"\\Paging file(_Total)\\% Usage\"]":
-            item.value = (rnd.NextDouble() * 100).ToString(); break;
+            item.SetValue(rnd.NextDouble() * 100); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% DPC Time\"]":
-            item.value = (rnd.NextDouble()).ToString(); break;
+            item.SetValue(rnd.NextDouble()); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% Interrupt Time\"]":
-            item.value = (rnd.NextDouble()).ToString(); break;
+            item.SetValue(rnd.NextDouble()); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% Privileged Time\"]":
-            item.value = (rnd.NextDouble() + 5).ToString(); break;
+            item.SetValue(rnd.NextDouble() + 5); break;
 
         case "perf_counter_en[\"\\Processor Information(_total)\\% User Time\"]":
-            item.value = (rnd.NextDouble() + 5).ToString(); break;
+            item.SetValue(rnd.NextDouble() + 5); break;
 
         case "perf_counter_en[\"\\System\\Context Switches/sec\"]":
-            item.value = (rnd.NextDouble() + 18000).ToString(); break;
+            item.SetValue(rnd.NextDouble() + 18000); break;
 
 
         case "perf_counter_en[\"\\System\\Threads\"]":
-            item.value = rnd.Next(1000, 5000).ToString(); break;
+            item.SetValue(rnd.Next(1000, 5000)); break;
 
         case "proc.num[]":
-            item.value = rnd.Next(10, 500).ToString(); break;
+            item.SetValue(rnd.Next(10, 500)); break;
 
         case "system.cpu.util":
-            item.value = (rnd.NextDouble() * 100).ToString(); break;
+            item.SetValue(rnd.NextDouble() * 100); break;
 
         case "system.swap.size[,total]":
-            item.value = rnd.Next(19514624, 2095514624).ToString(); break;
+            item.SetValue(rnd.Next(19514624, 2095514624)); break;
 
         case "system.uptime":
-            item.value = rnd.Next(6555, 603482).ToString(); break;
+            item.SetValue(rnd.Next(6555, 603482)); break;
 
         case "vm.memory.size[total]":
-            item.value = rnd.Next(12713088, 1702713088).ToString(); break;
+            item.SetValue(rnd.Next(12713088, 1702713088)); break;
 
         case "vm.memory.size[used]":
-            item.value = rnd.Next(127113088, 170271388).ToString(); break;
+            item.SetValue(rnd.Next(127113088, 170271388)); break;
 
         case "wmi.get[root/cimv2,\"Select NumberOfLogicalProcessors from Win32_ComputerSystem\"]":
-            item.value = rnd.Next(2, 16).ToString(); break;
+            item.SetValue(rnd.Next(2, 16)); break;
+
+        case "agent.hostname":
+            item.SetValue(devname); break;
+
+        case "agent.ping":
+            item.SetValue(1); break;
+
+        case "agent.version":
+            item.SetValue("6.2"); break;
+
+        case "system.hostname":
+            item.SetValue("Gyakornok PC"); break;
+
+        case "system.localtime":
+            item.SetValue("$\"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}\""); break;
+
+        case "system.sw.arch":
+            item.SetValue("x64"); break;
+
+        case "system.sw.os":
+            item.SetValue("Unknown metric system.sw.os"); break;
+
+        case "system.uname":
+            item.SetValue("Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64"); break;
+
+        case "vfs.fs.get":
+            item.SetValue("{}"); break;
+
+        case "wmi.getall[root\\cimv2,\"select Name,Description,NetConnectionID,Speed,AdapterTypeId,NetConnectionStatus,GUID from win32_networkadapter where PhysicalAdapter=True and NetConnectionStatus>0\"]":
+            item.SetValue(0); break;
+
 
     }
 

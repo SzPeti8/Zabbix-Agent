@@ -65,11 +65,11 @@ public partial class Zabbix_Serializables
         public long ns { get; set; }
 
         //TODO: megirni a settereket a többire
-        public void SetValue(int newValue)
+        public void SetValue(object newValue)
         {
             value = newValue.ToString();
         }
-
+        
     }
 
 
