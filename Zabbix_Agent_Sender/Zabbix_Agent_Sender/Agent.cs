@@ -96,7 +96,7 @@ namespace Zabbix_Agent_Sender
             try
             {
                 Process(conf_Items);
-                DATAtimer = new System.Timers.Timer(2000);
+                DATAtimer = new System.Timers.Timer(20000);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
                     //TODO: Config lekérdezése időnként, csak itt

@@ -97,6 +97,10 @@ public partial class Zabbix_Serializables
         public List<Zabbix_Send_Item> data { get; set; }
     }
 
+    public class Zabbix_Dev_Request : Zabbix_Dev_Request_Response { }
+
+    public class Zabbix_Dev_Response :Zabbix_Dev_Request_Response { }
+
 
     #region proxy
 

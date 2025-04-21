@@ -9,9 +9,9 @@ namespace Zabbix_Agent_Sender
 {
     public class Example_Utils
     {
-        public static Zabbix_Dev_Request_Response CreateZabbixRRRequest(List<Zabbix_Config_Item> itemList,string hostname)
+        public static Zabbix_Dev_Request CreateZabbixRRRequest(List<Zabbix_Config_Item> itemList,string hostname)
         {
-            Zabbix_Dev_Request_Response zabbix_Dev_Request_Response = new Zabbix_Dev_Request_Response();
+            Zabbix_Dev_Request zabbix_Dev_Request_Response = new Zabbix_Dev_Request();
             zabbix_Dev_Request_Response.hostName = hostname;
             List < Zabbix_Send_Item > devItems = new List<Zabbix_Send_Item>();
             for (int i = 0; i < itemList.Count; i++)

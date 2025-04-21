@@ -29,7 +29,7 @@ namespace Zabbix_Agent_Sender
                             
                     
                 }
-                zabbixRR.Response = new Zabbix_Dev_Request_Response();
+                zabbixRR.Response = new Zabbix_Dev_Response();
                 zabbixRR.Response.data = items;
                 zabbixRR.Response.hostName = devname;
 
