@@ -165,7 +165,7 @@ Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
             item.SetValue("Gyakornok PC"); break;
 
         case "system.localtime":
-            item.SetValue("$\"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}\""); break;
+            item.SetValue($"{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}"); break;
 
         case "system.sw.arch":
             item.SetValue("x64"); break;
