@@ -12,7 +12,7 @@ namespace Zabbix_Agent_Sender
         
         
 
-        public static Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
+        public static void GettingData(Zabbix_Send_Item item)
         {
             Random rnd = new Random();
             var devname = "gyszpc_2";
@@ -108,10 +108,11 @@ namespace Zabbix_Agent_Sender
                 case "wmi.getall[root\\cimv2,\"select Name,Description,NetConnectionID,Speed,AdapterTypeId,NetConnectionStatus,GUID from win32_networkadapter where PhysicalAdapter=True and NetConnectionStatus>0\"]":
                     item.SetValue(0); break;
 
-
+                default:
+                    throw new Exception($"Unknown key: {item.key}");
             }
 
-            throw new Exception($"Unknown key: {item.key}");
+            
         }
 
     }

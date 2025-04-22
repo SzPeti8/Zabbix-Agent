@@ -72,7 +72,7 @@ void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
             try
             {
                 
-                items[i] = DeviceGetData.GettingData(items[i]);
+               DeviceGetData.GettingData(items[i]);
             }
             catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {items[i].itemid}, key: {items[i].key}. Error: {e.Message}"); }
 
