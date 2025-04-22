@@ -71,7 +71,8 @@ void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
         {
             try
             {
-                items[i] = GettingData(items[i]);
+                
+                items[i] = DeviceGetData.GettingData(items[i]);
             }
             catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {items[i].itemid}, key: {items[i].key}. Error: {e.Message}"); }
 
@@ -86,7 +87,7 @@ void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
     
 }
 
-Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
+/*Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
 {
     
     switch (item.key)
@@ -126,7 +127,6 @@ Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
 
         case "perf_counter_en[\"\\System\\Context Switches/sec\"]":
             item.SetValue(rnd.NextDouble() + 18000); break;
-
 
         case "perf_counter_en[\"\\System\\Threads\"]":
             item.SetValue(rnd.Next(1000, 5000)); break;
@@ -187,6 +187,7 @@ Zabbix_Send_Item GettingData(Zabbix_Send_Item item)
 
     throw new Exception($"Unknown key: {item.key}");
 }
+*/
 
 string GetDevName()
 {

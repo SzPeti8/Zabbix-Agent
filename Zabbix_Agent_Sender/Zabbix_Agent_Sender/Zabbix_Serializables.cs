@@ -64,7 +64,7 @@ public partial class Zabbix_Serializables
         public long clock { get; set; }
         public long ns { get; set; }
 
-        //TODO: megirni a settereket a többire
+        //TODO: megirni a settereket a többire-
         public void SetValue(object newValue)
         {
             value = newValue.ToString();
@@ -90,7 +90,7 @@ public partial class Zabbix_Serializables
         public int? config_revision { get; set; }
     }
     
-    //TODO: örökoltessem a request responsoet legyen kulon response, és requests
+    //TODO: örökoltessem a request responsoet legyen kulon response, és requests-
     public class Zabbix_Dev_Request_Response
     {
         public string hostName { get; set; } 

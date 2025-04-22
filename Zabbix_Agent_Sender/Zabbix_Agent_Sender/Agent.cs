@@ -26,6 +26,7 @@ namespace Zabbix_Agent_Sender
         string heartbeatPayload = null;
         string configPayload = null;
 
+        static System.Timers.Timer configTimer;
         static System.Timers.Timer HBtimer;
         static System.Timers.Timer DATAtimer;
 
@@ -82,6 +83,29 @@ namespace Zabbix_Agent_Sender
 
                 return;
             }
+
+            configTimer = new System.Timers.Timer(10000);
+            configTimer.Elapsed += (sender, e) =>
+            {
+                log.Info($"Getting The config file again from server: {zabbixServer}, Port: {zabbixPort}, Host: {host}");
+                string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
+                try
+                {
+                    conf_Items = DeserializeResponseConfig(conf_Items_String).data;
+
+                }
+                catch (Exception ex)
+                {
+                    log.Debug($"Response to Agent Config Request: {conf_Items_String}");
+                    log.Error("Couldnt Deserialize Config Response. Message: " + ex.Message);
+
+                    return;
+                }
+
+
+            };
+            configTimer.AutoReset = true; // újra és újra lefut
+            configTimer.Enabled = true;
 
             //Sending heartbeat
             SendingHeartbeat();
@@ -241,6 +265,8 @@ namespace Zabbix_Agent_Sender
             HBtimer.Enabled = false;
             DATAtimer.AutoReset = false;
             DATAtimer.Enabled = false;
+            configTimer.AutoReset = false;
+            configTimer.Enabled = false;
 
             log.Info("AGENT SHUT DOWN Name: "+this.GetType().Name);
         }
