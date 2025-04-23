@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using static Zabbix_Serializables;
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.Device
 {
     public class DeviceGetData
     {
-        
-        
+
+
 
         public static void GettingData(Zabbix_Send_Item item)
         {
@@ -58,7 +58,7 @@ namespace Zabbix_Agent_Sender
                     item.SetValue(rnd.Next(1000, 5000)); break;
 
                 case "perf_counter_en[\"\\System\\Processor Queue Length\"]":
-                    item.SetValue(rnd.Next(0,100));break;
+                    item.SetValue(rnd.Next(0, 100)); break;
 
                 case "proc.num[]":
                     item.SetValue(rnd.Next(10, 500)); break;
@@ -115,7 +115,7 @@ namespace Zabbix_Agent_Sender
                     throw new Exception($"Unknown key: {item.key}");
             }
 
-            
+
         }
 
     }

@@ -1,7 +1,7 @@
 ﻿using log4net.Config;
-using Zabbix_Agent_Sender;
 using static Zabbix_Active_Sender_Utils;
 using static Zabbix_Active_Sender;
+using Zabbix_Agent_Sender.Agent;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);

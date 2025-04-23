@@ -4,17 +4,18 @@ using static Zabbix_Serializables;
 using static Zabbix_Active_Sender_Utils;
 using static Zabbix_Active_Sender;
 using log4net.Config;
-using  System.Timers;
-using static Zabbix_Agent_Sender.Example_Utils;
+using System.Timers;
+using static Zabbix_Agent_Sender.Device.Example_Utils;
+using Zabbix_Agent_Sender.Device;
 
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.Agent
 {
-    
 
-    public partial class Agent : IAgent
+
+    public class Agent : IAgent
     {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         string zabbixServer = null;
         int zabbixPort = 0;
@@ -35,7 +36,7 @@ namespace Zabbix_Agent_Sender
 
         public void Init(AgentConfig config)
         {
-            test();
+            
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
             //konfig beállítások
             zabbixServer = config.zabbixServer;
@@ -51,9 +52,9 @@ namespace Zabbix_Agent_Sender
             log.Debug("Creating Config Payload");
             configPayload = CreateConfigPayload(host, version);
         }
-    
 
-        
+
+
 
         public void Start()
         {
@@ -61,7 +62,7 @@ namespace Zabbix_Agent_Sender
             //Checking config settings
             if (IsConfigDone())
             {
-                log.Error("Wrong Config Setup for Agent in: " + this.GetType().Name);
+                log.Error("Wrong Config Setup for Agent in: " + GetType().Name);
                 return;
             }
 
@@ -135,13 +136,13 @@ namespace Zabbix_Agent_Sender
                 DATAtimer = new System.Timers.Timer(20000);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
-                    
+
                 };
                 DATAtimer.AutoReset = true; // újra és újra lefut
                 DATAtimer.Enabled = true;
                 //log.Error(e.Message);
                 throw e;
-                
+
             }
 
         }
@@ -165,17 +166,17 @@ namespace Zabbix_Agent_Sender
                 for (int i = 0; i < conf_Items.Count; i++)
                 {
                     Zabbix_Send_Item s_item = GettingNewData(conf_Items[i], host);
-                    
+
                     if (s_item.value != null)
                     {
                         send_tems.Add(s_item);
                     }
-                    
+
                 }
                 //send_tems = GettingNewData(conf_Items, host);
 
             }
-            catch(DevNameDoesntMatchException e)
+            catch (DevNameDoesntMatchException e)
             {
                 //log.Error(e.Message);
                 throw e;
@@ -189,12 +190,12 @@ namespace Zabbix_Agent_Sender
 
             SendingData(send_tems, host, session, version, zabbixServer, zabbixPort, id);
             id += send_tems.Count + 1;
-            
+
         }
 
 
 
-        public Zabbix_Send_Item GettingNewData(Zabbix_Config_Item  conf_Items,string host)
+        public Zabbix_Send_Item GettingNewData(Zabbix_Config_Item conf_Items, string host)
         {
             log.Debug("Generating ZabbixRR From Config items");
 
@@ -202,7 +203,7 @@ namespace Zabbix_Agent_Sender
 
             zabbixRR.Request = CreateZabbixRRRequest(conf_Items, host);
 
-            
+
             log.Debug("Dev_Process Invoke");
             RequestReceived?.Invoke(this, zabbixRR);
             if (zabbixRR.Response == null)
@@ -216,7 +217,7 @@ namespace Zabbix_Agent_Sender
             return send_tems;
         }
 
-        public void SendingData(List<Zabbix_Send_Item> send_tems,string host,string session, string version,string zabbixServer,int zabbixPort,int id)
+        public void SendingData(List<Zabbix_Send_Item> send_tems, string host, string session, string version, string zabbixServer, int zabbixPort, int id)
         {
             log.Debug("Prepare SendItems");
             send_tems = PrepareSendItems(send_tems, id);
@@ -258,7 +259,7 @@ namespace Zabbix_Agent_Sender
         }
 
 
-        
+
         public List<Zabbix_Send_Item> PrepareSendItems(List<Zabbix_Send_Item> items, int idCount)
         {
             for (int i = 0; items.Count > i; i++)
@@ -280,14 +281,14 @@ namespace Zabbix_Agent_Sender
             configTimer.AutoReset = false;
             configTimer.Enabled = false;
 
-            log.Info("AGENT SHUT DOWN Name: "+this.GetType().Name);
+            log.Info("AGENT SHUT DOWN Name: " + GetType().Name);
         }
 
         public event EventHandler<ZabbixRR> RequestReceived;
 
         bool IsConfigDone()
         {
-            return !(zabbixServer == null | zabbixPort ==0 | host == null| version != null | heartbeat_freq ==0);
+            return !(zabbixServer == null | zabbixPort == 0 | host == null | version != null | heartbeat_freq == 0);
         }
 
         public void SendingHeartbeat()

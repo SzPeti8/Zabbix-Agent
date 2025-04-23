@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zabbix_Agent_Sender.Device;
 using static Zabbix_Serializables;
 
 namespace Zabbix_Agent_Sender.notused

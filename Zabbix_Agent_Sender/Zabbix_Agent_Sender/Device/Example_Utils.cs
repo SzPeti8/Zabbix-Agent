@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using static Zabbix_Serializables;
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.Device
 {
     public class Example_Utils
     {
-        public static Zabbix_Dev_Request CreateZabbixRRRequest(Zabbix_Config_Item itemList,string hostname)
+        public static Zabbix_Dev_Request CreateZabbixRRRequest(Zabbix_Config_Item itemList, string hostname)
         {
             Zabbix_Dev_Request zabbix_Dev_Request = new Zabbix_Dev_Request();
             zabbix_Dev_Request.hostName = hostname;
-            zabbix_Dev_Request.data = (new Zabbix_Send_Item(itemList.key, itemList.itemId));
+            zabbix_Dev_Request.data = new Zabbix_Send_Item(itemList.key, itemList.itemId);
             return zabbix_Dev_Request;
         }
 

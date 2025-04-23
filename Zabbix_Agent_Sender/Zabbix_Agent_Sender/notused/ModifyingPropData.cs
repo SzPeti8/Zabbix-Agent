@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using static Zabbix_Serializables;
 using static Zabbix_Prop_Data;
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.notused
 {
     internal class ModifyingPropData
     {
@@ -16,23 +16,23 @@ namespace Zabbix_Agent_Sender
             List<Zabbix_Send_Item> old = DATA();
 
 
-            
+
             for (int i = 0; i < old.Count; i++)
             {
                 switch (old[i].key)
                 {
                     case "perf_counter_en[\"\\Memory\\Cache Bytes\"]":
-                        old[i].value = rnd.Next(300645000,491655168).ToString(); break;
+                        old[i].value = rnd.Next(300645000, 491655168).ToString(); break;
 
                     case "perf_counter_en[\"\\Memory\\Free System Page Table Entries\"]":
                         old[i].value = rnd.Next(1000, 12471498).ToString(); break;
 
 
                     case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-                        old[i].value = (rnd.NextDouble()*1000).ToString(); break;
+                        old[i].value = (rnd.NextDouble() * 1000).ToString(); break;
 
                     case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
-                        old[i].value = (rnd.NextDouble() +8).ToString(); break;
+                        old[i].value = (rnd.NextDouble() + 8).ToString(); break;
 
                     case "perf_counter_en[\"\\Memory\\Pool Nonpaged Bytes\"]":
                         old[i].value = rnd.Next(300645000, 491655168).ToString(); break;
@@ -41,13 +41,13 @@ namespace Zabbix_Agent_Sender
                         old[i].value = (rnd.NextDouble() * 100).ToString(); break;
 
                     case "perf_counter_en[\"\\Processor Information(_total)\\% DPC Time\"]":
-                        old[i].value = (rnd.NextDouble() ).ToString(); break;
+                        old[i].value = rnd.NextDouble().ToString(); break;
 
                     case "perf_counter_en[\"\\Processor Information(_total)\\% Interrupt Time\"]":
-                        old[i].value = (rnd.NextDouble()).ToString(); break;
+                        old[i].value = rnd.NextDouble().ToString(); break;
 
                     case "perf_counter_en[\"\\Processor Information(_total)\\% Privileged Time\"]":
-                        old[i].value = (rnd.NextDouble()+5).ToString(); break;
+                        old[i].value = (rnd.NextDouble() + 5).ToString(); break;
 
                     case "perf_counter_en[\"\\Processor Information(_total)\\% User Time\"]":
                         old[i].value = (rnd.NextDouble() + 5).ToString(); break;
@@ -63,7 +63,7 @@ namespace Zabbix_Agent_Sender
                         old[i].value = rnd.Next(10, 500).ToString(); break;
 
                     case "system.cpu.util":
-                        old[i].value = (rnd.NextDouble() *100).ToString(); break;
+                        old[i].value = (rnd.NextDouble() * 100).ToString(); break;
 
                     case "system.swap.size[,total]":
                         old[i].value = rnd.Next(19514624, 2095514624).ToString(); break;

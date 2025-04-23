@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.Agent
 {
     public class AgentConfig
     {
@@ -17,11 +17,11 @@ namespace Zabbix_Agent_Sender
             this.heartbeat_freq = heartbeat_freq;
         }
 
-        public string zabbixServer {  get; set; }
-        public int zabbixPort {  get; set; }
-        public string host {  get; set; }
+        public string zabbixServer { get; set; }
+        public int zabbixPort { get; set; }
+        public string host { get; set; }
         public string version { get; set; }
-        public int heartbeat_freq {  get; set; }
+        public int heartbeat_freq { get; set; }
 
 
     }

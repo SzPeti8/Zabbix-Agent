@@ -1,7 +1,7 @@
 ﻿using System;
 using static Zabbix_Serializables;
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.Agent
 {
     public interface IAgent
     {

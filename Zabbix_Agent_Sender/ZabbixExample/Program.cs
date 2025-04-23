@@ -3,11 +3,13 @@ using log4net;
 using Zabbix_Agent_Sender;
 using static Zabbix_Agent_Sender.ZabbixRR;
 using static Zabbix_Serializables;
-using static Zabbix_Agent_Sender.DevNameDoesntMatchException;
+using static Zabbix_Agent_Sender.Device.DevNameDoesntMatchException;
 using System.Globalization;
+using Zabbix_Agent_Sender.Agent;
+using Zabbix_Agent_Sender.Device;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
- log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
 // A tizedes értékek javítása
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
