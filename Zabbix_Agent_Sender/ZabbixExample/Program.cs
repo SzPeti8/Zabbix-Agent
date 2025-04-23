@@ -64,7 +64,7 @@ void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
 
     if (zabbixRR.Request.hostName == devname)
     {
-        Thread.Sleep(rnd.Next(1000));
+        Thread.Sleep(rnd.Next(500));
 
         Zabbix_Send_Item items = zabbixRR.Request.data;
         
