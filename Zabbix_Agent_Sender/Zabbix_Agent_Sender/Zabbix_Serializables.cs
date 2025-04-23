@@ -114,7 +114,8 @@ public partial class Zabbix_Serializables
     public class Zabbix_Proxy_Data
     {
         public Proxy_Data_Hosts hosts { get; set;}
-        public Proxy_Data_interface _interface    { get; set;}
+        [JsonPropertyName("interface")]
+        public Proxy_Data_interface @interface    { get; set;}
         public Proxy_Data_interface_snmp interface_snmp { get; set;}
         public Proxy_Data_host_inventory host_inventory { get; set;}
         public Proxy_Data_items items { get; set;}

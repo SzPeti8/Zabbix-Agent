@@ -2,6 +2,8 @@
 using static Zabbix_Active_Sender_Utils;
 using static Zabbix_Active_Sender;
 using Zabbix_Agent_Sender.Agent;
+using Newtonsoft.Json;
+using static Zabbix_Serializables;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -21,3 +23,16 @@ string configPayload = CreateProxyConfigPayload(devname, version,session);
 //converting response to stringnél hibát dob, mert a kezdő buffer nem elég nagy
 string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
 Console.WriteLine(conf_Items_String);
+
+Zabbix_Proxy_Config_Response zabbixData = JsonConvert.DeserializeObject<Zabbix_Proxy_Config_Response>(conf_Items_String);
+
+Console.WriteLine(zabbixData);
+
+List<Proxy_Data_items_Item> items = new List<Proxy_Data_items_Item>();
+
+for (int i = 0; zabbixData.data.items.data.Count > i; i++)
+{
+    items.Add(new Proxy_Data_items_Item(zabbixData.data.items.data[i]));
+}
+
+Console.WriteLine(items);

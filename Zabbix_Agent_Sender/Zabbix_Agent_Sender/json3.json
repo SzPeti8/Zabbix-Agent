@@ -25,7 +25,7 @@
     },
     "items": {
       "fields": [ "itemid", "type", "snmp_oid", "hostid", "key_", "delay", "history", "status", "value_type", "trapper_hosts", "logtimefmt", "params", "ipmi_sensor", "authtype", "username", "password", "publickey", "privatekey", "flags", "interfaceid", "inventory_link", "jmx_endpoint", "master_itemid", "timeout", "url", "query_fields", "posts", "status_codes", "follow_redirects", "post_type", "http_proxy", "headers", "retrieve_mode", "request_method", "output_format", "ssl_cert_file", "ssl_key_file", "ssl_key_password", "verify_peer", "verify_host", "allow_traps" ],
-      "data": [
+      "data": [//cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
         [ 121151, 7, "", 11451, "agent.hostname", "1h", "7d", 0, 1, "", "", "", "", 0, "", "", "", "", 0, null, 0, "", null, "3s", "", "", "", "200", 1, 0, "", "", 0, 0, 0, "", "", "", 0, 0, 0 ],
         [ 121152, 7, "", 11451, "agent.ping", "1m", "7d", 0, 3, "", "", "", "", 0, "", "", "", "", 0, null, 0, "", null, "3s", "", "", "", "200", 1, 0, "", "", 0, 0, 0, "", "", "", 0, 0, 0 ],
         [ 121153, 7, "", 11451, "agent.version", "1h", "7d", 0, 1, "", "", "", "", 0, "", "", "", "", 0, null, 0, "", null, "3s", "", "", "", "200", 1, 0, "", "", 0, 0, 0, "", "", "", 0, 0, 0 ],
