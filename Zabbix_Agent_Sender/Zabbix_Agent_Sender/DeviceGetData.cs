@@ -57,6 +57,9 @@ namespace Zabbix_Agent_Sender
                 case "perf_counter_en[\"\\System\\Threads\"]":
                     item.SetValue(rnd.Next(1000, 5000)); break;
 
+                case "perf_counter_en[\"\\System\\Processor Queue Length\"]":
+                    item.SetValue(rnd.Next(0,100));break;
+
                 case "proc.num[]":
                     item.SetValue(rnd.Next(10, 500)); break;
 
