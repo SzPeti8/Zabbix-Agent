@@ -5,24 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using static Zabbix_Serializables;
 
-namespace Zabbix_Agent_Sender
+namespace Zabbix_Agent_Sender.notused
 {
     public class Exemple1 : IExample
     {
         public string devname = "gyszp_pc2";
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        public ZabbixRR Dev_Process(ZabbixRR zabbixRR )
+        public ZabbixRR Dev_Process(ZabbixRR zabbixRR)
         {
-            
+
             if (zabbixRR.Request.hostName == devname)
             {
                 Zabbix_Send_Item item = zabbixRR.Request.data;
-   
-                    try
-                    {
-                        item = GettingData(item);
-                    }
-                    catch(Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {item.itemid}, key: {item.key}. Error: {e.Message}"); }
+
+                try
+                {
+                    item = GettingData(item);
+                }
+                catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {item.itemid}, key: {item.key}. Error: {e.Message}"); }
 
                 zabbixRR.Response = new Zabbix_Dev_Response();
                 zabbixRR.Response.data = item;
@@ -48,7 +48,7 @@ namespace Zabbix_Agent_Sender
                     item.value = (rnd.NextDouble() * 1000).ToString().Replace(',', '.'); break;
 
                 case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
-                    item.value = (rnd.NextDouble() + 8).ToString().Replace(',','.'); break;
+                    item.value = (rnd.NextDouble() + 8).ToString().Replace(',', '.'); break;
 
                 case "perf_counter_en[\"\\Memory\\Pool Nonpaged Bytes\"]":
                     item.value = rnd.Next(300645000, 491655168).ToString(); break;
@@ -57,10 +57,10 @@ namespace Zabbix_Agent_Sender
                     item.value = (rnd.NextDouble() * 100).ToString().Replace(',', '.'); break;
 
                 case "perf_counter_en[\"\\Processor Information(_total)\\% DPC Time\"]":
-                    item.value = (rnd.NextDouble()).ToString().Replace(',', '.'); break;
+                    item.value = rnd.NextDouble().ToString().Replace(',', '.'); break;
 
                 case "perf_counter_en[\"\\Processor Information(_total)\\% Interrupt Time\"]":
-                    item.value = (rnd.NextDouble()).ToString().Replace(',', '.'); break;
+                    item.value = rnd.NextDouble().ToString().Replace(',', '.'); break;
 
                 case "perf_counter_en[\"\\Processor Information(_total)\\% Privileged Time\"]":
                     item.value = (rnd.NextDouble() + 5).ToString().Replace(',', '.'); break;
