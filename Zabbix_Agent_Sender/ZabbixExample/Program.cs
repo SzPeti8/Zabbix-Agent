@@ -64,21 +64,15 @@ void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
     {
         Thread.Sleep(rnd.Next(1000));
 
-        List<Zabbix_Send_Item> items = zabbixRR.Request.data;
+        Zabbix_Send_Item items = zabbixRR.Request.data;
         
-
-        for (int i = 0; items.Count > i; i++)
-        {
             try
             {
                 
-               DeviceGetData.GettingData(items[i]);
+               DeviceGetData.GettingData(items);
             }
-            catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {items[i].itemid}, key: {items[i].key}. Error: {e.Message}"); }
-
-
-
-        }
+            catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {items.itemid}, key: {items.key}. Error: {e.Message}"); }
+       
         zabbixRR.Response = new Zabbix_Dev_Response();
         zabbixRR.Response.data = items;
         zabbixRR.Response.hostName = devname;

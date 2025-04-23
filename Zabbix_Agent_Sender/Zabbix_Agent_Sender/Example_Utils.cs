@@ -9,31 +9,26 @@ namespace Zabbix_Agent_Sender
 {
     public class Example_Utils
     {
-        public static Zabbix_Dev_Request CreateZabbixRRRequest(List<Zabbix_Config_Item> itemList,string hostname)
+        public static Zabbix_Dev_Request CreateZabbixRRRequest(Zabbix_Config_Item itemList,string hostname)
         {
             Zabbix_Dev_Request zabbix_Dev_Request = new Zabbix_Dev_Request();
             zabbix_Dev_Request.hostName = hostname;
-            List < Zabbix_Send_Item > devItems = new List<Zabbix_Send_Item>();
-            for (int i = 0; i < itemList.Count; i++)
-            {
-                devItems.Add (new Zabbix_Send_Item(itemList[i].key, itemList[i].itemId));
-            }
-            zabbix_Dev_Request.data = devItems;
+            zabbix_Dev_Request.data = (new Zabbix_Send_Item(itemList.key, itemList.itemId));
             return zabbix_Dev_Request;
         }
 
-        public static List<Zabbix_Send_Item> ConvertFromZabbixRRToZabbixSendItemList(ZabbixRR zabbixRR, string hostname)
+        public static Zabbix_Send_Item ConvertFromZabbixRRToZabbixSendItem(ZabbixRR zabbixRR, string hostname)
         {
-            List<Zabbix_Send_Item> SendItems =  new List<Zabbix_Send_Item>();
-            for (int i = 0;zabbixRR.Response.data.Count> i;i++ )
-            {
-                if (zabbixRR.Response.data[i].value != null)
-                {
-                    SendItems.Add(zabbixRR.Response.data[i]);
-                }
-            }
+            //List<Zabbix_Send_Item> SendItems =  new List<Zabbix_Send_Item>();
+            //for (int i = 0;zabbixRR.Response.data.Count> i;i++ )
+            //{
+            //    if (zabbixRR.Response.data[i].value != null)
+            //    {
+            //        SendItems.Add(zabbixRR.Response.data[i]);
+            //    }
+            //}
 
-            return SendItems;
+            return zabbixRR.Response.data;
         }
 
     }

@@ -16,21 +16,16 @@ namespace Zabbix_Agent_Sender
             
             if (zabbixRR.Request.hostName == devname)
             {
-                List<Zabbix_Send_Item> items = zabbixRR.Request.data;
-
-                for (int i = 0; items.Count > i; i++)
-                {
+                Zabbix_Send_Item item = zabbixRR.Request.data;
+   
                     try
                     {
-                        items[i] = GettingData(items[i]);
+                        item = GettingData(item);
                     }
-                    catch(Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {items[i].itemid}, key: {items[i].key}. Error: {e.Message}"); }
-                    
-                            
-                    
-                }
+                    catch(Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {item.itemid}, key: {item.key}. Error: {e.Message}"); }
+
                 zabbixRR.Response = new Zabbix_Dev_Response();
-                zabbixRR.Response.data = items;
+                zabbixRR.Response.data = item;
                 zabbixRR.Response.hostName = devname;
 
             }

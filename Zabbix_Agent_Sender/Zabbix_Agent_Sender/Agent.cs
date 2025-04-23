@@ -156,11 +156,23 @@ namespace Zabbix_Agent_Sender
 
 
             //Getting new Data
-            List<Zabbix_Send_Item> send_tems = null;
+            List<Zabbix_Send_Item> send_tems = new List<Zabbix_Send_Item>();
 
             try
             {
-                send_tems = GettingNewData(conf_Items, host);
+                //for ami vegig megy a conf itemsen
+
+                for (int i = 0; i < conf_Items.Count; i++)
+                {
+                    Zabbix_Send_Item s_item = GettingNewData(conf_Items[i], host);
+                    
+                    if (s_item.value != null)
+                    {
+                        send_tems.Add(s_item);
+                    }
+                    
+                }
+                //send_tems = GettingNewData(conf_Items, host);
 
             }
             catch(DevNameDoesntMatchException e)
@@ -182,7 +194,7 @@ namespace Zabbix_Agent_Sender
 
 
 
-        public List<Zabbix_Send_Item> GettingNewData(List<Zabbix_Config_Item>  conf_Items,string host)
+        public Zabbix_Send_Item GettingNewData(Zabbix_Config_Item  conf_Items,string host)
         {
             log.Debug("Generating ZabbixRR From Config items");
 
@@ -200,7 +212,7 @@ namespace Zabbix_Agent_Sender
             }
             log.Debug("Convert FromZabbixRR To ZabbixSendItem List");
 
-            List<Zabbix_Send_Item> send_tems = ConvertFromZabbixRRToZabbixSendItemList(zabbixRR, host);
+            Zabbix_Send_Item send_tems = ConvertFromZabbixRRToZabbixSendItem(zabbixRR, host);
             return send_tems;
         }
 

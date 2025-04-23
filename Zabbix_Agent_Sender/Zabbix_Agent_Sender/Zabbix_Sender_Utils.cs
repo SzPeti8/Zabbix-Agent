@@ -118,7 +118,7 @@ public class Zabbix_Active_Sender_Utils
         zabbixRR.Request.hostName = hostName;
         for (int i = 0;data.Count>i;i++)
         {
-            zabbixRR.Request.data.Add(new Zabbix_Send_Item(data[i].key, data[i].itemId));
+            zabbixRR.Request.data = (new Zabbix_Send_Item(data[i].key, data[i].itemId));
         }
 
         return zabbixRR;
