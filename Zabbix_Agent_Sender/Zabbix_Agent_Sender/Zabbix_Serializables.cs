@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.Json.Serialization;
 
 public partial class Zabbix_Serializables
@@ -64,10 +65,10 @@ public partial class Zabbix_Serializables
         public long clock { get; set; }
         public long ns { get; set; }
 
-        //TODO: megirni a settereket a többire-
+        
         public void SetValue(object newValue)
         {
-            value = newValue.ToString();
+            value = Convert.ToString(newValue, CultureInfo.InvariantCulture);
         }
         
     }

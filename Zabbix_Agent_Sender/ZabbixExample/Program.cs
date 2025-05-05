@@ -11,10 +11,7 @@ using Zabbix_Agent_Sender.Device;
 
 log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
-//TODO: kiszedni
-// A tizedes értékek javítása
-CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
-CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
+
 
 IAgent agent1 = new Agent();
 string devname = "gyszp_pc2";
@@ -97,8 +94,7 @@ void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
 
 
         case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-            //TODO: Culture info csere-
-            //TODO: egyszerűsítés-
+            
             item.SetValue(rnd.NextDouble() * 1000);break;
 
         case "perf_counter_en[\"\\Memory\\Pages/sec\"]":

@@ -26,8 +26,7 @@ namespace Zabbix_Agent_Sender.Device
 
 
                 case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-                    //TODO: Culture info csere-
-                    //TODO: egyszerűsítés-
+                    
                     item.SetValue(rnd.NextDouble() * 1000); break;
 
                 case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
