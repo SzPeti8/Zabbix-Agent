@@ -24,15 +24,40 @@ string configPayload = CreateProxyConfigPayload(devname, version,session);
 string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
 Console.WriteLine(conf_Items_String);
 
-Zabbix_Proxy_Config_Response zabbixData = JsonConvert.DeserializeObject<Zabbix_Proxy_Config_Response>(conf_Items_String);
+Zabbix_Proxy_Config_Response CONFIG_Response = JsonConvert.DeserializeObject<Zabbix_Proxy_Config_Response>(conf_Items_String);
 
-Console.WriteLine(zabbixData);
+Console.WriteLine(CONFIG_Response);
 
-List<Proxy_Data_items_Item> items = new List<Proxy_Data_items_Item>();
+List<Proxy_Data_items_Item> Conf_items = new List<Proxy_Data_items_Item>();
 
-for (int i = 0; zabbixData.data.items.data.Count > i; i++)
+List<Proxy_Data_Hosts_Item> hosts = new List<Proxy_Data_Hosts_Item>();
+List<Proxy_Data_interface_Item> intefaces = new List<Proxy_Data_interface_Item>();
+
+try
 {
-    items.Add(new Proxy_Data_items_Item(zabbixData.data.items.data[i]));
+    log.Debug("Getting the Conf_items from the ZabbixData");
+    for (int i = 0; CONFIG_Response.data.items.data.Count > i; i++)
+    {
+        Conf_items.Add(new Proxy_Data_items_Item(CONFIG_Response.data.items.data[i]));
+    }
+
+    log.Debug("Getting the Hosts from the ZabbixData");
+    for (int i = 0; i < CONFIG_Response.data.hosts.data.Count; i++)
+    {
+        hosts.Add(new Proxy_Data_Hosts_Item(CONFIG_Response.data.hosts.data[i]));
+    }
+
+    log.Debug("Getting the Interfaces from the ZabbixData");
+    for (int i = 0; i < CONFIG_Response.data.@interface.data.Count; i++)
+    {
+        intefaces.Add(new Proxy_Data_interface_Item(CONFIG_Response.data.@interface.data[i]));
+    }
+}
+catch (Exception ex)
+{
+    log.Error("There was an error processing the config response. \n"+ex);
 }
 
-Console.WriteLine(items);
+
+
+Console.WriteLine(Conf_items);

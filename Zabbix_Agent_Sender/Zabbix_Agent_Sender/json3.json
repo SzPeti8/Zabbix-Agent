@@ -4,7 +4,7 @@
     "hosts": {
       "fields": [ "hostid", "host", "status", "ipmi_authtype", "ipmi_privilege", "ipmi_username", "ipmi_password", "name", "tls_connect", "tls_accept", "tls_issuer", "tls_subject", "tls_psk_identity", "tls_psk" ],
       "data": [
-        [ 11451, "gyszp_pc3", 0, -1, 2, "", "", "gyszp_pc3", 1, 1, "", "", "", "" ],
+        [ 11451,             "gyszp_pc3", 0,      -1,              2,                "",              "",            "gyszp_pc3", 1,           1,            "",          "",             "",                "" ],
         [ 11452, "gyszp_pc4", 0, -1, 2, "", "", "gyszp_pc4", 1, 1, "", "", "", "" ]
       ]
     },

@@ -162,7 +162,7 @@ namespace Zabbix_Agent_Sender.Agent
             try
             {
                 //for ami vegig megy a conf itemsen
-
+                //TODO: Async módon taskolni őket
                 for (int i = 0; i < conf_Items.Count; i++)
                 {
                     Zabbix_Send_Item s_item = GettingNewData(conf_Items[i], host);
@@ -194,7 +194,7 @@ namespace Zabbix_Agent_Sender.Agent
         }
 
 
-
+        //TODO: new async funtion ebbol
         public Zabbix_Send_Item GettingNewData(Zabbix_Config_Item conf_Items, string host)
         {
             log.Debug("Generating ZabbixRR From Config items");
