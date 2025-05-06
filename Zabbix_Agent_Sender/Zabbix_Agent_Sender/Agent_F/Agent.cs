@@ -7,6 +7,7 @@ using log4net.Config;
 using System.Timers;
 using static Zabbix_Agent_Sender.Device.Example_Utils;
 using Zabbix_Agent_Sender.Device;
+using System.Security.Policy;
 
 
 namespace Zabbix_Agent_Sender.Agent
@@ -124,7 +125,7 @@ namespace Zabbix_Agent_Sender.Agent
                 DATAtimer = new System.Timers.Timer(20000);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
-                    //TODO: Config lekérdezése időnként, csak itt
+                    
                     Process(conf_Items);
                 };
                 DATAtimer.AutoReset = true; // újra és újra lefut
@@ -148,12 +149,9 @@ namespace Zabbix_Agent_Sender.Agent
         }
 
 
-        public void Process(List<Zabbix_Config_Item> conf_Items)
+        public async void Process(List<Zabbix_Config_Item> conf_Items)
         {
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
-
-            //XXXXXXXXXXXXXXXXXX CHANGED FOR TESTING ZABBIXEXAMPLE PROJECT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            //zabbixRR = obj.Dev_Process(zabbixRR);
 
 
             //Getting new Data
@@ -161,24 +159,64 @@ namespace Zabbix_Agent_Sender.Agent
 
             try
             {
-                //for ami vegig megy a conf itemsen
-                //TODO: Async módon taskolni őket
-                for (int i = 0; i < conf_Items.Count; i++)
+                var cts = new CancellationTokenSource();
+                CancellationToken token = cts.Token;
+
+                log.Debug("Timer INDUL#########################");
+                //await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
+
+                Task.Run(async () =>
                 {
-                    Zabbix_Send_Item s_item = GettingNewData(conf_Items[i], host);
+                    await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
+                    cts.Cancel();
+                    log.Debug("LEJART AZ IDO");
 
-                    if (s_item.value != null)
+                });
+
+                
+                //Creating tasks
+                var semaphore = new SemaphoreSlim(3); // max 10 párhuzamosan
+                var tasks = conf_Items.Select(async item =>
+                {
+                    await semaphore.WaitAsync().ConfigureAwait(false);
+                    try
                     {
-                        send_tems.Add(s_item);
+                        return await GettingNewDataAsync(item, host,token);
                     }
+                    catch (OperationCanceledException e)
+                    {
+                        return null;
+                    }
+                    finally
+                    {
+                        semaphore.Release();
+                    }
+                }).ToList();
 
+                //Getting the finished task results to a list
+                var results = tasks
+                    .Where(t => t.IsCompletedSuccessfully).Where(t => t.Result != null  )
+                    .Select(t => t.Result)
+                    .ToList();
+
+
+                log.Info($"After TimeOut {results.Count} task finished.");
+
+                //Adding the results to a list
+                for (int i = 0;i < results.Count; i++)
+                {
+                    log.Debug($"Task result: {results[i].key}. => value: {results[i].value}");
+                    if (results[i].value != null)
+                    {
+                        send_tems.Add(results[i]);
+                    }
                 }
-                //send_tems = GettingNewData(conf_Items, host);
+                
 
             }
             catch (DevNameDoesntMatchException e)
             {
-                //log.Error(e.Message);
+                
                 throw e;
             }
             if (send_tems == null)
@@ -194,8 +232,9 @@ namespace Zabbix_Agent_Sender.Agent
         }
 
 
-        //TODO: new async funtion ebbol
-        public Zabbix_Send_Item GettingNewData(Zabbix_Config_Item conf_Items, string host)
+        //TODO: new async funtion ebbol-
+        //Async Task Function to get new data from host
+        public async Task<Zabbix_Send_Item> GettingNewDataAsync(Zabbix_Config_Item conf_Items, string host,CancellationToken token)
         {
             log.Debug("Generating ZabbixRR From Config items");
 
@@ -203,9 +242,19 @@ namespace Zabbix_Agent_Sender.Agent
 
             zabbixRR.Request = CreateZabbixRRRequest(conf_Items, host);
 
+            zabbixRR.CancellationToken = token;
 
             log.Debug("Dev_Process Invoke");
-            RequestReceived?.Invoke(this, zabbixRR);
+            try
+            {
+                RequestReceived?.Invoke(this, zabbixRR);
+            }
+            catch (OperationCanceledException) 
+            {
+                log.Warn("Task Canccelled");
+                throw new OperationCanceledException();
+            }
+            
             if (zabbixRR.Response == null)
             {
                 log.Error($"Response is null, Example did not send data back hostname you tried to get: {host}");
@@ -213,10 +262,11 @@ namespace Zabbix_Agent_Sender.Agent
             }
             log.Debug("Convert FromZabbixRR To ZabbixSendItem List");
 
-            Zabbix_Send_Item send_tems = ConvertFromZabbixRRToZabbixSendItem(zabbixRR, host);
-            return send_tems;
+            Zabbix_Send_Item send_tem = ConvertFromZabbixRRToZabbixSendItem(zabbixRR, host);
+            return send_tem;
         }
 
+        //Function for sending data to server
         public void SendingData(List<Zabbix_Send_Item> send_tems, string host, string session, string version, string zabbixServer, int zabbixPort, int id)
         {
             log.Debug("Prepare SendItems");

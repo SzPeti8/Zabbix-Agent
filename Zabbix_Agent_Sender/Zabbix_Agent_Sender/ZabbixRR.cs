@@ -9,5 +9,6 @@ namespace Zabbix_Agent_Sender
 
         //lehet átkell irni send itemre
         public Zabbix_Dev_Response Response { get; set; }
+        public CancellationToken CancellationToken { get; set; }
     }
 }
