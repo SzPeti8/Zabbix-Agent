@@ -30,7 +30,7 @@ AgentConfig config = new AgentConfig
     );
 
 agent1.Init(config);
-agent1.RequestReceived += Agent_RequestReceived;
+agent1.RequestReceived += Agent_RequestReceivedAsync;
 
 try
 {
@@ -56,15 +56,15 @@ manualResetEvent.WaitOne();
 agent1.Stop();
 
 
-void Agent_RequestReceived(object? sender, ZabbixRR zabbixRR)
+async Task Agent_RequestReceivedAsync(object? sender, ZabbixRR zabbixRR)
 {
     
 
     if (zabbixRR.Request.hostName == devname)
     {
-        //await Task.Delay(rnd.Next(2000),zabbixRR.CancellationToken);
+        await Task.Delay(rnd.Next(5000),zabbixRR.CancellationToken);
         zabbixRR.CancellationToken.ThrowIfCancellationRequested();
-        Thread.Sleep(rnd.Next(2000));
+        //Thread.Sleep(rnd.Next(2000));
 
         Zabbix_Send_Item item = zabbixRR.Request.data;
         

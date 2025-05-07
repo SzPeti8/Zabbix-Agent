@@ -8,6 +8,7 @@ using System.Timers;
 using static Zabbix_Agent_Sender.Device.Example_Utils;
 using Zabbix_Agent_Sender.Device;
 using System.Security.Policy;
+using Zabbix_Agent_Sender.Agent_F;
 
 
 namespace Zabbix_Agent_Sender.Agent
@@ -162,20 +163,14 @@ namespace Zabbix_Agent_Sender.Agent
                 var cts = new CancellationTokenSource();
                 CancellationToken token = cts.Token;
 
-                log.Debug("Timer INDUL#########################");
+                
                 //await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
 
-                Task.Run(async () =>
-                {
-                    await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
-                    cts.Cancel();
-                    log.Debug("LEJART AZ IDO");
-
-                });
+                
 
                 
                 //Creating tasks
-                var semaphore = new SemaphoreSlim(3); // max 10 párhuzamosan
+                var semaphore = new SemaphoreSlim(10); // max 10 párhuzamosan
                 var tasks = conf_Items.Select(async item =>
                 {
                     await semaphore.WaitAsync().ConfigureAwait(false);
@@ -192,6 +187,15 @@ namespace Zabbix_Agent_Sender.Agent
                         semaphore.Release();
                     }
                 }).ToList();
+
+                log.Debug("Timer INDUL#########################");
+                await Task.Run(async () =>
+                {
+                    await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
+                    cts.Cancel();
+                    log.Debug("LEJART AZ IDO");
+
+                });
 
                 //Getting the finished task results to a list
                 var results = tasks
@@ -247,7 +251,7 @@ namespace Zabbix_Agent_Sender.Agent
             log.Debug("Dev_Process Invoke");
             try
             {
-                RequestReceived?.Invoke(this, zabbixRR);
+               await RequestReceived?.Invoke(this, zabbixRR);
             }
             catch (OperationCanceledException) 
             {
@@ -334,7 +338,7 @@ namespace Zabbix_Agent_Sender.Agent
             log.Info("AGENT SHUT DOWN Name: " + GetType().Name);
         }
 
-        public event EventHandler<ZabbixRR> RequestReceived;
+        public event AsyncRequestHandler? RequestReceived;
 
         bool IsConfigDone()
         {
