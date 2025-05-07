@@ -6,10 +6,14 @@ using Newtonsoft.Json;
 using static Zabbix_Serializables;
 using Zabbix_Agent_Sender.Proxy;
 using log4net;
+using System;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 log4net.ILog logProxy = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
+
+
+ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
 IAgent Proxy = new Agent();
 string devname = "gyszp_proxy";
@@ -18,6 +22,8 @@ string zabbixServer = "zabbix2.beks.hu"; // Zabbix Server címe
 int zabbixPort = 10051;
 Random rnd = new Random();
 string session = GenerateSessionID();
+
+System.Timers.Timer DATAtimer;
 
 logProxy.Debug("Creating Config Payload");
 string configPayload = CreateProxyConfigPayload(devname, version,session);
@@ -59,6 +65,8 @@ catch (Exception ex)
 {
     logProxy.Error("There was an error processing the config response. \n"+ex);
 }
+
+
 Zabbix_Proxy_Data_Request data_Request = new Zabbix_Proxy_Data_Request();
 
 data_Request = await Proxy_Getting_Data.gettingDataFromHosts(Conf_items, hosts, intefaces);
@@ -77,3 +85,33 @@ string data_Payload = SerializeProxySendRequest(data_Request);
 string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
 
 logProxy.Debug(server_response_to_data_request);
+
+DATAtimer = new System.Timers.Timer(20000);
+DATAtimer.Elapsed += async (sender, e) =>
+{
+
+    Zabbix_Proxy_Data_Request data_Request = new Zabbix_Proxy_Data_Request();
+
+    data_Request = await Proxy_Getting_Data.gettingDataFromHosts(Conf_items, hosts, intefaces);
+
+
+
+    data_Request.request = "proxy data";
+    data_Request.host = devname;
+    data_Request.session = session;
+    data_Request.version = version;
+    data_Request.clock = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+    data_Request.ns = 0;
+
+    string data_Payload = SerializeProxySendRequest(data_Request);
+
+    string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
+
+    logProxy.Debug(server_response_to_data_request);
+};
+DATAtimer.AutoReset = true; // újra és újra lefut
+DATAtimer.Enabled = true;
+
+Console.CancelKeyPress += (sender, e) => { e.Cancel = true; manualResetEvent.Set();logProxy.Info($"PROXY SHOT DOWN Name: {devname}"); };
+
+manualResetEvent.WaitOne();

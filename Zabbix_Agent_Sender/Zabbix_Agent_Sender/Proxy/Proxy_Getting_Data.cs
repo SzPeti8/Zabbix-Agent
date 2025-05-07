@@ -34,6 +34,12 @@ namespace Zabbix_Agent_Sender.Proxy
                     active_status = 1
                 });
             }
+
+            for (int i = 0; i < Conf_items.Count; i++)
+            {
+
+            }
+
             data_Request.historyData = Proxy_Data_Generator.GenerateData(Conf_items);
             
 
