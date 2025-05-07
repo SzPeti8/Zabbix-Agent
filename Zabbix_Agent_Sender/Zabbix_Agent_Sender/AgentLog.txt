@@ -13917,3 +13917,116 @@ Ellenőrzések száma: 30
 2025-04-17 08:40:43,210 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
 2025-04-17 08:44:15,945 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
 2025-04-17 08:44:46,407 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 20:47:06,112 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 20:47:06,458 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 20:59:11,792 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-07 20:59:11,981 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 20:59:11,285 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-07 20:59:11,297 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-07 20:59:11,350 [1] INFO Zabbix_Active_Sender -  JSON válasz: 
+2025-05-07 20:59:24,528 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 20:59:24,817 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 21:00:15,870 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-07 21:00:15,008 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:00:15,227 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-07 21:00:15,229 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-07 21:00:15,287 [1] INFO Zabbix_Active_Sender -  JSON válasz: 
+2025-05-07 21:00:15,310 [7] INFO Zabbix_Agent_Sender.Agent.Agent - After TimeOut 17 task finished.
+2025-05-07 21:00:15,377 [9] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,386 [13] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,409 [10] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,409 [5] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,409 [12] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,487 [15] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,487 [14] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,570 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:00:15,605 [5] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,605 [10] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,607 [13] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,646 [15] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,687 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-07 21:00:15,687 [9] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,700 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-07 21:00:15,736 [16] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:00:15,746 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:00:15,819 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000025"}
+2025-05-07 21:00:15,820 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000025"}
+2025-05-07 21:00:15,821 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:00:15,881 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000026"}
+2025-05-07 21:00:15,881 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000026"}
+2025-05-07 21:00:15,882 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:00:15,935 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000026"}
+2025-05-07 21:00:15,936 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000026"}
+2025-05-07 21:00:15,937 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:00:15,992 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000024"}
+2025-05-07 21:00:15,992 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000024"}
+2025-05-07 21:00:15,993 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:00:15,050 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 1; failed: 0; total: 1; seconds spent: 0.000010"}
+2025-05-07 21:00:15,050 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 1; failed: 0; total: 1; seconds spent: 0.000010"}
+2025-05-07 21:00:15,929 [1] INFO Zabbix_Agent_Sender.Agent.Agent - AGENT SHUT DOWN Name: Agent
+2025-05-07 21:00:40,630 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:00:40,226 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 21:05:08,698 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-07 21:05:08,829 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:05:08,053 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-07 21:05:08,059 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-07 21:05:08,111 [1] INFO Zabbix_Active_Sender -  JSON válasz: 
+2025-05-07 21:05:08,190 [7] INFO Zabbix_Agent_Sender.Agent.Agent - After TimeOut 19 task finished.
+2025-05-07 21:05:08,220 [12] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,223 [5] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,223 [9] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,223 [10] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,240 [13] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,326 [14] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,441 [15] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,446 [12] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,454 [9] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,458 [13] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,462 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,496 [16] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-07 21:05:08,590 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000023"}
+2025-05-07 21:05:08,590 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000023"}
+2025-05-07 21:05:08,591 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,650 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-07 21:05:08,650 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-07 21:05:08,650 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,705 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000025"}
+2025-05-07 21:05:08,705 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000025"}
+2025-05-07 21:05:08,706 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,761 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000014"}
+2025-05-07 21:05:08,762 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000014"}
+2025-05-07 21:05:08,763 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,821 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-07 21:05:08,821 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-07 21:05:08,822 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,874 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000013"}
+2025-05-07 21:05:08,875 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000013"}
+2025-05-07 21:05:08,875 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-07 21:05:08,934 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 1; failed: 0; total: 1; seconds spent: 0.000009"}
+2025-05-07 21:05:08,934 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 1; failed: 0; total: 1; seconds spent: 0.000009"}
+2025-05-07 21:05:08,026 [1] INFO Zabbix_Agent_Sender.Agent.Agent - AGENT SHUT DOWN Name: Agent
+2025-05-07 21:05:23,462 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:05:23,798 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 21:06:11,835 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:06:11,204 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 21:06:11,204 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: service.discovery
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: zabbix[host,active_agent,available]
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: service.discovery
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: zabbix[host,active_agent,available]
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: net.if.discovery
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: vfs.fs.dependent.discovery
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: system.swap.pfree
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: net.if.discovery
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: vfs.fs.dependent.discovery
+2025-05-07 21:06:11,205 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: system.swap.pfree
+2025-05-07 21:06:11,300 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}

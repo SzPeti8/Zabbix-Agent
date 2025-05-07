@@ -5,9 +5,10 @@ using Zabbix_Agent_Sender.Agent;
 using Newtonsoft.Json;
 using static Zabbix_Serializables;
 using Zabbix_Agent_Sender.Proxy;
+using log4net;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
-log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+log4net.ILog logProxy = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
 IAgent Proxy = new Agent();
@@ -18,12 +19,12 @@ int zabbixPort = 10051;
 Random rnd = new Random();
 string session = GenerateSessionID();
 
-log.Debug("Creating Config Payload");
+logProxy.Debug("Creating Config Payload");
 string configPayload = CreateProxyConfigPayload(devname, version,session);
 
 //converting response to stringnél hibát dob, mert a kezdő buffer nem elég nagy
 string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
-Console.WriteLine(conf_Items_String);
+logProxy.Debug("Config request response: \n"+conf_Items_String);
 
 Zabbix_Proxy_Config_Response CONFIG_Response = JsonConvert.DeserializeObject<Zabbix_Proxy_Config_Response>(conf_Items_String);
 
@@ -36,19 +37,19 @@ List<Proxy_Data_interface_Item> intefaces = new List<Proxy_Data_interface_Item>(
 
 try
 {
-    log.Debug("Getting the Conf_items from the ZabbixData");
+    logProxy.Debug("Getting the Conf_items from the ZabbixData");
     for (int i = 0; CONFIG_Response.data.items.data.Count > i; i++)
     {
         Conf_items.Add(new Proxy_Data_items_Item(CONFIG_Response.data.items.data[i]));
     }
 
-    log.Debug("Getting the Hosts from the ZabbixData");
+    logProxy.Debug("Getting the Hosts from the ZabbixData");
     for (int i = 0; i < CONFIG_Response.data.hosts.data.Count; i++)
     {
         hosts.Add(new Proxy_Data_Hosts_Item(CONFIG_Response.data.hosts.data[i]));
     }
 
-    log.Debug("Getting the Interfaces from the ZabbixData");
+    logProxy.Debug("Getting the Interfaces from the ZabbixData");
     for (int i = 0; i < CONFIG_Response.data.@interface.data.Count; i++)
     {
         intefaces.Add(new Proxy_Data_interface_Item(CONFIG_Response.data.@interface.data[i]));
@@ -56,7 +57,7 @@ try
 }
 catch (Exception ex)
 {
-    log.Error("There was an error processing the config response. \n"+ex);
+    logProxy.Error("There was an error processing the config response. \n"+ex);
 }
 Zabbix_Proxy_Data_Request data_Request = new Zabbix_Proxy_Data_Request();
 
@@ -75,4 +76,4 @@ string data_Payload = SerializeProxySendRequest(data_Request);
 
 string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
 
-Console.WriteLine(server_response_to_data_request);
+logProxy.Debug(server_response_to_data_request);

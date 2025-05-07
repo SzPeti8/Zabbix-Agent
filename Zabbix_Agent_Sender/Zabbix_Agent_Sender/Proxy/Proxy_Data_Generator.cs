@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net.Config;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,10 +9,17 @@ using static Zabbix_Serializables;
 
 namespace Zabbix_Agent_Sender.Proxy
 {
+
     public class Proxy_Data_Generator
     {
+        
+        
+
         public static List<historyData> GenerateData(List<Proxy_Data_items_Item> items) 
         {
+            log4net.ILog logProxy = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            XmlConfigurator.Configure(new FileInfo("log4net.config"));
+
             List<historyData> historyDatas = new List<historyData>();
             Random rnd = new Random();
             for (int i = 0;i<items.Count;i++)
@@ -115,7 +123,7 @@ namespace Zabbix_Agent_Sender.Proxy
                                historyDatas.Add(new historyData(0, items[i].itemid)); break;
 
                             default:
-                                Console.WriteLine($"Unknown key: {items[i].key_}");
+                                logProxy.Warn($"Unknown key: {items[i].key_}");
                                 break;
                         }
                         break;
@@ -216,12 +224,12 @@ namespace Zabbix_Agent_Sender.Proxy
                                historyDatas.Add(new historyData(0, items[i].itemid)); break;
 
                             default:
-                                Console.WriteLine($"Unknown key: {items[i].key_}");
+                                logProxy.Warn($"Unknown key: {items[i].key_}");
                                 break;
                         }
                         break ;
                     default:
-                        Console.WriteLine($"Unknown key: {items[i].hostid}");
+                        logProxy.Warn($"Unknown hostid: {items[i].hostid}");
                         break;
 
                 }
