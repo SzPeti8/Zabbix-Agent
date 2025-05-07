@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 using Zabbix_Agent_Sender;
+using Zabbix_Agent_Sender.Proxy;
 
 
 public class Zabbix_Active_Sender_Utils
@@ -139,6 +140,15 @@ public class Zabbix_Active_Sender_Utils
         log.Debug($"Created Zabbix_Send_Request: {SerializeSendRequest(request)}");
         return SerializeSendRequest(request);
     }
+
+    public static string SerializeProxySendRequest(Zabbix_Proxy_Data_Request request)
+    {
+        log.Debug("Serialize request");
+        return JsonSerializer.Serialize(request);
+    }
+
+    //public static string CreateProxyDataRequestPayload()
+
     #endregion
 
 }

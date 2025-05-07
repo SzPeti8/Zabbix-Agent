@@ -108,11 +108,11 @@ public partial class Zabbix_Serializables
     public class Zabbix_Proxy_Config_Response
     {
         public int full_sync { get; set; }
-        public Zabbix_Proxy_Data data { get; set; }
+        public Zabbix_Proxy_Config_Data data { get; set; }
         public int config_revision { get; set; }
     }
 
-    public class Zabbix_Proxy_Data
+    public class Zabbix_Proxy_Config_Data
     {
         public Proxy_Data_Hosts hosts { get; set;}
         [JsonPropertyName("interface")]
@@ -142,6 +142,36 @@ public partial class Zabbix_Serializables
 
     }
 
+    public class Zabbix_Proxy_Data_Request
+    {
+        public string request { get; set; }
+        public string host {  get; set; }
+        public string session {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("interface availability")]
+        public List<interfaceAvailability>? interfaceAvailability { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("history data")]
+        public List<historyData>? historyData { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("discovery data")]
+        public List<discoveryData>? discoveryData { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<autoRegistration>? autoRegistration { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("host data")]
+        public List<hostData>? hostDatas { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<tasks>? tasks { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public long? more {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public long? clock { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public long? ns { get; set; }
+        public string version { get; set; }
+
+    }
 
     #endregion
 

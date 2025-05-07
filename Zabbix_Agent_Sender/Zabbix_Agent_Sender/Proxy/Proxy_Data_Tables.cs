@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 public partial class Zabbix_Serializables
 {
+    #region config
     public class Proxy_Data_Item
     {
 
@@ -241,6 +243,104 @@ public partial class Zabbix_Serializables
         public Proxy_Data_Hosts_Item() { }
 
     }
+    #endregion
 
+
+    #region dataRequest
+
+    public class interfaceAvailability
+    {
+        public long interfaceid { get; set; }
+        public long available {  get; set; }
+        public string error {  get; set; }
+    }
+
+    public class historyData
+    {
+        
+        public int id { get; set; }
+        public long itemid { get; set; }
+        public long clock { get; set; }
+        public long ns { get; set; }
+        public string value { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public long? timestamp { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? source { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public int? severity { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public int? eventid { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public int? state { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public long? lastlogsize { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public int? mtime { get; set; }
+
+
+        public  historyData(object value, long itemid)
+        {
+            this.value = Convert.ToString(value, CultureInfo.InvariantCulture);
+            this.itemid = itemid;
+            this.clock = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            this.ns = 0;
+        }
+
+        public void SetValue(object newValue)
+        {
+            value = Convert.ToString(newValue, CultureInfo.InvariantCulture);
+        }
+    }
+
+    public class discoveryData
+    {
+        public long clock { get; set; }
+        public long druleid {  get; set; }
+        public long dcheckid {  get; set; }
+        public long type {  get; set; }
+        public string ip { get; set; }
+        public string dns { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? port { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? key_ {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? value {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public long? status { get; set; }
+
+    }
+
+    public class autoRegistration
+    {
+        public long clock { get; set; }
+        public string host { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? ip {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? dns {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? port {  get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? host_metadata {  get; set; }
+    }
+
+    public class hostData
+    {
+        public long hostid { get; set; }
+        public long active_status { get; set; }
+    }
+
+    public class tasks
+    {
+        public long type { get; set; }
+        public long status {  get; set; }
+        public string? error {  get; set; }
+        public long parent_taskid {  get; set; }
+    }
+
+
+    #endregion
 }
 
