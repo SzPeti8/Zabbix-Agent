@@ -14138,3 +14138,465 @@ Ellenőrzések száma: 30
 2025-05-07 21:28:16,500 [1] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator - Unknown key: system.swap.pfree
 2025-05-07 21:28:16,606 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
 2025-05-07 21:28:16,052 [12] INFO Program+<<Main>$>d__0 - PROXY SHOT DOWN Name: gyszp_proxy
+2025-05-07 21:40:59,461 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:42:30,810 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:43:54,912 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:45:26,776 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:45:26,328 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:45:26,350 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:45:26,355 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:45:26,370 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,779 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:49:42,159 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,172 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,178 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,181 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,184 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,187 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,190 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,193 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,196 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,200 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,208 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,169 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,177 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,181 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,231 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,173 [13] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,181 [13] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,189 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,222 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,226 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,227 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 21:49:42,237 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,178 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,186 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,193 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,249 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,184 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,193 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,194 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: zabbix[host,active_agent,available]
+2025-05-07 21:49:42,197 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,233 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,239 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,241 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,246 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,248 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,256 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,194 [13] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,206 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,255 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,286 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,196 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,202 [7] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 21:49:42,203 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,209 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,251 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,256 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,260 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,279 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,296 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,310 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,202 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,210 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,262 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: zabbix[host,active_agent,available]
+2025-05-07 21:49:42,283 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: net.if.discovery
+2025-05-07 21:49:42,298 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: vfs.fs.dependent.discovery
+2025-05-07 21:49:42,305 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: system.swap.pfree
+2025-05-07 21:49:42,308 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: net.if.discovery
+2025-05-07 21:49:42,319 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,204 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: vfs.fs.dependent.discovery
+2025-05-07 21:49:42,213 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: system.swap.pfree
+2025-05-07 21:49:42,323 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,327 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,332 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,345 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,352 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,360 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,363 [10] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,367 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,374 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:49:42,375 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 21:52:21,430 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:52:21,789 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,798 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,800 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,802 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,804 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,806 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,808 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,811 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,813 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,816 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,823 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 0 task finished.
+2025-05-07 21:52:21,895 [1] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 21:52:21,796 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,799 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,852 [14] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,800 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,803 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,839 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,852 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,855 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:52:21,195 [16] INFO Program+<<Main>$>d__0 - PROXY SHOT DOWN Name: gyszp_proxy
+2025-05-07 21:55:44,868 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 21:55:44,307 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,319 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,322 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,324 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,327 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,330 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,333 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,336 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,338 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,341 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,475 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,332 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,398 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,422 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,456 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,466 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,481 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,305 [10] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,411 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,928 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,450 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,457 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,464 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,470 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,479 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,486 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,501 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,508 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,513 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,520 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,464 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,471 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,477 [10] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,487 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,493 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,555 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,465 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,468 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,477 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,480 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,491 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,497 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,533 [9] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 21:55:44,546 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,551 [7] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 21:55:44,567 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,548 [10] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 21:55:44,857 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,365 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,508 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,067 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 21:55:44,035 [3] INFO Program+<<Main>$>d__0 - PROXY SHOT DOWN Name: gyszp_proxy
+2025-05-07 22:14:41,736 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 22:14:41,333 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,344 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,348 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,351 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,353 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,356 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,359 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,362 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,365 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,368 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,429 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,379 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,407 [13] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,418 [13] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,480 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,051 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,459 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,594 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,905 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,099 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,106 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,111 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,118 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,125 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,132 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,137 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,144 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,161 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,168 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,108 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,213 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,113 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,134 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,153 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,169 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,188 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,191 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,196 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,229 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,186 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:14:41,278 [18] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:14:41,292 [18] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:14:41,220 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,314 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,619 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,086 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,089 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,092 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,096 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,098 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,100 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,102 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,103 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,105 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,108 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,099 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,134 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,101 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,112 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,129 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,130 [16] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 22:14:41,132 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,133 [19] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 22:14:41,136 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,140 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,117 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:14:41,263 [16] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:14:41,284 [16] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:14:41,025 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,142 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,485 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,505 [14] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,103 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,109 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,116 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,122 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,129 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,135 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,142 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,146 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,150 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,158 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,107 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,113 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,120 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,126 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,135 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,147 [12] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,152 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,158 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,173 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,115 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,122 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,128 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,132 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,141 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,152 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,160 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,160 [12] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 22:14:41,166 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,200 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,165 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:14:41,253 [20] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:14:41,253 [20] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:14:41,389 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,675 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,482 [14] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:14:41,204 [13] INFO Program+<<Main>$>d__0 - PROXY SHOT DOWN Name: gyszp_proxy
+2025-05-07 22:18:35,049 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-07 22:18:35,524 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,538 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,541 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,544 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,547 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,550 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,553 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,557 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,560 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,564 [1] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,537 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,545 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,652 [10] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,667 [13] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,687 [14] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,545 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,549 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,568 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,667 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,668 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 22:18:35,678 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,689 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,700 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,799 [7] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:18:35,815 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,830 [16] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,840 [14] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,840 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,851 [9] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,860 [13] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,860 [10] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,860 [15] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,175 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,204 [16] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,495 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,497 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,500 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,502 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,504 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,505 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,508 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,512 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,515 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,518 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,498 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,501 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,503 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,532 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,534 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,502 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,505 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,510 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,519 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,521 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,545 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,558 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:18:35,669 [18] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,676 [11] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,677 [17] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,676 [19] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,677 [11] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,686 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,130 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,149 [19] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,171 [20] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,495 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,497 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,502 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,507 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,509 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,511 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,513 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,516 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,518 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,520 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,503 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,548 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,508 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,510 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,511 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,524 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 22:18:35,532 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,535 [20] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 22:18:35,537 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,539 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,547 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,553 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,528 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:18:35,678 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,687 [18] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,693 [5] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,755 [20] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,935 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,103 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,883 [17] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,908 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,968 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,044 [16] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,507 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,513 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,525 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,531 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,535 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,539 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,542 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,545 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,548 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,555 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,515 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,531 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,542 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,572 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,519 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,533 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,536 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,540 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,544 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,552 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,554 [15] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 22:18:35,556 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,562 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,570 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 22:18:35,577 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,561 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:18:35,663 [15] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,664 [18] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,675 [15] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,702 [19] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,712 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,290 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,936 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,961 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,976 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,013 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,083 [16] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,088 [20] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,113 [16] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,509 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,521 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,539 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,546 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,567 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,573 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,580 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,592 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,602 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,610 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,559 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,572 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,579 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,587 [20] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,602 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,613 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,621 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,563 [19] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,580 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,583 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,589 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 22:18:35,591 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,607 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,616 [15] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: service.discovery
+2025-05-07 22:18:35,618 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,625 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,670 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - After TimeOut 18 task finished.
+2025-05-07 22:18:35,763 [15] INFO Zabbix_Active_Sender -  JSON válasz: {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,779 [15] INFO Program+<<Main>$>d__0 - {"upload":"enabled","response":"success"}
+2025-05-07 22:18:35,799 [11] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,026 [5] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,331 [18] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,207 [9] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,221 [10] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,248 [9] WARN Zabbix_Agent_Sender.Proxy.Proxy_Getting_Data+<gettingDataFromHosts>d__0 - Task Cancceled
+2025-05-07 22:18:35,509 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,516 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,523 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,527 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,531 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,535 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,538 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,542 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,544 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,548 [5] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,517 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,520 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,530 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,537 [14] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,548 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,557 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,520 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,524 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,537 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,539 [15] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,541 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,547 [17] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,547 [17] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: perf_instance_en.discovery[PhysicalDisk]
+2025-05-07 22:18:35,554 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,567 [11] INFO Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - task started
+2025-05-07 22:18:35,873 [21] INFO Program+<<Main>$>d__0 - PROXY SHOT DOWN Name: gyszp_proxy

@@ -84,7 +84,7 @@ string data_Payload = SerializeProxySendRequest(data_Request);
 
 string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
 
-logProxy.Debug(server_response_to_data_request);
+logProxy.Info(server_response_to_data_request);
 
 DATAtimer = new System.Timers.Timer(20000);
 DATAtimer.Elapsed += async (sender, e) =>
@@ -105,9 +105,10 @@ DATAtimer.Elapsed += async (sender, e) =>
 
     string data_Payload = SerializeProxySendRequest(data_Request);
 
+    
     string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
-
-    logProxy.Debug(server_response_to_data_request);
+    
+    logProxy.Info(server_response_to_data_request);
 };
 DATAtimer.AutoReset = true; // újra és újra lefut
 DATAtimer.Enabled = true;
