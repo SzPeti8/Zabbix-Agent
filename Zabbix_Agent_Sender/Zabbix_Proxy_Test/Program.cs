@@ -7,20 +7,28 @@ using static Zabbix_Serializables;
 using Zabbix_Agent_Sender.Proxy;
 using log4net;
 using System;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
+
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 log4net.ILog logProxy = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .Build();
+
 
 ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-IAgent Proxy = new Agent();
-string devname = "gyszp_proxy";
-string version = "6.4";
-string zabbixServer = "zabbix2.beks.hu"; // Zabbix Server címe
-int zabbixPort = 10051;
-Random rnd = new Random();
+
+string devname = configuration["ConnectionSettings:HostName"];
+string version = configuration["ConnectionSettings:ProtocolVersion"];
+string zabbixServer = configuration["ConnectionSettings:ServerAddress"]; 
+int zabbixPort = int.Parse( configuration["ConnectionSettings:ServerPort"]);
+int data_sending_interval_inMiliSeconds = int.Parse(configuration["AgentSettings:DataSendInterval_InMilisecs"]);
 string session = GenerateSessionID();
 
 System.Timers.Timer DATAtimer;
@@ -86,7 +94,7 @@ string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zab
 
 logProxy.Info(server_response_to_data_request);
 //TODO: csak engedélyezett statusu hostok feldolgozása
-DATAtimer = new System.Timers.Timer(20000);
+DATAtimer = new System.Timers.Timer(data_sending_interval_inMiliSeconds);
 DATAtimer.Elapsed += async (sender, e) =>
 {
 
