@@ -70,7 +70,7 @@ namespace Zabbix_Agent_Sender.Proxy
             logProxy.Debug("Timer INDUL#########################");
             await Task.Run(async () =>
             {
-                await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
+                await Task.Delay(TimeSpan.FromSeconds(10)).ConfigureAwait(false);
                 cts.Cancel();
                 logProxy.Debug("LEJART AZ IDO");
 
@@ -80,6 +80,16 @@ namespace Zabbix_Agent_Sender.Proxy
                     .Where(t => t.IsCompletedSuccessfully).Where(t => t.Result != null)
                     .Select(t => t.Result)
                     .ToList();
+
+
+            for (int i = 0; i < results.Count; i++)
+            {
+                if (results[i].value != null)
+                {
+                    data_Request.historyData.Add(results[i]);
+                }
+                
+            }
 
 
             logProxy.Info($"After TimeOut {results.Count} task finished.");

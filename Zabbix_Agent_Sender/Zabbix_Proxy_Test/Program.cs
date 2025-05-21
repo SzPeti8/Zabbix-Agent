@@ -28,7 +28,7 @@ System.Timers.Timer DATAtimer;
 logProxy.Debug("Creating Config Payload");
 string configPayload = CreateProxyConfigPayload(devname, version,session);
 
-//converting response to stringnél hibát dob, mert a kezdő buffer nem elég nagy
+//TODO: converting response to stringnél hibát dob, mert a kezdő buffer nem elég nagy
 string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
 logProxy.Debug("Config request response: \n"+conf_Items_String);
 
@@ -85,7 +85,7 @@ string data_Payload = SerializeProxySendRequest(data_Request);
 string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
 
 logProxy.Info(server_response_to_data_request);
-
+//TODO: csak engedélyezett statusu hostok feldolgozása
 DATAtimer = new System.Timers.Timer(20000);
 DATAtimer.Elapsed += async (sender, e) =>
 {
@@ -110,7 +110,7 @@ DATAtimer.Elapsed += async (sender, e) =>
     
     logProxy.Info(server_response_to_data_request);
 };
-DATAtimer.AutoReset = true; // újra és újra lefut
+DATAtimer.AutoReset = true; 
 DATAtimer.Enabled = true;
 
 Console.CancelKeyPress += (sender, e) => { e.Cancel = true; manualResetEvent.Set();logProxy.Info($"PROXY SHOT DOWN Name: {devname}"); };

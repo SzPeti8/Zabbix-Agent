@@ -27,7 +27,10 @@ public class Zabbix_Active_Sender
                 log.Debug($"Küldés Zabbixnak: {jsonPayload}");
                 //Console.WriteLine($"Küldés Zabbixnak: {jsonPayload}");
                 stream.Write(packet, 0, packet.Length);
-                byte[] responseBuffer = new byte[30000]; // 8 KB buffer
+                //TODO: A puffer méret változás kezelése dinamikusan
+                //TODO: A buffer levetele 1000 byte-ra
+                //TODO: összes behuzalozott Timeout adatokat kivenni config file-ba
+                byte[] responseBuffer = new byte[50000]; // 8 KB buffer
                 int totalBytesRead = 0;
                 int bytesRead;
 

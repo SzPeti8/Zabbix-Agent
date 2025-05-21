@@ -107,7 +107,7 @@ namespace Zabbix_Agent_Sender.Agent
 
 
             };
-            configTimer.AutoReset = true; // újra és újra lefut
+            configTimer.AutoReset = true; 
             configTimer.Enabled = true;
 
             //Sending heartbeat
@@ -117,7 +117,7 @@ namespace Zabbix_Agent_Sender.Agent
             {
                 SendingHeartbeat();
             };
-            HBtimer.AutoReset = true; // újra és újra lefut
+            HBtimer.AutoReset = true; 
             HBtimer.Enabled = true;
 
             try
@@ -129,7 +129,7 @@ namespace Zabbix_Agent_Sender.Agent
                     
                     Process(conf_Items);
                 };
-                DATAtimer.AutoReset = true; // újra és újra lefut
+                DATAtimer.AutoReset = true;
                 DATAtimer.Enabled = true;
 
             }
@@ -140,9 +140,9 @@ namespace Zabbix_Agent_Sender.Agent
                 {
 
                 };
-                DATAtimer.AutoReset = true; // újra és újra lefut
+                DATAtimer.AutoReset = true; 
                 DATAtimer.Enabled = true;
-                //log.Error(e.Message);
+                
                 throw e;
 
             }
@@ -162,13 +162,7 @@ namespace Zabbix_Agent_Sender.Agent
             {
                 var cts = new CancellationTokenSource();
                 CancellationToken token = cts.Token;
-
-                
-                //await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
-
-                
-
-                
+ 
                 //Creating tasks
                 var semaphore = new SemaphoreSlim(10); // max 10 párhuzamosan
                 var tasks = conf_Items.Select(async item =>

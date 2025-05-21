@@ -19,6 +19,7 @@ Random rnd = new Random();
 
 ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
+//TODO: Iconfiguration használata a confighoz
 log.Debug("Creating AgentConfig");
 AgentConfig config = new AgentConfig
     (
@@ -42,11 +43,7 @@ catch (DevNameDoesntMatchException e)
     log.Error(e.Message +"\n" + $"Example Devname: {devname}");
     manualResetEvent.Set();
 }
-//log.Debug("Creating Config Payload");
-//string configPayload = CreateConfigPayload(host, version);
 
-//string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
-//Console.WriteLine(conf_Items_String);
 
 
 Console.CancelKeyPress += (sender, e) => { e.Cancel = true; manualResetEvent.Set(); };
@@ -64,7 +61,7 @@ async Task Agent_RequestReceivedAsync(object? sender, ZabbixRR zabbixRR)
     {
         await Task.Delay(rnd.Next(5000),zabbixRR.CancellationToken);
         zabbixRR.CancellationToken.ThrowIfCancellationRequested();
-        //Thread.Sleep(rnd.Next(2000));
+        
 
         Zabbix_Send_Item item = zabbixRR.Request.data;
         
