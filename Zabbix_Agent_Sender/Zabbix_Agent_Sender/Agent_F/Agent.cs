@@ -23,7 +23,9 @@ namespace Zabbix_Agent_Sender.Agent
         int zabbixPort = 0;
         string host = null;
         string version = null;
-        int heartbeat_freq = 0;
+        int heartbeat_freq_inMiliSecs = 20000;
+        int data_sending_interval_inMiliSecs = 30000;
+        int config_data_interval_inMiliSecs = 10000;
 
         string session = null;
         string heartbeatPayload = null;
@@ -45,12 +47,14 @@ namespace Zabbix_Agent_Sender.Agent
             zabbixPort = config.zabbixPort;
             host = config.host;
             version = config.version;
-            heartbeat_freq = config.heartbeat_freq;
+            heartbeat_freq_inMiliSecs = config.heartbeat_freq_InMiliSecs;
+            data_sending_interval_inMiliSecs = config.data_sending_freq_InMiliSecs;
+            config_data_interval_inMiliSecs = config.config_data_req_freq_InMiliSecs;
 
             log.Debug("Generating Session ID ");
             session = GenerateSessionID();
             log.Debug("Creating Heartbeat Payload");
-            heartbeatPayload = CreateHeartbeatPayload(host, version, heartbeat_freq);
+            heartbeatPayload = CreateHeartbeatPayload(host, version, heartbeat_freq_inMiliSecs);
             log.Debug("Creating Config Payload");
             configPayload = CreateConfigPayload(host, version);
         }
@@ -70,8 +74,23 @@ namespace Zabbix_Agent_Sender.Agent
 
             //Getting the config list
             log.Info($"Getting The config file from server: {zabbixServer}, Port: {zabbixPort}, Host: {host}");
-            //Console.WriteLine($"Getting The config file from server: {zabbixServer}, Port: {zabbixPort}, Host: {host}");
-            string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
+            
+            string conf_Items_String = null;
+            try
+            {
+                conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
+            }
+            catch (System.Net.Sockets.SocketException exSocket)
+            {
+                log.Error($"Hibatörtént a szerver megszólításánál. A szerver nem válaszolt. {exSocket.Message} \n {exSocket}");
+                return;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
+                return;
+            }
+            
             //Deserializeing
             List<Zabbix_Config_Item> conf_Items = new List<Zabbix_Config_Item>();
             try
@@ -87,11 +106,27 @@ namespace Zabbix_Agent_Sender.Agent
                 return;
             }
 
-            configTimer = new System.Timers.Timer(10000);
+            configTimer = new System.Timers.Timer(config_data_interval_inMiliSecs);
             configTimer.Elapsed += (sender, e) =>
             {
                 log.Info($"Getting The config file again from server: {zabbixServer}, Port: {zabbixPort}, Host: {host}");
-                string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
+
+                string conf_Items_String = null;
+                try
+                {
+                    conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
+                }
+                catch (System.Net.Sockets.SocketException exSocket)
+                {
+                    log.Error($"Hibatörtént a szerver megszólításánál. A szerver nem válaszolt. {exSocket.Message} \n {exSocket}");
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
+                    return;
+                }
+
                 try
                 {
                     conf_Items = DeserializeResponseConfig(conf_Items_String).data;
@@ -112,7 +147,7 @@ namespace Zabbix_Agent_Sender.Agent
 
             //Sending heartbeat
             SendingHeartbeat();
-            HBtimer = new System.Timers.Timer(heartbeat_freq * 1000);
+            HBtimer = new System.Timers.Timer(heartbeat_freq_inMiliSecs);
             HBtimer.Elapsed += (sender, e) =>
             {
                 SendingHeartbeat();
@@ -123,7 +158,7 @@ namespace Zabbix_Agent_Sender.Agent
             try
             {
                 Process(conf_Items);
-                DATAtimer = new System.Timers.Timer(20000);
+                DATAtimer = new System.Timers.Timer(data_sending_interval_inMiliSecs);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
                     
@@ -230,7 +265,7 @@ namespace Zabbix_Agent_Sender.Agent
         }
 
 
-        //TODO: new async funtion ebbol-
+        
         //Async Task Function to get new data from host
         public async Task<Zabbix_Send_Item> GettingNewDataAsync(Zabbix_Config_Item conf_Items, string host,CancellationToken token)
         {
@@ -282,7 +317,23 @@ namespace Zabbix_Agent_Sender.Agent
                     ], session, version);
                     log.Debug($"Payload: {agentDataPayload}");
                     log.Info("Sending Data to server");
-                    string dataRespond = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, agentDataPayload);
+
+                    string dataRespond = null;
+                    try
+                    {
+                        dataRespond = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, agentDataPayload);
+                    }
+                    catch (System.Net.Sockets.SocketException exSocket)
+                    {
+                        log.Error($"Hibatörtént a szerver megszólításánál. A szerver nem válaszolt. {exSocket.Message} \n {exSocket}");
+                        return;
+                    }
+                    catch (Exception ex)
+                    {
+                        log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
+                        return;
+                    }
+
                     log.Info($"Data response: {dataRespond}");
                 }
                 else
@@ -298,7 +349,23 @@ namespace Zabbix_Agent_Sender.Agent
                         string agentDataPayload = CreateAgentDataPayload(host, leftovers, session, version);
                         log.Debug($"Payload: {agentDataPayload}");
                         log.Info("Sending Data to server");
-                        string dataRespond = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, agentDataPayload);
+
+                        string dataRespond = null;
+                        try
+                        {
+                            dataRespond = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, agentDataPayload);
+                        }
+                        catch (System.Net.Sockets.SocketException exSocket)
+                        {
+                            log.Error($"Hibatörtént a szerver megszólításánál. A szerver nem válaszolt. {exSocket.Message} \n {exSocket}");
+                            return;
+                        }
+                        catch (Exception ex)
+                        {
+                            log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
+                            return;
+                        }
+
                         log.Info($"Data response: {dataRespond}");
                         break;
                     }
@@ -322,12 +389,6 @@ namespace Zabbix_Agent_Sender.Agent
 
         public void Stop()
         {
-            HBtimer.AutoReset = false;
-            HBtimer.Enabled = false;
-            DATAtimer.AutoReset = false;
-            DATAtimer.Enabled = false;
-            configTimer.AutoReset = false;
-            configTimer.Enabled = false;
 
             log.Info("AGENT SHUT DOWN Name: " + GetType().Name);
         }
@@ -336,13 +397,28 @@ namespace Zabbix_Agent_Sender.Agent
 
         bool IsConfigDone()
         {
-            return !(zabbixServer == null | zabbixPort == 0 | host == null | version != null | heartbeat_freq == 0);
+            return !(zabbixServer == null | zabbixPort == 0 | host == null | version != null | heartbeat_freq_inMiliSecs == 0);
         }
 
         public void SendingHeartbeat()
         {
             log.Info("Sending Heartbeat to server");
-            string response = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, heartbeatPayload);
+            string response = null;
+            try
+            {
+                response = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, heartbeatPayload);
+            }
+            catch (System.Net.Sockets.SocketException exSocket)
+            {
+                log.Error($"Hibatörtént a szerver megszólításánál. A szerver nem válaszolt. {exSocket.Message} \n {exSocket}");
+                return;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
+                return;
+            }
+            
             log.Debug("Heartbeat response:" + response);
         }
     }

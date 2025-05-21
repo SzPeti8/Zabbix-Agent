@@ -7,31 +7,49 @@ using static Zabbix_Agent_Sender.Device.DevNameDoesntMatchException;
 using System.Globalization;
 using Zabbix_Agent_Sender.Agent;
 using Zabbix_Agent_Sender.Device;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .Build();
+
 
 IAgent agent1 = new Agent();
-string devname = "gyszp_pc2";
+string devname = configuration["ConnectionSettings:HostName"]; ;
 Random rnd = new Random();
 
 ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
 //TODO: Iconfiguration használata a confighoz
 log.Debug("Creating AgentConfig");
-AgentConfig config = new AgentConfig
-    (
-    zabbixServer: "zabbix2.beks.hu", // Zabbix Server címe
-    zabbixPort: 10051,  // Alapértelmezett port
-    host: "gyszp_pc2", // A Zabbix Agentben beállított hostname
-    version: "6.2", //Zabbix verzió
-    heartbeat_freq: 60 //Heartbeat frekvencia
-    );
+try
+    {
+        AgentConfig config = new AgentConfig
+        (
+        zabbixServer: configuration["ConnectionSettings:ServerAddress"], // Zabbix Server címe
+        zabbixPort: int.Parse(configuration["ConnectionSettings:ServerPort"]),  // Alapértelmezett port
+        host: configuration["ConnectionSettings:HostName"], // A Zabbix Agentben beállított hostname
+        version: configuration["ConnectionSettings:ProtocolVersion"], //Zabbix verzió
+        heartbeat_freq_InMiliSecs: int.Parse(configuration["AgentSettings:HeartbeatInterval_InMilisecs"]), //Heartbeat frekvencia
+        data_sending_freq_InMiliSecs: int.Parse(configuration["AgentSettings:DataSendInterval_InMilisecs"]),
+        config_data_req_freq_InMiliSecs: int.Parse(configuration["AgentSettings:ConfigDataInterval_InMilisecs"])
+        );
+        agent1.Init(config);
+        agent1.RequestReceived += Agent_RequestReceivedAsync;
+}
+catch (Exception e)
+{
+    log.Error($"Couldnt create config. Error: {e.Message}");
+    manualResetEvent.Set();
+}
 
-agent1.Init(config);
-agent1.RequestReceived += Agent_RequestReceivedAsync;
+
 
 try
 {

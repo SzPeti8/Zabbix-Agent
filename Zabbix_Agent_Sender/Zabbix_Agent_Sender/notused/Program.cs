@@ -19,16 +19,16 @@ ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
 XmlConfigurator.Configure(new FileInfo("log4net.config"));
 log.Debug("Creating AgentConfig");
-AgentConfig config = new AgentConfig
-    (
-    zabbixServer: "zabbix2.beks.hu", // Zabbix Server címe
-    zabbixPort: 10051,  // Alapértelmezett port
-    host: "gyszp_pc2", // A Zabbix Agentben beállított hostname
-    version: "6.2", //Zabbix verzió
-    heartbeat_freq: 60 //Heartbeat frekvencia
-    );
+//AgentConfig config = new AgentConfig
+//    (
+//    zabbixServer: "zabbix2.beks.hu", // Zabbix Server címe
+//    zabbixPort: 10051,  // Alapértelmezett port
+//    host: "gyszp_pc2", // A Zabbix Agentben beállított hostname
+//    version: "6.2", //Zabbix verzió
+//    heartbeat_freq_InMiliSecs: 60 //Heartbeat frekvencia
+//    );
 
-agent.Init(config);
+//agent.Init(config);
 
 agent.Start();
 //log.Debug("Creating Config Payload");
