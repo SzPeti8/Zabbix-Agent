@@ -15,36 +15,49 @@ public class Zabbix_Active_Sender
 	{
         
             log.Debug("Kapcsolódás a Zabbix szerverhez...");
+
+        using (TcpClient client = new TcpClient(zabbixServer, zabbixPort))
+        {
+            log.Debug("Sikeres kapcsolat!");
+
+
+            NetworkStream stream = client.GetStream();
+            byte[] packet = CompilePacketTOSend(jsonPayload);
+            log.Debug($"Küldés Zabbixnak: {jsonPayload}");
+
+            stream.Write(packet, 0, packet.Length);
             
-            using (TcpClient client = new TcpClient(zabbixServer, zabbixPort))
+
+            // Use a MemoryStream to accumulate the response
+            using (var ms = new MemoryStream())
             {
-                log.Debug("Sikeres kapcsolat!");
-                
-
-                NetworkStream stream = client.GetStream();
-                byte[] packet = CompilePacketTOSend(jsonPayload);
-                log.Debug($"Küldés Zabbixnak: {jsonPayload}");
-                
-                stream.Write(packet, 0, packet.Length);
-                //TODO: A puffer méret változás kezelése dinamikusan
-                //TODO: A buffer levetele 1000 byte-ra
-                //TODO: összes behuzalozott Timeout adatokat kivenni config file-ba
-                byte[] responseBuffer = new byte[50000]; // 8 KB buffer
-                int totalBytesRead = 0;
+                byte[] buffer = new byte[4096]; // Read in 4KB chunks
                 int bytesRead;
-
-                do
+                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
                 {
-                    bytesRead = stream.Read(responseBuffer, totalBytesRead, responseBuffer.Length - totalBytesRead);
-                    totalBytesRead += bytesRead;
+                    ms.Write(buffer, 0, bytesRead);
 
-                    // Ha a fogadás véget ért, kilépünk
-                    if (bytesRead == 0) break;
+                    
+                    if (ms.Length >= 13)
+                    {
+                        byte[] temp = ms.ToArray();
+                        int jsonPayloadLength = BitConverter.ToInt32(temp, 5);
+                        if (ms.Length >= 13 + jsonPayloadLength)
+                            break;
+                    }
                 }
-                while (totalBytesRead < 13 || totalBytesRead < 13 + BitConverter.ToInt32(responseBuffer, 5));
-                log.Debug($" Beolvasott bájtok: {totalBytesRead}");
+
+                byte[] responseBuffer = ms.ToArray();
+                log.Debug($" Beolvasott bájtok: {responseBuffer.Length}");
 
                 log.Debug("Converting Response to int");
+
+                if (responseBuffer.Length < 13)
+                {
+                    log.Warn("No or incomplete response received from server.");
+                    return "No response or incomplete response from server";
+                }
+
                 int jsonLength = BitConverter.ToInt32(responseBuffer, 5);
                 log.Debug("Converting Response to string");
                 string jsonResponse = Encoding.UTF8.GetString(responseBuffer, 13, jsonLength);
@@ -64,6 +77,7 @@ public class Zabbix_Active_Sender
 
                 return jsonResponse;
             }
+        }
         
         
         log.Error("HIBA: Zabbix_Active_Sender_Normal ln end");

@@ -26,7 +26,7 @@ Random rnd = new Random();
 
 ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-//TODO: Iconfiguration használata a confighoz
+
 log.Debug("Creating AgentConfig");
 try
     {
