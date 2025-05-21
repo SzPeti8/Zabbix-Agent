@@ -36,13 +36,12 @@ System.Timers.Timer DATAtimer;
 logProxy.Debug("Creating Config Payload");
 string configPayload = CreateProxyConfigPayload(devname, version,session);
 
-//TODO: converting response to stringnél hibát dob, mert a kezdő buffer nem elég nagy
+
 string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
 logProxy.Debug("Config request response: \n"+conf_Items_String);
 
 Zabbix_Proxy_Config_Response CONFIG_Response = JsonConvert.DeserializeObject<Zabbix_Proxy_Config_Response>(conf_Items_String);
 
-//Console.WriteLine(CONFIG_Response);
 
 List<Proxy_Data_items_Item> Conf_items = new List<Proxy_Data_items_Item>();
 
@@ -51,22 +50,42 @@ List<Proxy_Data_interface_Item> intefaces = new List<Proxy_Data_interface_Item>(
 
 try
 {
+    List<long> downHosts = new List<long>();
     logProxy.Debug("Getting the Conf_items from the ZabbixData");
     for (int i = 0; CONFIG_Response.data.items.data.Count > i; i++)
     {
-        Conf_items.Add(new Proxy_Data_items_Item(CONFIG_Response.data.items.data[i]));
+        Proxy_Data_items_Item item = new Proxy_Data_items_Item(CONFIG_Response.data.items.data[i]);
+        if(item.status == 0)
+        {
+            Conf_items.Add(item);
+        }
+        else
+        {
+            downHosts.Add(item.hostid);
+        }
+        
     }
 
     logProxy.Debug("Getting the Hosts from the ZabbixData");
     for (int i = 0; i < CONFIG_Response.data.hosts.data.Count; i++)
     {
-        hosts.Add(new Proxy_Data_Hosts_Item(CONFIG_Response.data.hosts.data[i]));
+        Proxy_Data_Hosts_Item item = new Proxy_Data_Hosts_Item(CONFIG_Response.data.hosts.data[i]);
+        if(!downHosts.Contains(item.hostid))
+        {
+            hosts.Add(item);
+        }
+        
     }
 
     logProxy.Debug("Getting the Interfaces from the ZabbixData");
     for (int i = 0; i < CONFIG_Response.data.@interface.data.Count; i++)
     {
-        intefaces.Add(new Proxy_Data_interface_Item(CONFIG_Response.data.@interface.data[i]));
+        Proxy_Data_interface_Item item = new Proxy_Data_interface_Item(CONFIG_Response.data.@interface.data[i]);
+        if (!downHosts.Contains(item.hostid))
+        {
+            intefaces.Add(item);
+        }
+        
     }
 }
 catch (Exception ex)
@@ -93,7 +112,7 @@ string data_Payload = SerializeProxySendRequest(data_Request);
 string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
 
 logProxy.Info(server_response_to_data_request);
-//TODO: csak engedélyezett statusu hostok feldolgozása
+
 DATAtimer = new System.Timers.Timer(data_sending_interval_inMiliSeconds);
 DATAtimer.Elapsed += async (sender, e) =>
 {
