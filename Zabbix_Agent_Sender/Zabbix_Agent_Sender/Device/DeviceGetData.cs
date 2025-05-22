@@ -2,11 +2,17 @@
 
 namespace Zabbix_Agent_Sender.Device
 {
+    /// <summary>
+    /// Provides methods to retrieve and set simulated device data for Zabbix items.
+    /// </summary>
     public class DeviceGetData
     {
-
-
-
+        /// <summary>
+        /// Sets the value of the specified <see cref="Zabbix_Send_Item"/> based on its key.
+        /// Simulates device data for various Zabbix item keys.
+        /// </summary>
+        /// <param name="item">The Zabbix item whose value will be set.</param>
+        /// <exception cref="Exception">Thrown when the item key is unknown.</exception>
         public static void GettingData(Zabbix_Send_Item item)
         {
             Random rnd = new Random();
@@ -19,9 +25,7 @@ namespace Zabbix_Agent_Sender.Device
                 case "perf_counter_en[\"\\Memory\\Free System Page Table Entries\"]":
                     item.SetValue(rnd.Next(1000, 12471498)); break;
 
-
                 case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-
                     item.SetValue(rnd.NextDouble() * 1000); break;
 
                 case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
@@ -108,9 +112,6 @@ namespace Zabbix_Agent_Sender.Device
                 default:
                     throw new Exception($"Unknown key: {item.key}");
             }
-
-
         }
-
     }
 }

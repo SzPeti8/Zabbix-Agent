@@ -12,12 +12,16 @@ namespace Zabbix_Agent_Sender.Agent
 {
 
 
+    /// <summary>
+    /// Represents a Zabbix agent responsible for communicating with the Zabbix server,
+    /// sending heartbeats, retrieving configuration, and sending collected data.
+    /// </summary>
     public class Agent : IAgent
     {
         private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        string zabbixServer = null;
-        int zabbixPort = 0;
+        private string zabbixServer = null;
+        private int zabbixPort = 0;
         string host = null;
         string version = null;
         int heartbeat_freq_inMiliSecs = 20000;
@@ -36,12 +40,14 @@ namespace Zabbix_Agent_Sender.Agent
 
         int id = 1;
 
-
+        /// <summary>
+        /// Initializes the agent with the specified configuration.
+        /// </summary>
+        /// <param name="config">The agent configuration settings.</param>
         public void Init(AgentConfig config)
         {
-
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
-            //konfig beállítások
+            // Configuration settings
             zabbixServer = config.zabbixServer;
             zabbixPort = config.zabbixPort;
             host = config.host;
@@ -60,20 +66,20 @@ namespace Zabbix_Agent_Sender.Agent
             configPayload = CreateConfigPayload(host, version);
         }
 
-
-
-
+        /// <summary>
+        /// Starts the agent's operation, including configuration polling, heartbeat, and data sending.
+        /// </summary>
         public void Start()
         {
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
-            //Checking config settings
+            // Checking config settings
             if (IsConfigDone())
             {
                 log.Error("Wrong Config Setup for Agent in: " + GetType().Name);
                 return;
             }
 
-            //Getting the config list
+            // Getting the config list
             log.Info($"Getting The config file from server: {zabbixServer}, Port: {zabbixPort}, Host: {host}");
 
             string conf_Items_String = null;
@@ -92,21 +98,20 @@ namespace Zabbix_Agent_Sender.Agent
                 return;
             }
 
-            //Deserializeing
+            // Deserializing
             List<Zabbix_Config_Item> conf_Items = new List<Zabbix_Config_Item>();
             try
             {
                 conf_Items = DeserializeResponseConfig(conf_Items_String).data;
-
             }
             catch (Exception e)
             {
                 log.Debug($"Response to Agent Config Request: {conf_Items_String}");
                 log.Error("Couldnt Deserialize Config Response. Message: " + e.Message);
-
                 return;
             }
 
+            // Set up configuration polling timer
             configTimer = new System.Timers.Timer(config_data_interval_inMiliSecs);
             configTimer.Elapsed += (sender, e) =>
             {
@@ -131,22 +136,18 @@ namespace Zabbix_Agent_Sender.Agent
                 try
                 {
                     conf_Items = DeserializeResponseConfig(conf_Items_String).data;
-
                 }
                 catch (Exception ex)
                 {
                     log.Debug($"Response to Agent Config Request: {conf_Items_String}");
                     log.Error("Couldnt Deserialize Config Response. Message: " + ex.Message);
-
                     return;
                 }
-
-
             };
             configTimer.AutoReset = true;
             configTimer.Enabled = true;
 
-            //Sending heartbeat
+            // Sending heartbeat
             SendingHeartbeat();
             HBtimer = new System.Timers.Timer(heartbeat_freq_inMiliSecs);
             HBtimer.Elapsed += (sender, e) =>
@@ -162,36 +163,33 @@ namespace Zabbix_Agent_Sender.Agent
                 DATAtimer = new System.Timers.Timer(data_sending_interval_inMiliSecs);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
-
                     Process(conf_Items);
                 };
                 DATAtimer.AutoReset = true;
                 DATAtimer.Enabled = true;
-
             }
             catch (DevNameDoesntMatchException e)
             {
                 DATAtimer = new System.Timers.Timer(20000);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
-
                 };
                 DATAtimer.AutoReset = true;
                 DATAtimer.Enabled = true;
-
                 throw e;
-
             }
-
         }
 
-
+        /// <summary>
+        /// Processes the provided list of Zabbix configuration items asynchronously.
+        /// Collects data for each item and sends the results to the Zabbix server.
+        /// </summary>
+        /// <param name="conf_Items">The list of configuration items to process.</param>
         public async void Process(List<Zabbix_Config_Item> conf_Items)
         {
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
-
-            //Getting new Data
+            // Getting new Data
             List<Zabbix_Send_Item> send_tems = new List<Zabbix_Send_Item>();
 
             try
@@ -199,8 +197,8 @@ namespace Zabbix_Agent_Sender.Agent
                 var cts = new CancellationTokenSource();
                 CancellationToken token = cts.Token;
 
-                //Creating tasks
-                var semaphore = new SemaphoreSlim(number_ofThreads); // max 10 párhuzamosan
+                // Creating tasks
+                var semaphore = new SemaphoreSlim(number_ofThreads); 
                 var tasks = conf_Items.Select(async item =>
                 {
                     await semaphore.WaitAsync().ConfigureAwait(false);
@@ -208,7 +206,7 @@ namespace Zabbix_Agent_Sender.Agent
                     {
                         return await GettingNewDataAsync(item, host, token);
                     }
-                    catch (OperationCanceledException e)
+                    catch (OperationCanceledException)
                     {
                         return null;
                     }
@@ -224,19 +222,17 @@ namespace Zabbix_Agent_Sender.Agent
                     await Task.Delay(TimeSpan.FromSeconds(timeout_freq_ForGettingData_inSeconds)).ConfigureAwait(false);
                     cts.Cancel();
                     log.Debug("LEJART AZ IDO");
-
                 });
 
-                //Getting the finished task results to a list
+                // Getting the finished task results to a list
                 var results = tasks
                     .Where(t => t.IsCompletedSuccessfully).Where(t => t.Result != null)
                     .Select(t => t.Result)
                     .ToList();
 
-
                 log.Info($"After TimeOut {results.Count} task finished.");
 
-                //Adding the results to a list
+                // Adding the results to a list
                 for (int i = 0; i < results.Count; i++)
                 {
                     log.Debug($"Task result: {results[i].key}. => value: {results[i].value}");
@@ -245,12 +241,9 @@ namespace Zabbix_Agent_Sender.Agent
                         send_tems.Add(results[i]);
                     }
                 }
-
-
             }
             catch (DevNameDoesntMatchException e)
             {
-
                 throw e;
             }
             if (send_tems == null)
@@ -258,16 +251,19 @@ namespace Zabbix_Agent_Sender.Agent
                 log.Error("List of items you want to send is null");
                 return;
             }
-            //Sending Data
-
+            // Sending Data
             SendingData(send_tems, host, session, version, zabbixServer, zabbixPort, id);
             id += send_tems.Count + 1;
-
         }
 
-
-
-        //Async Task Function to get new data from host
+        /// <summary>
+        /// Asynchronously gets new data for a configuration item from the host.
+        /// </summary>
+        /// <param name="conf_Items">The configuration item to process.</param>
+        /// <param name="host">The host name.</param>
+        /// <param name="token">The cancellation token.</param>
+        /// <returns>A <see cref="Zabbix_Send_Item"/> containing the collected data.</returns>
+        /// <exception cref="DevNameDoesntMatchException">Thrown if the device name does not match or no response is received.</exception>
         public async Task<Zabbix_Send_Item> GettingNewDataAsync(Zabbix_Config_Item conf_Items, string host, CancellationToken token)
         {
             log.Debug("Generating ZabbixRR From Config items");
@@ -300,7 +296,16 @@ namespace Zabbix_Agent_Sender.Agent
             return send_tem;
         }
 
-        //Function for sending data to server
+        /// <summary>
+        /// Sends the collected data items to the Zabbix server in batches.
+        /// </summary>
+        /// <param name="send_tems">The list of items to send.</param>
+        /// <param name="host">The host name.</param>
+        /// <param name="session">The session identifier.</param>
+        /// <param name="version">The agent version.</param>
+        /// <param name="zabbixServer">The Zabbix server address.</param>
+        /// <param name="zabbixPort">The Zabbix server port.</param>
+        /// <param name="id">The starting ID for the items.</param>
         public void SendingData(List<Zabbix_Send_Item> send_tems, string host, string session, string version, string zabbixServer, int zabbixPort, int id)
         {
             log.Debug("Prepare SendItems");
@@ -313,8 +318,8 @@ namespace Zabbix_Agent_Sender.Agent
                     string agentDataPayload = CreateAgentDataPayload(host,
                     [
                         send_tems[i-2],
-                        send_tems[i-1],
-                        send_tems[i]
+                            send_tems[i-1],
+                            send_tems[i]
                     ], session, version);
                     log.Debug($"Payload: {agentDataPayload}");
                     log.Info("Sending Data to server");
@@ -374,8 +379,12 @@ namespace Zabbix_Agent_Sender.Agent
             }
         }
 
-
-
+        /// <summary>
+        /// Prepares the list of items to be sent by assigning IDs and timestamps.
+        /// </summary>
+        /// <param name="items">The list of items to prepare.</param>
+        /// <param name="idCount">The starting ID value.</param>
+        /// <returns>The prepared list of items.</returns>
         public List<Zabbix_Send_Item> PrepareSendItems(List<Zabbix_Send_Item> items, int idCount)
         {
             for (int i = 0; items.Count > i; i++)
@@ -388,19 +397,31 @@ namespace Zabbix_Agent_Sender.Agent
             return items;
         }
 
+        /// <summary>
+        /// Stops the agent's operation and logs shutdown information.
+        /// </summary>
         public void Stop()
         {
-
             log.Info("AGENT SHUT DOWN Name: " + GetType().Name);
         }
 
+        /// <summary>
+        /// Occurs when a request for data is received.
+        /// </summary>
         public event AsyncRequestHandler? RequestReceived;
 
-        bool IsConfigDone()
+        /// <summary>
+        /// Checks if the agent configuration is valid and complete.
+        /// </summary>
+        /// <returns><c>true</c> if the configuration is invalid; otherwise, <c>false</c>.</returns>
+        private bool IsConfigDone()
         {
             return !(zabbixServer == null | zabbixPort == 0 | host == null | version != null | heartbeat_freq_inMiliSecs == 0);
         }
 
+        /// <summary>
+        /// Sends a heartbeat message to the Zabbix server.
+        /// </summary>
         public void SendingHeartbeat()
         {
             log.Info("Sending Heartbeat to server");

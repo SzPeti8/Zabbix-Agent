@@ -4,15 +4,25 @@ using static Zabbix_Serializables;
 namespace Zabbix_Agent_Sender.Proxy
 {
 
+    /// <summary>
+    /// Provides methods to generate simulated proxy data for Zabbix items.
+    /// </summary>
     public class Proxy_Data_Generator
     {
-
-
-
+        /// <summary>
+        /// Generates simulated <see cref="historyData"/> for a given proxy data item.
+        /// </summary>
+        /// <param name="items">The proxy data item for which to generate data.</param>
+        /// <param name="token">A cancellation token to observe while waiting for the task to complete.</param>
+        /// <returns>
+        /// A task that represents the asynchronous operation. The task result contains the generated <see cref="historyData"/>,
+        /// or <c>null</c> if the key is unknown.
+        /// </returns>
+        /// <remarks>
+        /// This method simulates a delay, logs the operation, and generates random or fixed data based on the item key.
+        /// </remarks>
         public static async Task<historyData> GenerateData(Proxy_Data_items_Item items, CancellationToken token)
         {
-
-
             log4net.ILog logProxy = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
@@ -22,7 +32,6 @@ namespace Zabbix_Agent_Sender.Proxy
             List<historyData> historyDatas = new List<historyData>();
             Random rnd = new Random();
 
-
             switch (items.key_)
             {
                 case "perf_counter_en[\"\\Memory\\Cache Bytes\"]":
@@ -31,9 +40,7 @@ namespace Zabbix_Agent_Sender.Proxy
                 case "perf_counter_en[\"\\Memory\\Free System Page Table Entries\"]":
                     return (new historyData(rnd.Next(1000, 12471498), items.itemid)); break;
 
-
                 case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-
                     return (new historyData(rnd.NextDouble() * 1000, items.itemid)); break;
 
                 case "perf_counter_en[\"\\Memory\\Pages/sec\"]":
