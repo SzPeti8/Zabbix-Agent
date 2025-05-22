@@ -1,4 +1,6 @@
 ﻿using log4net.Config;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,14 @@ namespace Zabbix_Agent_Sender.Proxy
         {
             log4net.ILog logProxy = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
+
+            var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build();
+
+            int Timeout_Frequency = int.Parse(configuration["AgentSettings:TimeoutIntervalForGettingData_inSeconds"]);
+            int numberOfThreads = int.Parse(configuration["AgentSettings:NumberOfThreads"]);
 
             Zabbix_Proxy_Data_Request data_Request = new Zabbix_Proxy_Data_Request();
 
@@ -47,7 +57,7 @@ namespace Zabbix_Agent_Sender.Proxy
             var cts = new CancellationTokenSource();
             CancellationToken token = cts.Token;
 
-            var semaphore = new SemaphoreSlim(10); // max 10 párhuzamosan
+            var semaphore = new SemaphoreSlim(numberOfThreads); // max 10 párhuzamosan
             var tasks = Conf_items.Select(async item =>
             {
                 await semaphore.WaitAsync().ConfigureAwait(false);
@@ -70,7 +80,8 @@ namespace Zabbix_Agent_Sender.Proxy
             logProxy.Debug("Timer INDUL#########################");
             await Task.Run(async () =>
             {
-                await Task.Delay(TimeSpan.FromSeconds(10)).ConfigureAwait(false);
+                //TODO: hany masodpercig var behuzalozni
+                await Task.Delay(TimeSpan.FromSeconds(Timeout_Frequency)).ConfigureAwait(false);
                 cts.Cancel();
                 logProxy.Debug("LEJART AZ IDO");
 

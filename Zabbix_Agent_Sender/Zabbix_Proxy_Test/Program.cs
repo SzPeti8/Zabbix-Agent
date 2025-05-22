@@ -1,14 +1,10 @@
 ﻿using log4net.Config;
-using static Zabbix_Active_Sender_Utils;
-using static Zabbix_Active_Sender;
-using Zabbix_Agent_Sender.Agent;
-using Newtonsoft.Json;
-using static Zabbix_Serializables;
-using Zabbix_Agent_Sender.Proxy;
-using log4net;
-using System;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
+using Newtonsoft.Json;
+using Zabbix_Agent_Sender.Proxy;
+using static Zabbix_Active_Sender;
+using static Zabbix_Active_Sender_Utils;
+using static Zabbix_Serializables;
 
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
@@ -26,19 +22,19 @@ ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
 string devname = configuration["ConnectionSettings:HostName"];
 string version = configuration["ConnectionSettings:ProtocolVersion"];
-string zabbixServer = configuration["ConnectionSettings:ServerAddress"]; 
-int zabbixPort = int.Parse( configuration["ConnectionSettings:ServerPort"]);
+string zabbixServer = configuration["ConnectionSettings:ServerAddress"];
+int zabbixPort = int.Parse(configuration["ConnectionSettings:ServerPort"]);
 int data_sending_interval_inMiliSeconds = int.Parse(configuration["AgentSettings:DataSendInterval_InMilisecs"]);
 string session = GenerateSessionID();
 
 System.Timers.Timer DATAtimer;
 
 logProxy.Debug("Creating Config Payload");
-string configPayload = CreateProxyConfigPayload(devname, version,session);
+string configPayload = CreateProxyConfigPayload(devname, version, session);
 
 
 string conf_Items_String = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, configPayload);
-logProxy.Debug("Config request response: \n"+conf_Items_String);
+logProxy.Debug("Config request response: \n" + conf_Items_String);
 
 Zabbix_Proxy_Config_Response CONFIG_Response = JsonConvert.DeserializeObject<Zabbix_Proxy_Config_Response>(conf_Items_String);
 
@@ -55,7 +51,7 @@ try
     for (int i = 0; CONFIG_Response.data.items.data.Count > i; i++)
     {
         Proxy_Data_items_Item item = new Proxy_Data_items_Item(CONFIG_Response.data.items.data[i]);
-        if(item.status == 0)
+        if (item.status == 0)
         {
             Conf_items.Add(item);
         }
@@ -63,18 +59,18 @@ try
         {
             downHosts.Add(item.hostid);
         }
-        
+
     }
 
     logProxy.Debug("Getting the Hosts from the ZabbixData");
     for (int i = 0; i < CONFIG_Response.data.hosts.data.Count; i++)
     {
         Proxy_Data_Hosts_Item item = new Proxy_Data_Hosts_Item(CONFIG_Response.data.hosts.data[i]);
-        if(!downHosts.Contains(item.hostid))
+        if (!downHosts.Contains(item.hostid))
         {
             hosts.Add(item);
         }
-        
+
     }
 
     logProxy.Debug("Getting the Interfaces from the ZabbixData");
@@ -85,12 +81,12 @@ try
         {
             intefaces.Add(item);
         }
-        
+
     }
 }
 catch (Exception ex)
 {
-    logProxy.Error("There was an error processing the config response. \n"+ex);
+    logProxy.Error("There was an error processing the config response. \n" + ex);
 }
 
 
@@ -132,14 +128,15 @@ DATAtimer.Elapsed += async (sender, e) =>
 
     string data_Payload = SerializeProxySendRequest(data_Request);
 
-    
+
     string server_response_to_data_request = Zabbix_Active_Request_Sender_Normal(zabbixServer, zabbixPort, data_Payload);
-    
+
     logProxy.Info(server_response_to_data_request);
 };
-DATAtimer.AutoReset = true; 
+DATAtimer.AutoReset = true;
 DATAtimer.Enabled = true;
 
-Console.CancelKeyPress += (sender, e) => { e.Cancel = true; manualResetEvent.Set();logProxy.Info($"PROXY SHOT DOWN Name: {devname}"); };
+
+Console.CancelKeyPress += (sender, e) => { e.Cancel = true; manualResetEvent.Set(); logProxy.Info($"PROXY SHOT DOWN Name: {devname}"); };
 
 manualResetEvent.WaitOne();

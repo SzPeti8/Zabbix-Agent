@@ -24689,3 +24689,997 @@ Ellenőrzések száma: 30
 2025-05-21 19:37:49,734 [19] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: system.swap.pfree
 2025-05-21 19:37:49,734 [17] WARN Zabbix_Agent_Sender.Proxy.Proxy_Data_Generator+<GenerateData>d__0 - Unknown key: vfs.fs.dependent.discovery
 2025-05-21 19:37:49,875 [10] INFO Program+<<Main>$>d__0 - PROXY SHOT DOWN Name: gyszp_proxy
+2025-05-22 11:34:34,449 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:35:11,235 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:38:11,358 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:40:52,058 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:42:31,389 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:45:24,205 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:45:24,601 [1] ERROR Program - Couldnt create config. Error: Value cannot be null. (Parameter 's')
+2025-05-22 11:45:24,609 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: , Port: 0, Host: 
+2025-05-22 11:45:24,618 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 11:49:14,789 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:52:50,702 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:55:17,484 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 11:55:48,584 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:03:35,477 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:03:35,497 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating Session ID 
+2025-05-22 12:03:35,502 [1] DEBUG Zabbix_Active_Sender_Utils - Created session id: putzcjzjvvw8irw2pft8ulrsjbt1g6mm
+2025-05-22 12:03:35,502 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Heartbeat Payload
+2025-05-22 12:03:35,503 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:03:35,760 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:03:35,760 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:03:35,760 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Config Payload
+2025-05-22 12:03:35,760 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:03:35,760 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:03:35,760 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:03:35,765 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:03:35,771 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:03:35,862 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:03:35,863 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:03:35,890 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:03:35,890 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:03:35,890 [1] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:03:35,890 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:03:35,329 [1] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:03:35,474 [1] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:03:35,474 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:04:48,201 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:04:48,224 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating Session ID 
+2025-05-22 12:04:48,228 [1] DEBUG Zabbix_Active_Sender_Utils - Created session id: t1mv0hlqrx8wd4tp3904zx1qla5cylf2
+2025-05-22 12:04:48,228 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Heartbeat Payload
+2025-05-22 12:04:48,229 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:04:48,347 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:04:48,347 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:04:48,347 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Config Payload
+2025-05-22 12:04:48,348 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:04:48,348 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:04:48,348 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:04:48,352 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:04:48,358 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:04:48,434 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:04:48,435 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:04:48,462 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:04:48,462 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:04:48,462 [1] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:04:48,463 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:04:48,469 [1] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:04:48,595 [1] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:04:48,596 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:04:48,603 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-22 12:04:48,603 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:04:48,632 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:04:48,632 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:04:48,635 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:04:48,635 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:04:48,636 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:04:48,636 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:04:48,637 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:04:48,637 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:04:48,664 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 0
+2025-05-22 12:04:48,664 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:04:48,666 [1] WARN Zabbix_Active_Sender - No or incomplete response received from server.
+2025-05-22 12:04:48,668 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Heartbeat response:No response or incomplete response from server
+2025-05-22 12:04:48,676 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Timer INDUL#########################
+2025-05-22 12:04:48,679 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - LEJART AZ IDO
+2025-05-22 12:04:48,680 [5] INFO Zabbix_Agent_Sender.Agent.Agent - After TimeOut 0 task finished.
+2025-05-22 12:04:48,681 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Prepare SendItems
+2025-05-22 12:04:48,487 [1] INFO Zabbix_Agent_Sender.Agent.Agent - AGENT SHUT DOWN Name: Agent
+2025-05-22 12:05:52,722 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:05:52,748 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating Session ID 
+2025-05-22 12:05:52,753 [1] DEBUG Zabbix_Active_Sender_Utils - Created session id: mcyxd1bhg3aa4vbq3szumo62ymm7e1wo
+2025-05-22 12:05:52,754 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Heartbeat Payload
+2025-05-22 12:05:52,754 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:05:52,883 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:05:52,883 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:05:52,884 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Config Payload
+2025-05-22 12:05:52,884 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:05:52,884 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:05:52,884 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:05:52,889 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:05:52,894 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:05:52,973 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:05:52,974 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:05:52,974 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:05:52,974 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:05:52,974 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:05:52,974 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:05:52,975 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:05:52,975 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:05:52,004 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:05:52,004 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:05:52,004 [1] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:05:52,004 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:05:52,010 [1] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:05:52,129 [1] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:05:52,129 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:05:52,135 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-22 12:05:52,135 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:05:52,161 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:05:52,161 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:05:52,162 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:05:52,165 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:05:52,165 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:05:52,165 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:05:52,165 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:05:52,166 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:05:52,195 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 0
+2025-05-22 12:05:52,195 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:05:52,196 [1] WARN Zabbix_Active_Sender - No or incomplete response received from server.
+2025-05-22 12:05:52,199 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Heartbeat response:No response or incomplete response from server
+2025-05-22 12:05:52,205 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Timer INDUL#########################
+2025-05-22 12:05:52,834 [1] INFO Zabbix_Agent_Sender.Agent.Agent - AGENT SHUT DOWN Name: Agent
+2025-05-22 12:06:26,867 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:07:44,148 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:08:51,013 [1] DEBUG Program - Creating AgentConfig
+2025-05-22 12:08:51,031 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating Session ID 
+2025-05-22 12:08:51,036 [1] DEBUG Zabbix_Active_Sender_Utils - Created session id: owb43z8zsuveiyiorhn3j7nkktj1wbtp
+2025-05-22 12:08:51,036 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Heartbeat Payload
+2025-05-22 12:08:51,037 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,253 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:08:51,254 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,254 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Config Payload
+2025-05-22 12:08:51,254 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,254 [1] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,254 [1] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,260 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:08:51,270 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,356 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,357 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,357 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,357 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,357 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,357 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,357 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,358 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,788 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:08:51,789 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,789 [1] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,789 [1] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:08:51,796 [1] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:08:51,916 [1] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:08:51,916 [1] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:08:51,921 [1] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-22 12:08:51,921 [1] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,952 [1] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,953 [1] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,954 [1] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,956 [1] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,956 [1] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,957 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,957 [1] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,957 [1] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:08:51,986 [1] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 0
+2025-05-22 12:08:51,986 [1] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,987 [1] WARN Zabbix_Active_Sender - No or incomplete response received from server.
+2025-05-22 12:08:51,989 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Heartbeat response:No response or incomplete response from server
+2025-05-22 12:08:51,994 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,995 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,997 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,998 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,999 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,002 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,002 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,003 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,003 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,003 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,003 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,004 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,004 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,004 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,005 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,005 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,005 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,006 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,006 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,006 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,008 [1] DEBUG Zabbix_Agent_Sender.Agent.Agent - Timer INDUL#########################
+2025-05-22 12:08:51,631 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,632 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,633 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,634 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,857 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,857 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,858 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,861 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,998 [10] DEBUG Program - Getting data.
+2025-05-22 12:08:51,000 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,000 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,001 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,220 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,221 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,226 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,227 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,392 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,392 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,393 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,396 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,659 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,660 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,660 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,663 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,009 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,009 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,010 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,012 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,247 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,247 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,248 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,251 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,528 [10] DEBUG Program - Getting data.
+2025-05-22 12:08:51,528 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,529 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,532 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,041 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,041 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,044 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,044 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,184 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,184 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,185 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,187 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,438 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,438 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,439 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,441 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,464 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,464 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,468 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,468 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,791 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,792 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,792 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,795 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,872 [10] DEBUG Program - Getting data.
+2025-05-22 12:08:51,872 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,873 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,875 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,982 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,982 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,983 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,985 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,268 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,268 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,269 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,271 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,421 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,421 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,422 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,424 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,803 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,804 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,805 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,807 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,935 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,935 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,936 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,939 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,070 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,070 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,218 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,218 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,347 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,348 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,992 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,992 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,289 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,289 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,214 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,214 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,524 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,524 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,448 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,448 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,918 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file again from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:08:51,918 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,960 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,960 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,961 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,963 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,963 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,963 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,964 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,964 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,989 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:08:51,989 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,990 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,992 [7] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:08:51,992 [7] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:08:51,993 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-22 12:08:51,993 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,993 [7] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:08:51,994 [7] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:08:51,011 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - LEJART AZ IDO
+2025-05-22 12:08:51,029 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,033 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,038 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,043 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,043 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,047 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,049 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,056 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:08:51,069 [7] INFO Zabbix_Agent_Sender.Agent.Agent - After TimeOut 28 task finished.
+2025-05-22 12:08:51,069 [9] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-22 12:08:51,069 [10] WARN Zabbix_Agent_Sender.Agent.Agent - Task Canccelled
+2025-05-22 12:08:51,069 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: agent.hostname. => value: gyszpc_2
+2025-05-22 12:08:51,073 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: agent.ping. => value: 1
+2025-05-22 12:08:51,078 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: agent.version. => value: 6.2
+2025-05-22 12:08:51,084 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Cache Bytes"]. => value: 370194220
+2025-05-22 12:08:51,089 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Free System Page Table Entries"]. => value: 5293917
+2025-05-22 12:08:51,094 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Page Faults/sec"]. => value: 35.88299692943742
+2025-05-22 12:08:51,105 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 0
+2025-05-22 12:08:51,109 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Pages/sec"]. => value: 8.11888188261547
+2025-05-22 12:08:51,109 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,115 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Pool Nonpaged Bytes"]. => value: 354176100
+2025-05-22 12:08:51,120 [5] WARN Zabbix_Active_Sender - No or incomplete response received from server.
+2025-05-22 12:08:51,120 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Paging file(_Total)\% Usage"]. => value: 81.60888951628539
+2025-05-22 12:08:51,120 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Heartbeat response:No response or incomplete response from server
+2025-05-22 12:08:51,120 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% DPC Time"]. => value: 0.5218355512677817
+2025-05-22 12:08:51,121 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% Interrupt Time"]. => value: 0.2755476756192283
+2025-05-22 12:08:51,121 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% Privileged Time"]. => value: 5.061242027654065
+2025-05-22 12:08:51,122 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% User Time"]. => value: 5.849565514056067
+2025-05-22 12:08:51,122 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\System\Context Switches/sec"]. => value: 18000.732906158144
+2025-05-22 12:08:51,122 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\System\Processor Queue Length"]. => value: 50
+2025-05-22 12:08:51,123 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\System\Threads"]. => value: 4722
+2025-05-22 12:08:51,123 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: proc.num[]. => value: 402
+2025-05-22 12:08:51,123 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.cpu.util. => value: 22.97219077032254
+2025-05-22 12:08:51,123 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.hostname. => value: Gyakornok PC
+2025-05-22 12:08:51,124 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.localtime. => value: 1747908537
+2025-05-22 12:08:51,124 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.sw.arch. => value: x64
+2025-05-22 12:08:51,124 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.sw.os. => value: Unknown metric system.sw.os
+2025-05-22 12:08:51,125 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.swap.size[,total]. => value: 1605178555
+2025-05-22 12:08:51,125 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.uname. => value: Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64
+2025-05-22 12:08:51,126 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.uptime. => value: 138790
+2025-05-22 12:08:51,126 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: vfs.fs.get. => value: {}
+2025-05-22 12:08:51,126 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: vm.memory.size[used]. => value: 135470470
+2025-05-22 12:08:51,127 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: wmi.get[root/cimv2,"Select NumberOfLogicalProcessors from Win32_ComputerSystem"]. => value: 12
+2025-05-22 12:08:51,128 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Prepare SendItems
+2025-05-22 12:08:51,129 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,130 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,134 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":1,"key":"agent.hostname","itemid":121091,"value":"gyszpc_2","clock":1747908542,"ns":0},{"id":2,"key":"agent.ping","itemid":121092,"value":"1","clock":1747908542,"ns":0},{"id":3,"key":"agent.version","itemid":121093,"value":"6.2","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,134 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,135 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":1,"key":"agent.hostname","itemid":121091,"value":"gyszpc_2","clock":1747908542,"ns":0},{"id":2,"key":"agent.ping","itemid":121092,"value":"1","clock":1747908542,"ns":0},{"id":3,"key":"agent.version","itemid":121093,"value":"6.2","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,135 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,135 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,162 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,162 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,163 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,165 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,165 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,165 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,166 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,166 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":1,"key":"agent.hostname","itemid":121091,"value":"gyszpc_2","clock":1747908542,"ns":0},{"id":2,"key":"agent.ping","itemid":121092,"value":"1","clock":1747908542,"ns":0},{"id":3,"key":"agent.version","itemid":121093,"value":"6.2","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,190 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,190 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,191 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,193 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-22 12:08:51,194 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-22 12:08:51,194 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,194 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,196 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":4,"key":"perf_counter_en[\u0022\\Memory\\Cache Bytes\u0022]","itemid":121094,"value":"370194220","clock":1747908542,"ns":0},{"id":5,"key":"perf_counter_en[\u0022\\Memory\\Free System Page Table Entries\u0022]","itemid":121095,"value":"5293917","clock":1747908542,"ns":0},{"id":6,"key":"perf_counter_en[\u0022\\Memory\\Page Faults/sec\u0022]","itemid":121096,"value":"35.88299692943742","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,196 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,197 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":4,"key":"perf_counter_en[\u0022\\Memory\\Cache Bytes\u0022]","itemid":121094,"value":"370194220","clock":1747908542,"ns":0},{"id":5,"key":"perf_counter_en[\u0022\\Memory\\Free System Page Table Entries\u0022]","itemid":121095,"value":"5293917","clock":1747908542,"ns":0},{"id":6,"key":"perf_counter_en[\u0022\\Memory\\Page Faults/sec\u0022]","itemid":121096,"value":"35.88299692943742","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,198 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,198 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,225 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,225 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,226 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,228 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,229 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,229 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,229 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,230 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":4,"key":"perf_counter_en[\u0022\\Memory\\Cache Bytes\u0022]","itemid":121094,"value":"370194220","clock":1747908542,"ns":0},{"id":5,"key":"perf_counter_en[\u0022\\Memory\\Free System Page Table Entries\u0022]","itemid":121095,"value":"5293917","clock":1747908542,"ns":0},{"id":6,"key":"perf_counter_en[\u0022\\Memory\\Page Faults/sec\u0022]","itemid":121096,"value":"35.88299692943742","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,258 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,258 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,258 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,261 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000023"}
+2025-05-22 12:08:51,261 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000023"}
+2025-05-22 12:08:51,261 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,262 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,262 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":7,"key":"perf_counter_en[\u0022\\Memory\\Pages/sec\u0022]","itemid":121097,"value":"8.11888188261547","clock":1747908542,"ns":0},{"id":8,"key":"perf_counter_en[\u0022\\Memory\\Pool Nonpaged Bytes\u0022]","itemid":121098,"value":"354176100","clock":1747908542,"ns":0},{"id":9,"key":"perf_counter_en[\u0022\\Paging file(_Total)\\% Usage\u0022]","itemid":121099,"value":"81.60888951628539","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,263 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,263 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":7,"key":"perf_counter_en[\u0022\\Memory\\Pages/sec\u0022]","itemid":121097,"value":"8.11888188261547","clock":1747908542,"ns":0},{"id":8,"key":"perf_counter_en[\u0022\\Memory\\Pool Nonpaged Bytes\u0022]","itemid":121098,"value":"354176100","clock":1747908542,"ns":0},{"id":9,"key":"perf_counter_en[\u0022\\Paging file(_Total)\\% Usage\u0022]","itemid":121099,"value":"81.60888951628539","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,264 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,265 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,296 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,296 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,297 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,297 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,300 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,300 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,301 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,301 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":7,"key":"perf_counter_en[\u0022\\Memory\\Pages/sec\u0022]","itemid":121097,"value":"8.11888188261547","clock":1747908542,"ns":0},{"id":8,"key":"perf_counter_en[\u0022\\Memory\\Pool Nonpaged Bytes\u0022]","itemid":121098,"value":"354176100","clock":1747908542,"ns":0},{"id":9,"key":"perf_counter_en[\u0022\\Paging file(_Total)\\% Usage\u0022]","itemid":121099,"value":"81.60888951628539","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,330 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,331 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,331 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,334 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-22 12:08:51,334 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-22 12:08:51,334 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,335 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,335 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":10,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% DPC Time\u0022]","itemid":121100,"value":"0.5218355512677817","clock":1747908542,"ns":0},{"id":11,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Interrupt Time\u0022]","itemid":121101,"value":"0.2755476756192283","clock":1747908542,"ns":0},{"id":12,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Privileged Time\u0022]","itemid":121102,"value":"5.061242027654065","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,336 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,336 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":10,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% DPC Time\u0022]","itemid":121100,"value":"0.5218355512677817","clock":1747908542,"ns":0},{"id":11,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Interrupt Time\u0022]","itemid":121101,"value":"0.2755476756192283","clock":1747908542,"ns":0},{"id":12,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Privileged Time\u0022]","itemid":121102,"value":"5.061242027654065","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,337 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,337 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,366 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,367 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,368 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,370 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,370 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,371 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,371 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,371 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":10,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% DPC Time\u0022]","itemid":121100,"value":"0.5218355512677817","clock":1747908542,"ns":0},{"id":11,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Interrupt Time\u0022]","itemid":121101,"value":"0.2755476756192283","clock":1747908542,"ns":0},{"id":12,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Privileged Time\u0022]","itemid":121102,"value":"5.061242027654065","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,394 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,395 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,395 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,398 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000039"}
+2025-05-22 12:08:51,399 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000039"}
+2025-05-22 12:08:51,399 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,399 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,400 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":13,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% User Time\u0022]","itemid":121103,"value":"5.849565514056067","clock":1747908542,"ns":0},{"id":14,"key":"perf_counter_en[\u0022\\System\\Context Switches/sec\u0022]","itemid":121104,"value":"18000.732906158144","clock":1747908542,"ns":0},{"id":15,"key":"perf_counter_en[\u0022\\System\\Processor Queue Length\u0022]","itemid":121105,"value":"50","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,401 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,401 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":13,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% User Time\u0022]","itemid":121103,"value":"5.849565514056067","clock":1747908542,"ns":0},{"id":14,"key":"perf_counter_en[\u0022\\System\\Context Switches/sec\u0022]","itemid":121104,"value":"18000.732906158144","clock":1747908542,"ns":0},{"id":15,"key":"perf_counter_en[\u0022\\System\\Processor Queue Length\u0022]","itemid":121105,"value":"50","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,401 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,402 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,429 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,430 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,433 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,433 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,434 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,434 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,434 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,435 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":13,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% User Time\u0022]","itemid":121103,"value":"5.849565514056067","clock":1747908542,"ns":0},{"id":14,"key":"perf_counter_en[\u0022\\System\\Context Switches/sec\u0022]","itemid":121104,"value":"18000.732906158144","clock":1747908542,"ns":0},{"id":15,"key":"perf_counter_en[\u0022\\System\\Processor Queue Length\u0022]","itemid":121105,"value":"50","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,462 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,463 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,463 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,466 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000046"}
+2025-05-22 12:08:51,466 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000046"}
+2025-05-22 12:08:51,466 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,466 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,467 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":16,"key":"perf_counter_en[\u0022\\System\\Threads\u0022]","itemid":121106,"value":"4722","clock":1747908542,"ns":0},{"id":17,"key":"proc.num[]","itemid":121107,"value":"402","clock":1747908542,"ns":0},{"id":18,"key":"system.cpu.util","itemid":121108,"value":"22.97219077032254","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,467 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,467 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":16,"key":"perf_counter_en[\u0022\\System\\Threads\u0022]","itemid":121106,"value":"4722","clock":1747908542,"ns":0},{"id":17,"key":"proc.num[]","itemid":121107,"value":"402","clock":1747908542,"ns":0},{"id":18,"key":"system.cpu.util","itemid":121108,"value":"22.97219077032254","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,468 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,468 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,497 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,497 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,498 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,500 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,501 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,501 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,502 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,502 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":16,"key":"perf_counter_en[\u0022\\System\\Threads\u0022]","itemid":121106,"value":"4722","clock":1747908542,"ns":0},{"id":17,"key":"proc.num[]","itemid":121107,"value":"402","clock":1747908542,"ns":0},{"id":18,"key":"system.cpu.util","itemid":121108,"value":"22.97219077032254","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,527 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,527 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,530 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,530 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000012"}
+2025-05-22 12:08:51,531 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000012"}
+2025-05-22 12:08:51,531 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,531 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,531 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":19,"key":"system.hostname","itemid":121109,"value":"Gyakornok PC","clock":1747908542,"ns":0},{"id":20,"key":"system.localtime","itemid":121110,"value":"1747908537","clock":1747908542,"ns":0},{"id":21,"key":"system.sw.arch","itemid":121111,"value":"x64","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,532 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,532 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":19,"key":"system.hostname","itemid":121109,"value":"Gyakornok PC","clock":1747908542,"ns":0},{"id":20,"key":"system.localtime","itemid":121110,"value":"1747908537","clock":1747908542,"ns":0},{"id":21,"key":"system.sw.arch","itemid":121111,"value":"x64","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,533 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,533 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,559 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,559 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,560 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,562 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,563 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,563 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,563 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,564 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":19,"key":"system.hostname","itemid":121109,"value":"Gyakornok PC","clock":1747908542,"ns":0},{"id":20,"key":"system.localtime","itemid":121110,"value":"1747908537","clock":1747908542,"ns":0},{"id":21,"key":"system.sw.arch","itemid":121111,"value":"x64","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,587 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,587 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,588 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,590 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-22 12:08:51,590 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-22 12:08:51,591 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,591 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,591 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":22,"key":"system.sw.os","itemid":121112,"value":"Unknown metric system.sw.os","clock":1747908542,"ns":0},{"id":23,"key":"system.swap.size[,total]","itemid":121114,"value":"1605178555","clock":1747908542,"ns":0},{"id":24,"key":"system.uname","itemid":121115,"value":"Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,592 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,592 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":22,"key":"system.sw.os","itemid":121112,"value":"Unknown metric system.sw.os","clock":1747908542,"ns":0},{"id":23,"key":"system.swap.size[,total]","itemid":121114,"value":"1605178555","clock":1747908542,"ns":0},{"id":24,"key":"system.uname","itemid":121115,"value":"Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,593 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,593 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,619 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,619 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,619 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,622 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,622 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,622 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,622 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,623 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":22,"key":"system.sw.os","itemid":121112,"value":"Unknown metric system.sw.os","clock":1747908542,"ns":0},{"id":23,"key":"system.swap.size[,total]","itemid":121114,"value":"1605178555","clock":1747908542,"ns":0},{"id":24,"key":"system.uname","itemid":121115,"value":"Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,646 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,647 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,647 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,650 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000014"}
+2025-05-22 12:08:51,650 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000014"}
+2025-05-22 12:08:51,651 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,651 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,652 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":25,"key":"system.uptime","itemid":121116,"value":"138790","clock":1747908542,"ns":0},{"id":26,"key":"vfs.fs.get","itemid":121117,"value":"{}","clock":1747908542,"ns":0},{"id":27,"key":"vm.memory.size[used]","itemid":121119,"value":"135470470","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,652 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,653 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":25,"key":"system.uptime","itemid":121116,"value":"138790","clock":1747908542,"ns":0},{"id":26,"key":"vfs.fs.get","itemid":121117,"value":"{}","clock":1747908542,"ns":0},{"id":27,"key":"vm.memory.size[used]","itemid":121119,"value":"135470470","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,654 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,654 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,681 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,681 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,682 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,684 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,684 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,685 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,685 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,685 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":25,"key":"system.uptime","itemid":121116,"value":"138790","clock":1747908542,"ns":0},{"id":26,"key":"vfs.fs.get","itemid":121117,"value":"{}","clock":1747908542,"ns":0},{"id":27,"key":"vm.memory.size[used]","itemid":121119,"value":"135470470","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,708 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,708 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,709 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,712 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000018"}
+2025-05-22 12:08:51,712 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000018"}
+2025-05-22 12:08:51,712 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,713 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,713 [7] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":28,"key":"wmi.get[root/cimv2,\u0022Select NumberOfLogicalProcessors from Win32_ComputerSystem\u0022]","itemid":121121,"value":"12","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,714 [7] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,714 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":28,"key":"wmi.get[root/cimv2,\u0022Select NumberOfLogicalProcessors from Win32_ComputerSystem\u0022]","itemid":121121,"value":"12","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,715 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,715 [7] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,740 [7] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,741 [7] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,741 [7] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,744 [7] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,744 [7] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,745 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,745 [7] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,745 [7] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":28,"key":"wmi.get[root/cimv2,\u0022Select NumberOfLogicalProcessors from Win32_ComputerSystem\u0022]","itemid":121121,"value":"12","clock":1747908542,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,768 [7] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,768 [7] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,769 [7] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,771 [7] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 1; failed: 0; total: 1; seconds spent: 0.000020"}
+2025-05-22 12:08:51,772 [7] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 1; failed: 0; total: 1; seconds spent: 0.000020"}
+2025-05-22 12:08:51,918 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file again from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:08:51,918 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,962 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,962 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,963 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,965 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,965 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,966 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,966 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,966 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,990 [9] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-22 12:08:51,991 [9] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,013 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,013 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,016 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,016 [9] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,017 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,017 [9] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,017 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,017 [9] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,018 [9] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,018 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,018 [9] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,019 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,019 [9] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,019 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,020 [9] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,020 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,020 [9] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:08:51,021 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,022 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,022 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,022 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,022 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,023 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,023 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,024 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,024 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,024 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,024 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,029 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Timer INDUL#########################
+2025-05-22 12:08:51,202 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:08:51,202 [9] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 0
+2025-05-22 12:08:51,203 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,206 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,204 [9] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,207 [9] WARN Zabbix_Active_Sender - No or incomplete response received from server.
+2025-05-22 12:08:51,207 [5] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:08:51,208 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Heartbeat response:No response or incomplete response from server
+2025-05-22 12:08:51,208 [5] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:08:51,209 [5] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:08:51,209 [5] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:08:51,226 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,226 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,227 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,230 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,192 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,192 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,193 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,196 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,320 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,320 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,321 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,324 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,534 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,534 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,537 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,537 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,747 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,747 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,748 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,751 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,509 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,509 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,510 [12] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,512 [12] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,566 [12] DEBUG Program - Getting data.
+2025-05-22 12:08:51,566 [12] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,567 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,569 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,600 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,601 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,603 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,606 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,697 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,698 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,698 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,701 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,707 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,708 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,710 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,711 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,725 [9] DEBUG Program - Getting data.
+2025-05-22 12:08:51,725 [9] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,725 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,726 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,039 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,039 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,040 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,042 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,329 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,329 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,330 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,332 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,414 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,414 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,415 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,417 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,528 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,528 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,529 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,532 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,885 [12] DEBUG Program - Getting data.
+2025-05-22 12:08:51,886 [12] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,886 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,889 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,309 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,309 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,310 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,312 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,680 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,680 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,681 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,683 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,003 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,003 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,004 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,007 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,099 [10] DEBUG Program - Getting data.
+2025-05-22 12:08:51,100 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,100 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Generating ZabbixRR From Config items
+2025-05-22 12:08:51,103 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Dev_Process Invoke
+2025-05-22 12:08:51,152 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,152 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,233 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,234 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,822 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,822 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,157 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,157 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,240 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,240 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,475 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,475 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,584 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,584 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,397 [7] DEBUG Program - Getting data.
+2025-05-22 12:08:51,397 [7] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,384 [5] DEBUG Program - Getting data.
+2025-05-22 12:08:51,384 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,918 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Getting The config file again from server: zabbix2.beks.hu, Port: 10051, Host: gyszp_pc2
+2025-05-22 12:08:51,918 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,967 [10] DEBUG Program - Getting data.
+2025-05-22 12:08:51,967 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Convert FromZabbixRR To ZabbixSendItem List
+2025-05-22 12:08:51,968 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,970 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,971 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,972 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,972 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,973 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,973 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,973 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active checks","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,992 [10] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Heartbeat to server
+2025-05-22 12:08:51,993 [10] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,002 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 3244
+2025-05-22 12:08:51,002 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,003 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,005 [5] INFO Zabbix_Active_Sender -  JSON válasz: Config File
+2025-05-22 12:08:51,005 [5] DEBUG Zabbix_Active_Sender_Utils - Deserializeing config response
+2025-05-22 12:08:51,006 [5] DEBUG Zabbix_Active_Sender_Utils - jsonRESPONSE.LENGTH: 3231
+2025-05-22 12:08:51,006 [5] INFO Zabbix_Active_Sender_Utils - Proccessed JSON: 
+Zabbix válasz: success
+Konfigurációs verzió: 
+Ellenőrzések száma: 30
+2025-05-22 12:08:51,026 [10] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,027 [10] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,030 [10] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,030 [10] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,030 [10] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,031 [10] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,031 [10] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,031 [10] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"active check heartbeat","host":"gyszp_pc2","heartbeat_freq":10000}
+2025-05-22 12:08:51,032 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - LEJART AZ IDO
+2025-05-22 12:08:51,032 [5] INFO Zabbix_Agent_Sender.Agent.Agent - After TimeOut 30 task finished.
+2025-05-22 12:08:51,032 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: agent.hostname. => value: gyszpc_2
+2025-05-22 12:08:51,033 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: agent.ping. => value: 1
+2025-05-22 12:08:51,033 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: agent.version. => value: 6.2
+2025-05-22 12:08:51,033 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Cache Bytes"]. => value: 334887182
+2025-05-22 12:08:51,033 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Free System Page Table Entries"]. => value: 3328356
+2025-05-22 12:08:51,034 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Page Faults/sec"]. => value: 179.31422288325683
+2025-05-22 12:08:51,034 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Pages/sec"]. => value: 8.090898870821041
+2025-05-22 12:08:51,034 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Memory\Pool Nonpaged Bytes"]. => value: 348618678
+2025-05-22 12:08:51,034 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Paging file(_Total)\% Usage"]. => value: 78.71502281509287
+2025-05-22 12:08:51,035 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% DPC Time"]. => value: 0.9002113018661908
+2025-05-22 12:08:51,035 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% Interrupt Time"]. => value: 0.013622649155995092
+2025-05-22 12:08:51,035 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% Privileged Time"]. => value: 5.018892832684301
+2025-05-22 12:08:51,036 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\Processor Information(_total)\% User Time"]. => value: 5.0000384028791505
+2025-05-22 12:08:51,036 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\System\Context Switches/sec"]. => value: 18000.821955886862
+2025-05-22 12:08:51,036 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\System\Processor Queue Length"]. => value: 89
+2025-05-22 12:08:51,036 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: perf_counter_en["\System\Threads"]. => value: 3398
+2025-05-22 12:08:51,037 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: proc.num[]. => value: 253
+2025-05-22 12:08:51,037 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.cpu.util. => value: 18.933481964219713
+2025-05-22 12:08:51,037 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.hostname. => value: Gyakornok PC
+2025-05-22 12:08:51,038 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.localtime. => value: 1747908557
+2025-05-22 12:08:51,038 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.sw.arch. => value: x64
+2025-05-22 12:08:51,040 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.sw.os. => value: Unknown metric system.sw.os
+2025-05-22 12:08:51,041 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.swap.size[,total]. => value: 778574890
+2025-05-22 12:08:51,041 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.uname. => value: Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64
+2025-05-22 12:08:51,041 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: system.uptime. => value: 239731
+2025-05-22 12:08:51,042 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: vfs.fs.get. => value: {}
+2025-05-22 12:08:51,042 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: vm.memory.size[total]. => value: 1197655078
+2025-05-22 12:08:51,042 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: vm.memory.size[used]. => value: 134023375
+2025-05-22 12:08:51,043 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: wmi.get[root/cimv2,"Select NumberOfLogicalProcessors from Win32_ComputerSystem"]. => value: 12
+2025-05-22 12:08:51,043 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Task result: wmi.getall[root\cimv2,"select Name,Description,NetConnectionID,Speed,AdapterTypeId,NetConnectionStatus,GUID from win32_networkadapter where PhysicalAdapter=True and NetConnectionStatus>0"]. => value: 0
+2025-05-22 12:08:51,044 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Prepare SendItems
+2025-05-22 12:08:51,044 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,044 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,045 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":30,"key":"agent.hostname","itemid":121091,"value":"gyszpc_2","clock":1747908562,"ns":0},{"id":31,"key":"agent.ping","itemid":121092,"value":"1","clock":1747908562,"ns":0},{"id":32,"key":"agent.version","itemid":121093,"value":"6.2","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,045 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,045 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":30,"key":"agent.hostname","itemid":121091,"value":"gyszpc_2","clock":1747908562,"ns":0},{"id":31,"key":"agent.ping","itemid":121092,"value":"1","clock":1747908562,"ns":0},{"id":32,"key":"agent.version","itemid":121093,"value":"6.2","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,046 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,046 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,056 [10] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 0
+2025-05-22 12:08:51,056 [10] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,056 [10] WARN Zabbix_Active_Sender - No or incomplete response received from server.
+2025-05-22 12:08:51,056 [10] DEBUG Zabbix_Agent_Sender.Agent.Agent - Heartbeat response:No response or incomplete response from server
+2025-05-22 12:08:51,075 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,075 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,078 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,079 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,079 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,079 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,080 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,080 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":30,"key":"agent.hostname","itemid":121091,"value":"gyszpc_2","clock":1747908562,"ns":0},{"id":31,"key":"agent.ping","itemid":121092,"value":"1","clock":1747908562,"ns":0},{"id":32,"key":"agent.version","itemid":121093,"value":"6.2","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,108 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,108 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,108 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,111 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-22 12:08:51,111 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000021"}
+2025-05-22 12:08:51,112 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,112 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,112 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":33,"key":"perf_counter_en[\u0022\\Memory\\Cache Bytes\u0022]","itemid":121094,"value":"334887182","clock":1747908562,"ns":0},{"id":34,"key":"perf_counter_en[\u0022\\Memory\\Free System Page Table Entries\u0022]","itemid":121095,"value":"3328356","clock":1747908562,"ns":0},{"id":35,"key":"perf_counter_en[\u0022\\Memory\\Page Faults/sec\u0022]","itemid":121096,"value":"179.31422288325683","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,113 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,113 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":33,"key":"perf_counter_en[\u0022\\Memory\\Cache Bytes\u0022]","itemid":121094,"value":"334887182","clock":1747908562,"ns":0},{"id":34,"key":"perf_counter_en[\u0022\\Memory\\Free System Page Table Entries\u0022]","itemid":121095,"value":"3328356","clock":1747908562,"ns":0},{"id":35,"key":"perf_counter_en[\u0022\\Memory\\Page Faults/sec\u0022]","itemid":121096,"value":"179.31422288325683","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,114 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,115 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,144 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,144 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,145 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,148 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,148 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,148 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,149 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,149 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":33,"key":"perf_counter_en[\u0022\\Memory\\Cache Bytes\u0022]","itemid":121094,"value":"334887182","clock":1747908562,"ns":0},{"id":34,"key":"perf_counter_en[\u0022\\Memory\\Free System Page Table Entries\u0022]","itemid":121095,"value":"3328356","clock":1747908562,"ns":0},{"id":35,"key":"perf_counter_en[\u0022\\Memory\\Page Faults/sec\u0022]","itemid":121096,"value":"179.31422288325683","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,172 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,172 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,177 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,178 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000014"}
+2025-05-22 12:08:51,179 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000014"}
+2025-05-22 12:08:51,181 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,182 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,183 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":36,"key":"perf_counter_en[\u0022\\Memory\\Pages/sec\u0022]","itemid":121097,"value":"8.090898870821041","clock":1747908562,"ns":0},{"id":37,"key":"perf_counter_en[\u0022\\Memory\\Pool Nonpaged Bytes\u0022]","itemid":121098,"value":"348618678","clock":1747908562,"ns":0},{"id":38,"key":"perf_counter_en[\u0022\\Paging file(_Total)\\% Usage\u0022]","itemid":121099,"value":"78.71502281509287","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,185 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,187 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":36,"key":"perf_counter_en[\u0022\\Memory\\Pages/sec\u0022]","itemid":121097,"value":"8.090898870821041","clock":1747908562,"ns":0},{"id":37,"key":"perf_counter_en[\u0022\\Memory\\Pool Nonpaged Bytes\u0022]","itemid":121098,"value":"348618678","clock":1747908562,"ns":0},{"id":38,"key":"perf_counter_en[\u0022\\Paging file(_Total)\\% Usage\u0022]","itemid":121099,"value":"78.71502281509287","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,189 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,189 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,216 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,216 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,217 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,219 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,220 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,220 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,220 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,221 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":36,"key":"perf_counter_en[\u0022\\Memory\\Pages/sec\u0022]","itemid":121097,"value":"8.090898870821041","clock":1747908562,"ns":0},{"id":37,"key":"perf_counter_en[\u0022\\Memory\\Pool Nonpaged Bytes\u0022]","itemid":121098,"value":"348618678","clock":1747908562,"ns":0},{"id":38,"key":"perf_counter_en[\u0022\\Paging file(_Total)\\% Usage\u0022]","itemid":121099,"value":"78.71502281509287","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,242 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,242 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,242 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,245 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000018"}
+2025-05-22 12:08:51,245 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000018"}
+2025-05-22 12:08:51,246 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,246 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,246 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":39,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% DPC Time\u0022]","itemid":121100,"value":"0.9002113018661908","clock":1747908562,"ns":0},{"id":40,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Interrupt Time\u0022]","itemid":121101,"value":"0.013622649155995092","clock":1747908562,"ns":0},{"id":41,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Privileged Time\u0022]","itemid":121102,"value":"5.018892832684301","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,247 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,247 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":39,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% DPC Time\u0022]","itemid":121100,"value":"0.9002113018661908","clock":1747908562,"ns":0},{"id":40,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Interrupt Time\u0022]","itemid":121101,"value":"0.013622649155995092","clock":1747908562,"ns":0},{"id":41,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Privileged Time\u0022]","itemid":121102,"value":"5.018892832684301","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,248 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,248 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,272 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,273 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,273 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,276 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,276 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,277 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,277 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,277 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":39,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% DPC Time\u0022]","itemid":121100,"value":"0.9002113018661908","clock":1747908562,"ns":0},{"id":40,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Interrupt Time\u0022]","itemid":121101,"value":"0.013622649155995092","clock":1747908562,"ns":0},{"id":41,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% Privileged Time\u0022]","itemid":121102,"value":"5.018892832684301","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,311 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,311 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,312 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,314 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-22 12:08:51,314 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000015"}
+2025-05-22 12:08:51,315 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,315 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,315 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":42,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% User Time\u0022]","itemid":121103,"value":"5.0000384028791505","clock":1747908562,"ns":0},{"id":43,"key":"perf_counter_en[\u0022\\System\\Context Switches/sec\u0022]","itemid":121104,"value":"18000.821955886862","clock":1747908562,"ns":0},{"id":44,"key":"perf_counter_en[\u0022\\System\\Processor Queue Length\u0022]","itemid":121105,"value":"89","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,316 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,316 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":42,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% User Time\u0022]","itemid":121103,"value":"5.0000384028791505","clock":1747908562,"ns":0},{"id":43,"key":"perf_counter_en[\u0022\\System\\Context Switches/sec\u0022]","itemid":121104,"value":"18000.821955886862","clock":1747908562,"ns":0},{"id":44,"key":"perf_counter_en[\u0022\\System\\Processor Queue Length\u0022]","itemid":121105,"value":"89","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,317 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,317 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,347 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,347 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,348 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,350 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,350 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,351 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,351 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,351 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":42,"key":"perf_counter_en[\u0022\\Processor Information(_total)\\% User Time\u0022]","itemid":121103,"value":"5.0000384028791505","clock":1747908562,"ns":0},{"id":43,"key":"perf_counter_en[\u0022\\System\\Context Switches/sec\u0022]","itemid":121104,"value":"18000.821955886862","clock":1747908562,"ns":0},{"id":44,"key":"perf_counter_en[\u0022\\System\\Processor Queue Length\u0022]","itemid":121105,"value":"89","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,375 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,375 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,376 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,379 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000012"}
+2025-05-22 12:08:51,379 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000012"}
+2025-05-22 12:08:51,380 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,380 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,380 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":45,"key":"perf_counter_en[\u0022\\System\\Threads\u0022]","itemid":121106,"value":"3398","clock":1747908562,"ns":0},{"id":46,"key":"proc.num[]","itemid":121107,"value":"253","clock":1747908562,"ns":0},{"id":47,"key":"system.cpu.util","itemid":121108,"value":"18.933481964219713","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,381 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,381 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":45,"key":"perf_counter_en[\u0022\\System\\Threads\u0022]","itemid":121106,"value":"3398","clock":1747908562,"ns":0},{"id":46,"key":"proc.num[]","itemid":121107,"value":"253","clock":1747908562,"ns":0},{"id":47,"key":"system.cpu.util","itemid":121108,"value":"18.933481964219713","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,382 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,382 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,408 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,408 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,409 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,411 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,411 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,412 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,412 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,412 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":45,"key":"perf_counter_en[\u0022\\System\\Threads\u0022]","itemid":121106,"value":"3398","clock":1747908562,"ns":0},{"id":46,"key":"proc.num[]","itemid":121107,"value":"253","clock":1747908562,"ns":0},{"id":47,"key":"system.cpu.util","itemid":121108,"value":"18.933481964219713","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,436 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,436 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,437 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,440 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000011"}
+2025-05-22 12:08:51,440 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000011"}
+2025-05-22 12:08:51,441 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,441 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,442 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":48,"key":"system.hostname","itemid":121109,"value":"Gyakornok PC","clock":1747908562,"ns":0},{"id":49,"key":"system.localtime","itemid":121110,"value":"1747908557","clock":1747908562,"ns":0},{"id":50,"key":"system.sw.arch","itemid":121111,"value":"x64","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,442 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,443 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":48,"key":"system.hostname","itemid":121109,"value":"Gyakornok PC","clock":1747908562,"ns":0},{"id":49,"key":"system.localtime","itemid":121110,"value":"1747908557","clock":1747908562,"ns":0},{"id":50,"key":"system.sw.arch","itemid":121111,"value":"x64","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,444 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,444 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,473 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,473 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,474 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,477 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,478 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,478 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,479 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,479 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":48,"key":"system.hostname","itemid":121109,"value":"Gyakornok PC","clock":1747908562,"ns":0},{"id":49,"key":"system.localtime","itemid":121110,"value":"1747908557","clock":1747908562,"ns":0},{"id":50,"key":"system.sw.arch","itemid":121111,"value":"x64","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,504 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,504 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,505 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,508 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000011"}
+2025-05-22 12:08:51,508 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000011"}
+2025-05-22 12:08:51,508 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,509 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,509 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":51,"key":"system.sw.os","itemid":121112,"value":"Unknown metric system.sw.os","clock":1747908562,"ns":0},{"id":52,"key":"system.swap.size[,total]","itemid":121114,"value":"778574890","clock":1747908562,"ns":0},{"id":53,"key":"system.uname","itemid":121115,"value":"Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,510 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,510 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":51,"key":"system.sw.os","itemid":121112,"value":"Unknown metric system.sw.os","clock":1747908562,"ns":0},{"id":52,"key":"system.swap.size[,total]","itemid":121114,"value":"778574890","clock":1747908562,"ns":0},{"id":53,"key":"system.uname","itemid":121115,"value":"Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,511 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,511 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,539 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,539 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,540 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,542 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,543 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,543 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,543 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,544 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":51,"key":"system.sw.os","itemid":121112,"value":"Unknown metric system.sw.os","clock":1747908562,"ns":0},{"id":52,"key":"system.swap.size[,total]","itemid":121114,"value":"778574890","clock":1747908562,"ns":0},{"id":53,"key":"system.uname","itemid":121115,"value":"Windows DESKTOP - J77B62V 10.0.19045 Microsoft Windows 10 Pro x64","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,569 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,569 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,570 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,573 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000013"}
+2025-05-22 12:08:51,573 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000013"}
+2025-05-22 12:08:51,573 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,574 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,574 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":54,"key":"system.uptime","itemid":121116,"value":"239731","clock":1747908562,"ns":0},{"id":55,"key":"vfs.fs.get","itemid":121117,"value":"{}","clock":1747908562,"ns":0},{"id":56,"key":"vm.memory.size[total]","itemid":121118,"value":"1197655078","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,575 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,575 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":54,"key":"system.uptime","itemid":121116,"value":"239731","clock":1747908562,"ns":0},{"id":55,"key":"vfs.fs.get","itemid":121117,"value":"{}","clock":1747908562,"ns":0},{"id":56,"key":"vm.memory.size[total]","itemid":121118,"value":"1197655078","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,575 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,576 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,603 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,603 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,606 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,607 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,607 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,607 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,608 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,608 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":54,"key":"system.uptime","itemid":121116,"value":"239731","clock":1747908562,"ns":0},{"id":55,"key":"vfs.fs.get","itemid":121117,"value":"{}","clock":1747908562,"ns":0},{"id":56,"key":"vm.memory.size[total]","itemid":121118,"value":"1197655078","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,631 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,631 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,631 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,634 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000012"}
+2025-05-22 12:08:51,634 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000012"}
+2025-05-22 12:08:51,634 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Creating Data Payload
+2025-05-22 12:08:51,635 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,636 [5] DEBUG Zabbix_Active_Sender_Utils - Created Zabbix_Send_Request: {"request":"agent data","data":[{"id":57,"key":"vm.memory.size[used]","itemid":121119,"value":"134023375","clock":1747908562,"ns":0},{"id":58,"key":"wmi.get[root/cimv2,\u0022Select NumberOfLogicalProcessors from Win32_ComputerSystem\u0022]","itemid":121121,"value":"12","clock":1747908562,"ns":0},{"id":59,"key":"wmi.getall[root\\cimv2,\u0022select Name,Description,NetConnectionID,Speed,AdapterTypeId,NetConnectionStatus,GUID from win32_networkadapter where PhysicalAdapter=True and NetConnectionStatus\u003E0\u0022]","itemid":121122,"value":"0","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,636 [5] DEBUG Zabbix_Active_Sender_Utils - Serialize request
+2025-05-22 12:08:51,637 [5] DEBUG Zabbix_Agent_Sender.Agent.Agent - Payload: {"request":"agent data","data":[{"id":57,"key":"vm.memory.size[used]","itemid":121119,"value":"134023375","clock":1747908562,"ns":0},{"id":58,"key":"wmi.get[root/cimv2,\u0022Select NumberOfLogicalProcessors from Win32_ComputerSystem\u0022]","itemid":121121,"value":"12","clock":1747908562,"ns":0},{"id":59,"key":"wmi.getall[root\\cimv2,\u0022select Name,Description,NetConnectionID,Speed,AdapterTypeId,NetConnectionStatus,GUID from win32_networkadapter where PhysicalAdapter=True and NetConnectionStatus\u003E0\u0022]","itemid":121122,"value":"0","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,638 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Sending Data to server
+2025-05-22 12:08:51,638 [5] DEBUG Zabbix_Active_Sender - Kapcsolódás a Zabbix szerverhez...
+2025-05-22 12:08:51,665 [5] DEBUG Zabbix_Active_Sender - Sikeres kapcsolat!
+2025-05-22 12:08:51,665 [5] DEBUG Zabbix_Active_Sender_Utils - Compileing Packet to send
+2025-05-22 12:08:51,666 [5] DEBUG Zabbix_Active_Sender_Utils - Converting payload to bytes
+2025-05-22 12:08:51,669 [5] DEBUG Zabbix_Active_Sender_Utils - Getting the length of converted bytes
+2025-05-22 12:08:51,669 [5] DEBUG Zabbix_Active_Sender_Utils - Little-endian conversion
+2025-05-22 12:08:51,669 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Zabbix header
+2025-05-22 12:08:51,670 [5] DEBUG Zabbix_Active_Sender_Utils - Creating Packet
+2025-05-22 12:08:51,670 [5] DEBUG Zabbix_Active_Sender - Küldés Zabbixnak: {"request":"agent data","data":[{"id":57,"key":"vm.memory.size[used]","itemid":121119,"value":"134023375","clock":1747908562,"ns":0},{"id":58,"key":"wmi.get[root/cimv2,\u0022Select NumberOfLogicalProcessors from Win32_ComputerSystem\u0022]","itemid":121121,"value":"12","clock":1747908562,"ns":0},{"id":59,"key":"wmi.getall[root\\cimv2,\u0022select Name,Description,NetConnectionID,Speed,AdapterTypeId,NetConnectionStatus,GUID from win32_networkadapter where PhysicalAdapter=True and NetConnectionStatus\u003E0\u0022]","itemid":121122,"value":"0","clock":1747908562,"ns":0}],"session":"owb43z8zsuveiyiorhn3j7nkktj1wbtp","host":"gyszp_pc2","version":"6.4"}
+2025-05-22 12:08:51,695 [5] DEBUG Zabbix_Active_Sender -  Beolvasott bájtok: 103
+2025-05-22 12:08:51,696 [5] DEBUG Zabbix_Active_Sender - Converting Response to int
+2025-05-22 12:08:51,697 [5] DEBUG Zabbix_Active_Sender - Converting Response to string
+2025-05-22 12:08:51,699 [5] INFO Zabbix_Active_Sender -  JSON válasz: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000030"}
+2025-05-22 12:08:51,700 [5] INFO Zabbix_Agent_Sender.Agent.Agent - Data response: {"response":"success","info":"processed: 3; failed: 0; total: 3; seconds spent: 0.000030"}

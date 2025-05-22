@@ -38,7 +38,9 @@ try
         version: configuration["ConnectionSettings:ProtocolVersion"], //Zabbix verzió
         heartbeat_freq_InMiliSecs: int.Parse(configuration["AgentSettings:HeartbeatInterval_InMilisecs"]), //Heartbeat frekvencia
         data_sending_freq_InMiliSecs: int.Parse(configuration["AgentSettings:DataSendInterval_InMilisecs"]),
-        config_data_req_freq_InMiliSecs: int.Parse(configuration["AgentSettings:ConfigDataInterval_InMilisecs"])
+        config_data_req_freq_InMiliSecs: int.Parse(configuration["AgentSettings:ConfigDataInterval_InMilisecs"]),
+        timeout_freq_ForGettingData_inSeconds: int.Parse(configuration["AgentSettings:TimeoutIntervalForGettingData_inSeconds"]),
+        maxThreads: int.Parse(configuration["AgentSettings:NumberOfThreads"])
         );
         agent1.Init(config);
         agent1.RequestReceived += Agent_RequestReceivedAsync;

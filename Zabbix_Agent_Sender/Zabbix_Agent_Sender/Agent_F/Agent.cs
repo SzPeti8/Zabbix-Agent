@@ -26,6 +26,8 @@ namespace Zabbix_Agent_Sender.Agent
         int heartbeat_freq_inMiliSecs = 20000;
         int data_sending_interval_inMiliSecs = 30000;
         int config_data_interval_inMiliSecs = 10000;
+        int timeout_freq_ForGettingData_inSeconds = 10;
+        int number_ofThreads = 10;
 
         string session = null;
         string heartbeatPayload = null;
@@ -50,6 +52,8 @@ namespace Zabbix_Agent_Sender.Agent
             heartbeat_freq_inMiliSecs = config.heartbeat_freq_InMiliSecs;
             data_sending_interval_inMiliSecs = config.data_sending_freq_InMiliSecs;
             config_data_interval_inMiliSecs = config.config_data_req_freq_InMiliSecs;
+            timeout_freq_ForGettingData_inSeconds = config.timeout_freq_ForGettingData_inSeconds;
+            number_ofThreads = config.maxThreads;
 
             log.Debug("Generating Session ID ");
             session = GenerateSessionID();
@@ -199,7 +203,7 @@ namespace Zabbix_Agent_Sender.Agent
                 CancellationToken token = cts.Token;
  
                 //Creating tasks
-                var semaphore = new SemaphoreSlim(10); // max 10 párhuzamosan
+                var semaphore = new SemaphoreSlim(number_ofThreads); // max 10 párhuzamosan
                 var tasks = conf_Items.Select(async item =>
                 {
                     await semaphore.WaitAsync().ConfigureAwait(false);
@@ -220,7 +224,7 @@ namespace Zabbix_Agent_Sender.Agent
                 log.Debug("Timer INDUL#########################");
                 await Task.Run(async () =>
                 {
-                    await Task.Delay(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
+                    await Task.Delay(TimeSpan.FromSeconds(timeout_freq_ForGettingData_inSeconds)).ConfigureAwait(false);
                     cts.Cancel();
                     log.Debug("LEJART AZ IDO");
 
