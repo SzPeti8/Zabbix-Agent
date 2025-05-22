@@ -1,13 +1,5 @@
 ﻿using log4net.Config;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using static Zabbix_Serializables;
 
 namespace Zabbix_Agent_Sender.Proxy
@@ -32,9 +24,9 @@ namespace Zabbix_Agent_Sender.Proxy
             Zabbix_Proxy_Data_Request data_Request = new Zabbix_Proxy_Data_Request();
 
             data_Request.interfaceAvailability = new List<interfaceAvailability>();
-            for (int i = 0; i < interfaces.Count;i++)
+            for (int i = 0; i < interfaces.Count; i++)
             {
-                
+
                 data_Request.interfaceAvailability.Add(new interfaceAvailability()
                 {
                     interfaceid = interfaces[i].interfaceid,
@@ -63,7 +55,7 @@ namespace Zabbix_Agent_Sender.Proxy
                 await semaphore.WaitAsync().ConfigureAwait(false);
                 try
                 {
-                    return await Proxy_Data_Generator.GenerateData(item,token);
+                    return await Proxy_Data_Generator.GenerateData(item, token);
                 }
                 catch (OperationCanceledException e)
                 {
@@ -99,7 +91,7 @@ namespace Zabbix_Agent_Sender.Proxy
                 {
                     data_Request.historyData.Add(results[i]);
                 }
-                
+
             }
 
 

@@ -1,14 +1,9 @@
 ﻿using log4net.Config;
-using log4net;
+using Microsoft.Extensions.Configuration;
 using Zabbix_Agent_Sender;
-using static Zabbix_Agent_Sender.ZabbixRR;
-using static Zabbix_Serializables;
-using static Zabbix_Agent_Sender.Device.DevNameDoesntMatchException;
-using System.Globalization;
 using Zabbix_Agent_Sender.Agent;
 using Zabbix_Agent_Sender.Device;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
+using static Zabbix_Serializables;
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -29,21 +24,21 @@ ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
 log.Debug("Creating AgentConfig");
 try
-    {
-        AgentConfig config = new AgentConfig
-        (
-        zabbixServer: configuration["ConnectionSettings:ServerAddress"], // Zabbix Server címe
-        zabbixPort: int.Parse(configuration["ConnectionSettings:ServerPort"]),  // Alapértelmezett port
-        host: configuration["ConnectionSettings:HostName"], // A Zabbix Agentben beállított hostname
-        version: configuration["ConnectionSettings:ProtocolVersion"], //Zabbix verzió
-        heartbeat_freq_InMiliSecs: int.Parse(configuration["AgentSettings:HeartbeatInterval_InMilisecs"]), //Heartbeat frekvencia
-        data_sending_freq_InMiliSecs: int.Parse(configuration["AgentSettings:DataSendInterval_InMilisecs"]),
-        config_data_req_freq_InMiliSecs: int.Parse(configuration["AgentSettings:ConfigDataInterval_InMilisecs"]),
-        timeout_freq_ForGettingData_inSeconds: int.Parse(configuration["AgentSettings:TimeoutIntervalForGettingData_inSeconds"]),
-        maxThreads: int.Parse(configuration["AgentSettings:NumberOfThreads"])
-        );
-        agent1.Init(config);
-        agent1.RequestReceived += Agent_RequestReceivedAsync;
+{
+    AgentConfig config = new AgentConfig
+    (
+    zabbixServer: configuration["ConnectionSettings:ServerAddress"], // Zabbix Server címe
+    zabbixPort: int.Parse(configuration["ConnectionSettings:ServerPort"]),  // Alapértelmezett port
+    host: configuration["ConnectionSettings:HostName"], // A Zabbix Agentben beállított hostname
+    version: configuration["ConnectionSettings:ProtocolVersion"], //Zabbix verzió
+    heartbeat_freq_InMiliSecs: int.Parse(configuration["AgentSettings:HeartbeatInterval_InMilisecs"]), //Heartbeat frekvencia
+    data_sending_freq_InMiliSecs: int.Parse(configuration["AgentSettings:DataSendInterval_InMilisecs"]),
+    config_data_req_freq_InMiliSecs: int.Parse(configuration["AgentSettings:ConfigDataInterval_InMilisecs"]),
+    timeout_freq_ForGettingData_inSeconds: int.Parse(configuration["AgentSettings:TimeoutIntervalForGettingData_inSeconds"]),
+    maxThreads: int.Parse(configuration["AgentSettings:NumberOfThreads"])
+    );
+    agent1.Init(config);
+    agent1.RequestReceived += Agent_RequestReceivedAsync;
 }
 catch (Exception e)
 {
@@ -60,7 +55,7 @@ try
 }
 catch (DevNameDoesntMatchException e)
 {
-    log.Error(e.Message +"\n" + $"Example Devname: {devname}");
+    log.Error(e.Message + "\n" + $"Example Devname: {devname}");
     manualResetEvent.Set();
 }
 
@@ -75,29 +70,29 @@ agent1.Stop();
 
 async Task Agent_RequestReceivedAsync(object? sender, ZabbixRR zabbixRR)
 {
-    
+
 
     if (zabbixRR.Request.hostName == devname)
     {
-        await Task.Delay(rnd.Next(5000),zabbixRR.CancellationToken);
+        await Task.Delay(rnd.Next(5000), zabbixRR.CancellationToken);
         zabbixRR.CancellationToken.ThrowIfCancellationRequested();
-        
+
 
         Zabbix_Send_Item item = zabbixRR.Request.data;
-        
-            try
-            {
-                log.Debug("Getting data.");
-                DeviceGetData.GettingData(item);
-            }
-            catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {item.itemid}, key: {item.key}. Error: {e.Message}"); }
-       
+
+        try
+        {
+            log.Debug("Getting data.");
+            DeviceGetData.GettingData(item);
+        }
+        catch (Exception e) { log.Error($"Couldnt get data for: hostname: {devname}, itemid: {item.itemid}, key: {item.key}. Error: {e.Message}"); }
+
         zabbixRR.Response = new Zabbix_Dev_Response();
         zabbixRR.Response.data = item;
         zabbixRR.Response.hostName = devname;
 
     }
-    
+
 }
 
 

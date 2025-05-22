@@ -1,5 +1,4 @@
-﻿using System;
-using static Zabbix_Serializables;
+﻿using static Zabbix_Serializables;
 
 namespace Zabbix_Agent_Sender.Device
 {

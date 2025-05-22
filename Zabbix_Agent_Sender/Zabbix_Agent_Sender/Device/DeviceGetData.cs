@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Zabbix_Serializables;
+﻿using static Zabbix_Serializables;
 
 namespace Zabbix_Agent_Sender.Device
 {
@@ -26,7 +21,7 @@ namespace Zabbix_Agent_Sender.Device
 
 
                 case "perf_counter_en[\"\\Memory\\Page Faults/sec\"]":
-                    
+
                     item.SetValue(rnd.NextDouble() * 1000); break;
 
                 case "perf_counter_en[\"\\Memory\\Pages/sec\"]":

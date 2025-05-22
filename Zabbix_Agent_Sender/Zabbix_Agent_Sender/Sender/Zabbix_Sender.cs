@@ -1,20 +1,17 @@
-﻿using System;
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
 using System.Text;
-using Newtonsoft.Json;
 using static Zabbix_Active_Sender_Utils;
-using static Zabbix_Serializables;
 
 
 
- 
+
 public class Zabbix_Active_Sender
 {
     private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-    public static string Zabbix_Active_Request_Sender_Normal(string zabbixServer,int zabbixPort,string jsonPayload)
-	{
-        
-            log.Debug("Kapcsolódás a Zabbix szerverhez...");
+    public static string Zabbix_Active_Request_Sender_Normal(string zabbixServer, int zabbixPort, string jsonPayload)
+    {
+
+        log.Debug("Kapcsolódás a Zabbix szerverhez...");
 
         using (TcpClient client = new TcpClient(zabbixServer, zabbixPort))
         {
@@ -26,7 +23,7 @@ public class Zabbix_Active_Sender
             log.Debug($"Küldés Zabbixnak: {jsonPayload}");
 
             stream.Write(packet, 0, packet.Length);
-            
+
 
             // Use a MemoryStream to accumulate the response
             using (var ms = new MemoryStream())
@@ -37,7 +34,7 @@ public class Zabbix_Active_Sender
                 {
                     ms.Write(buffer, 0, bytesRead);
 
-                    
+
                     if (ms.Length >= 13)
                     {
                         byte[] temp = ms.ToArray();
@@ -78,8 +75,8 @@ public class Zabbix_Active_Sender
                 return jsonResponse;
             }
         }
-        
-        
+
+
         log.Error("HIBA: Zabbix_Active_Sender_Normal ln end");
         return "HIBA: Zabbix_Active_Sender_Normal";
     }

@@ -1,14 +1,11 @@
 ﻿using log4net;
-using System;
-using static Zabbix_Serializables;
-using static Zabbix_Active_Sender_Utils;
-using static Zabbix_Active_Sender;
 using log4net.Config;
-using System.Timers;
-using static Zabbix_Agent_Sender.Device.Example_Utils;
-using Zabbix_Agent_Sender.Device;
-using System.Security.Policy;
 using Zabbix_Agent_Sender.Agent_F;
+using Zabbix_Agent_Sender.Device;
+using static Zabbix_Active_Sender;
+using static Zabbix_Active_Sender_Utils;
+using static Zabbix_Agent_Sender.Device.Example_Utils;
+using static Zabbix_Serializables;
 
 
 namespace Zabbix_Agent_Sender.Agent
@@ -42,7 +39,7 @@ namespace Zabbix_Agent_Sender.Agent
 
         public void Init(AgentConfig config)
         {
-            
+
             XmlConfigurator.Configure(new FileInfo("log4net.config"));
             //konfig beállítások
             zabbixServer = config.zabbixServer;
@@ -78,7 +75,7 @@ namespace Zabbix_Agent_Sender.Agent
 
             //Getting the config list
             log.Info($"Getting The config file from server: {zabbixServer}, Port: {zabbixPort}, Host: {host}");
-            
+
             string conf_Items_String = null;
             try
             {
@@ -94,7 +91,7 @@ namespace Zabbix_Agent_Sender.Agent
                 log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
                 return;
             }
-            
+
             //Deserializeing
             List<Zabbix_Config_Item> conf_Items = new List<Zabbix_Config_Item>();
             try
@@ -146,7 +143,7 @@ namespace Zabbix_Agent_Sender.Agent
 
 
             };
-            configTimer.AutoReset = true; 
+            configTimer.AutoReset = true;
             configTimer.Enabled = true;
 
             //Sending heartbeat
@@ -156,7 +153,7 @@ namespace Zabbix_Agent_Sender.Agent
             {
                 SendingHeartbeat();
             };
-            HBtimer.AutoReset = true; 
+            HBtimer.AutoReset = true;
             HBtimer.Enabled = true;
 
             try
@@ -165,7 +162,7 @@ namespace Zabbix_Agent_Sender.Agent
                 DATAtimer = new System.Timers.Timer(data_sending_interval_inMiliSecs);
                 DATAtimer.Elapsed += (sender, e) =>
                 {
-                    
+
                     Process(conf_Items);
                 };
                 DATAtimer.AutoReset = true;
@@ -179,9 +176,9 @@ namespace Zabbix_Agent_Sender.Agent
                 {
 
                 };
-                DATAtimer.AutoReset = true; 
+                DATAtimer.AutoReset = true;
                 DATAtimer.Enabled = true;
-                
+
                 throw e;
 
             }
@@ -201,7 +198,7 @@ namespace Zabbix_Agent_Sender.Agent
             {
                 var cts = new CancellationTokenSource();
                 CancellationToken token = cts.Token;
- 
+
                 //Creating tasks
                 var semaphore = new SemaphoreSlim(number_ofThreads); // max 10 párhuzamosan
                 var tasks = conf_Items.Select(async item =>
@@ -209,7 +206,7 @@ namespace Zabbix_Agent_Sender.Agent
                     await semaphore.WaitAsync().ConfigureAwait(false);
                     try
                     {
-                        return await GettingNewDataAsync(item, host,token);
+                        return await GettingNewDataAsync(item, host, token);
                     }
                     catch (OperationCanceledException e)
                     {
@@ -232,7 +229,7 @@ namespace Zabbix_Agent_Sender.Agent
 
                 //Getting the finished task results to a list
                 var results = tasks
-                    .Where(t => t.IsCompletedSuccessfully).Where(t => t.Result != null  )
+                    .Where(t => t.IsCompletedSuccessfully).Where(t => t.Result != null)
                     .Select(t => t.Result)
                     .ToList();
 
@@ -240,7 +237,7 @@ namespace Zabbix_Agent_Sender.Agent
                 log.Info($"After TimeOut {results.Count} task finished.");
 
                 //Adding the results to a list
-                for (int i = 0;i < results.Count; i++)
+                for (int i = 0; i < results.Count; i++)
                 {
                     log.Debug($"Task result: {results[i].key}. => value: {results[i].value}");
                     if (results[i].value != null)
@@ -248,12 +245,12 @@ namespace Zabbix_Agent_Sender.Agent
                         send_tems.Add(results[i]);
                     }
                 }
-                
+
 
             }
             catch (DevNameDoesntMatchException e)
             {
-                
+
                 throw e;
             }
             if (send_tems == null)
@@ -269,9 +266,9 @@ namespace Zabbix_Agent_Sender.Agent
         }
 
 
-        
+
         //Async Task Function to get new data from host
-        public async Task<Zabbix_Send_Item> GettingNewDataAsync(Zabbix_Config_Item conf_Items, string host,CancellationToken token)
+        public async Task<Zabbix_Send_Item> GettingNewDataAsync(Zabbix_Config_Item conf_Items, string host, CancellationToken token)
         {
             log.Debug("Generating ZabbixRR From Config items");
 
@@ -284,14 +281,14 @@ namespace Zabbix_Agent_Sender.Agent
             log.Debug("Dev_Process Invoke");
             try
             {
-               await RequestReceived?.Invoke(this, zabbixRR);
+                await RequestReceived?.Invoke(this, zabbixRR);
             }
-            catch (OperationCanceledException) 
+            catch (OperationCanceledException)
             {
                 log.Warn("Task Canccelled");
                 throw new OperationCanceledException();
             }
-            
+
             if (zabbixRR.Response == null)
             {
                 log.Error($"Response is null, Example did not send data back hostname you tried to get: {host}");
@@ -422,7 +419,7 @@ namespace Zabbix_Agent_Sender.Agent
                 log.Error("Hiba történt a Zabbix_Active_Sender_Normal-ban: " + ex.Message + "\n" + ex);
                 return;
             }
-            
+
             log.Debug("Heartbeat response:" + response);
         }
     }

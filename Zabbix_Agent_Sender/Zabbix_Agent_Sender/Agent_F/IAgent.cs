@@ -1,5 +1,4 @@
-﻿using System;
-using Zabbix_Agent_Sender.Agent_F;
+﻿using Zabbix_Agent_Sender.Agent_F;
 using static Zabbix_Serializables;
 
 namespace Zabbix_Agent_Sender.Agent

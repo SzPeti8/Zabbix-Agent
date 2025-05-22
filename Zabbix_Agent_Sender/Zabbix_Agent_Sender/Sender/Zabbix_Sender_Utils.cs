@@ -1,20 +1,15 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Text;
-using System.Linq;
-using static Zabbix_Serializables;
-using System.Text.Json.Serialization;
-using System.Text.Json;
-using JsonSerializer = System.Text.Json.JsonSerializer;
 using Zabbix_Agent_Sender;
-using Zabbix_Agent_Sender.Proxy;
+using static Zabbix_Serializables;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 
 public class Zabbix_Active_Sender_Utils
 {
     private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
     public static byte[] CompilePacketTOSend(string jsonPayload)
-	{
+    {
         log.Debug("Compileing Packet to send");
         log.Debug("Converting payload to bytes");
         byte[] jsonBytes = Encoding.UTF8.GetBytes(jsonPayload);
@@ -59,11 +54,11 @@ public class Zabbix_Active_Sender_Utils
         return JsonSerializer.Serialize(request);
     }
 
-    
+
 
     public static string CreateConfigPayload(string host, string version)
     {
-        
+
         Zabbix_Send_Request request = new Zabbix_Send_Request()
         {
             request = "active checks",
@@ -87,7 +82,7 @@ public class Zabbix_Active_Sender_Utils
         return SerializeSendRequest(request);
     }
 
-    public static string CreateAgentDataPayload(string host, List<Zabbix_Send_Item> items,string session, string version)
+    public static string CreateAgentDataPayload(string host, List<Zabbix_Send_Item> items, string session, string version)
     {
         Zabbix_Send_Request request = new Zabbix_Send_Request()
         {
@@ -96,7 +91,7 @@ public class Zabbix_Active_Sender_Utils
             session = session,
             host = host,
             version = version
-            
+
         };
         log.Debug($"Created Zabbix_Send_Request: {SerializeSendRequest(request)}");
         return SerializeSendRequest(request);
@@ -113,11 +108,11 @@ public class Zabbix_Active_Sender_Utils
         return str;
     }
 
-    public static ZabbixRR CreateZabbixRRFromConfig(List<Zabbix_Config_Item> data,string hostName)
+    public static ZabbixRR CreateZabbixRRFromConfig(List<Zabbix_Config_Item> data, string hostName)
     {
         ZabbixRR zabbixRR = new ZabbixRR();
         zabbixRR.Request.hostName = hostName;
-        for (int i = 0;data.Count>i;i++)
+        for (int i = 0; data.Count > i; i++)
         {
             zabbixRR.Request.data = (new Zabbix_Send_Item(data[i].key, data[i].itemId));
         }

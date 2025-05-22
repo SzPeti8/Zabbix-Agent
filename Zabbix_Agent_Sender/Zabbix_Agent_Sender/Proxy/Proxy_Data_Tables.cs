@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
+﻿using System.Globalization;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 
 
@@ -201,7 +196,7 @@ public partial class Zabbix_Serializables
         public Proxy_Data_interface_Item() { }
     }
 
-    public class Proxy_Data_Hosts_Item 
+    public class Proxy_Data_Hosts_Item
     {
         public long hostid { get; set; }
         public string host { get; set; }
@@ -237,7 +232,7 @@ public partial class Zabbix_Serializables
                 this.tls_psk_identity = (string)list[12];
                 this.tls_psk = (string)list[13];
             }
-            
+
         }
 
         public Proxy_Data_Hosts_Item() { }
@@ -251,13 +246,13 @@ public partial class Zabbix_Serializables
     public class interfaceAvailability
     {
         public long interfaceid { get; set; }
-        public long available {  get; set; }
-        public string error {  get; set; }
+        public long available { get; set; }
+        public string error { get; set; }
     }
 
     public class historyData
     {
-        
+
         public int id { get; set; }
         public long itemid { get; set; }
         public long clock { get; set; }
@@ -279,7 +274,7 @@ public partial class Zabbix_Serializables
         public int? mtime { get; set; }
 
 
-        public  historyData(object value, long itemid)
+        public historyData(object value, long itemid)
         {
             this.value = Convert.ToString(value, CultureInfo.InvariantCulture);
             this.itemid = itemid;
@@ -296,17 +291,17 @@ public partial class Zabbix_Serializables
     public class discoveryData
     {
         public long clock { get; set; }
-        public long druleid {  get; set; }
-        public long dcheckid {  get; set; }
-        public long type {  get; set; }
+        public long druleid { get; set; }
+        public long dcheckid { get; set; }
+        public long type { get; set; }
         public string ip { get; set; }
         public string dns { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? port { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? key_ {  get; set; }
+        public string? key_ { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? value {  get; set; }
+        public string? value { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public long? status { get; set; }
 
@@ -317,13 +312,13 @@ public partial class Zabbix_Serializables
         public long clock { get; set; }
         public string host { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? ip {  get; set; }
+        public string? ip { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? dns {  get; set; }
+        public string? dns { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? port {  get; set; }
+        public string? port { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? host_metadata {  get; set; }
+        public string? host_metadata { get; set; }
     }
 
     public class hostData
@@ -335,9 +330,9 @@ public partial class Zabbix_Serializables
     public class tasks
     {
         public long type { get; set; }
-        public long status {  get; set; }
-        public string? error {  get; set; }
-        public long parent_taskid {  get; set; }
+        public long status { get; set; }
+        public string? error { get; set; }
+        public long parent_taskid { get; set; }
     }
 
 

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Zabbix_Agent_Sender.Agent
+﻿namespace Zabbix_Agent_Sender.Agent
 {
     public class AgentConfig
     {
         public AgentConfig(string zabbixServer, int zabbixPort, string host, string version,
-            int heartbeat_freq_InMiliSecs, int data_sending_freq_InMiliSecs, int config_data_req_freq_InMiliSecs, 
+            int heartbeat_freq_InMiliSecs, int data_sending_freq_InMiliSecs, int config_data_req_freq_InMiliSecs,
             int timeout_freq_ForGettingData_inSeconds, int maxThreads)
         {
             this.zabbixServer = zabbixServer;
@@ -28,7 +22,7 @@ namespace Zabbix_Agent_Sender.Agent
         public string host { get; set; }
         public string version { get; set; }
         public int heartbeat_freq_InMiliSecs { get; set; }
-        public int data_sending_freq_InMiliSecs { get; set;}
+        public int data_sending_freq_InMiliSecs { get; set; }
         public int config_data_req_freq_InMiliSecs { get; set; }
         public int timeout_freq_ForGettingData_inSeconds { get; set; }
         public int maxThreads { get; set; }
