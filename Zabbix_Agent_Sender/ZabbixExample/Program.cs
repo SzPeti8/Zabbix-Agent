@@ -1,4 +1,8 @@
-﻿using log4net.Config;
+﻿/// <summary>
+/// Entry point for the Zabbix Agent Sender example application.
+/// Initializes logging, loads configuration, creates and starts the agent, and handles incoming Zabbix requests.
+/// </summary>
+using log4net.Config;
 using Microsoft.Extensions.Configuration;
 using Zabbix_Agent_Sender;
 using Zabbix_Agent_Sender.Agent;
@@ -21,10 +25,12 @@ Random rnd = new Random();
 
 ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
-
 log.Debug("Creating AgentConfig");
 try
 {
+    /// <summary>
+    /// Creates and initializes the agent configuration using values from the application settings.
+    /// </summary>
     AgentConfig config = new AgentConfig
     (
     zabbixServer: configuration["ConnectionSettings:ServerAddress"], // Zabbix Server címe
@@ -46,10 +52,11 @@ catch (Exception e)
     manualResetEvent.Set();
 }
 
-
-
 try
 {
+    /// <summary>
+    /// Starts the agent and handles device name mismatch exceptions.
+    /// </summary>
     agent1.Start();
 
 }
@@ -59,24 +66,24 @@ catch (DevNameDoesntMatchException e)
     manualResetEvent.Set();
 }
 
-
-
 Console.CancelKeyPress += (sender, e) => { e.Cancel = true; manualResetEvent.Set(); };
 
 manualResetEvent.WaitOne();
 
 agent1.Stop();
 
-
+/// <summary>
+/// Handles the RequestReceived event from the agent.
+/// Processes incoming Zabbix requests, retrieves device data, and sets the response.
+/// </summary>
+/// <param name="sender">The event sender.</param>
+/// <param name="zabbixRR">The Zabbix request/response object.</param>
 async Task Agent_RequestReceivedAsync(object? sender, ZabbixRR zabbixRR)
 {
-
-
     if (zabbixRR.Request.hostName == devname)
     {
         await Task.Delay(rnd.Next(5000), zabbixRR.CancellationToken);
         zabbixRR.CancellationToken.ThrowIfCancellationRequested();
-
 
         Zabbix_Send_Item item = zabbixRR.Request.data;
 
@@ -90,12 +97,13 @@ async Task Agent_RequestReceivedAsync(object? sender, ZabbixRR zabbixRR)
         zabbixRR.Response = new Zabbix_Dev_Response();
         zabbixRR.Response.data = item;
         zabbixRR.Response.hostName = devname;
-
     }
-
 }
 
-
+/// <summary>
+/// Gets the device name from the configuration.
+/// </summary>
+/// <returns>The device name as a string.</returns>
 string GetDevName()
 {
     return devname;
